@@ -1,0 +1,68 @@
+#!/usr/bin/make -f
+# You must remove unused comment lines for the released package.
+export DH_VERBOSE = 1
+export DH_OPTIONS=-v
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+#export DEB_CXXFLAGS_MAINT_APPEND= -fno-stack-clash-protection
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+include /usr/share/dpkg/pkg-info.mk
+include /usr/share/dpkg/architecture.mk
+
+SHELL = /bin/bash
+#DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export HOME=$(shell mktemp -d)
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	pushd src/runtime.* \
+	&& patch -p1 -i $(CURDIR)/debian/patches/101runtime-mono-remove-ilstrip.patch \
+	&& patch -p1 -i $(CURDIR)/debian/patches/2000-mkstemps-fix-2.patch \
+	&& popd
+
+	pushd src/command-line-api.* \
+		&& patch -p1 -i $(CURDIR)/debian/patches/300command-line-api-use-work-tree-with-git-apply.patch \
+	&& popd
+
+	pushd src/vstest.* \
+		&& patch -p1 -i $(CURDIR)/debian/patches/400vstest-use-work-tree-with-git-apply.patch \
+	&& popd
+
+	pushd src/fsharp.* \
+		&& patch -p1 -i $(CURDIR)/debian/patches/500fsharp-use-work-tree-with-git-apply.patch \
+	&& popd
+
+	pushd src/xliff-tasks.* \
+		&& patch -p1 -i $(CURDIR)/debian/patches/600xliff-tasks-use-work-tree-with-git-apply.patch \
+	&& popd
+
+#	pushd src/aspnetcore.* \
+		&& patch -p1 -i $(CURDIR)/debian/patches/1100aspnetcore-39471-build-all-packages.patch \
+	&& popd
+
+	pushd src/sdk.* \
+		&& patch -p1 -i $(CURDIR)/debian/patches/1500sdk-telemetry-optout.patch \
+		&& patch -p1 -i $(CURDIR)/debian/patches/1501sdk-22373-portablerid.patch \
+	&& popd
+
+	pushd src/installer.* \
+		&& patch -p1 -i $(CURDIR)/debian/patches/1600installer-12516-portablerid.patch \
+		&& popd
+##sed -i 's|/usr/share/dotnet|$(LIBDIR)/$(DEB_HOST_MULTIARCH)/dotnet|' src/runtime.*/src/native/corehost/hostmisc/pal.unix.cpp
+##	mkdir -p $(HOME)
+
+	VERBOSE=1 ./build.sh \
+    	-- \
+    	/v:n \
+    	/p:SkipPortableRuntimeBuild=true \
+    	/p:LogVerbosity=n \
+    	/p:MinimalConsoleLogOutput=false \
+    	/p:ContinueOnPrebuiltBaselineError=true \
+
+#override_dh_clean:
+#	rm -rf .dotnet
+
+
+

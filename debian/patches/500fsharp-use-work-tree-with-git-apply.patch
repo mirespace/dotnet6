@@ -1,0 +1,11 @@
+--- a/eng/SourceBuild.props
++++ b/eng/SourceBuild.props
+@@ -15,7 +15,7 @@
+     </ItemGroup>
+ 
+     <Exec
+-      Command="git apply --ignore-whitespace --whitespace=nowarn &quot;%(SourceBuildPatchFile.FullPath)&quot;"
++      Command="git --work-tree=&quot;$(RepoRoot)&quot; apply --ignore-whitespace --whitespace=nowarn &quot;%(SourceBuildPatchFile.FullPath)&quot;"
+       WorkingDirectory="$(RepoRoot)"
+       Condition="'@(SourceBuildPatchFile)' != ''" />
+   </Target>

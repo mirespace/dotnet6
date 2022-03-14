@@ -1,0 +1,24 @@
+diff --git a/src/libraries/Native/Unix/configure.cmake b/src/libraries/Native/Unix/configure.cmake
+index e1afadb0e..225e31611 100644
+--- a/src/src/libraries/Native/Unix/configure.cmake
++++ b/src/libraries/Native/Unix/configure.cmake
+@@ -766,7 +766,8 @@ check_c_source_compiles(
+ 
+     int main(void)
+     {
+-        return mkstemps(\"abc\", 3);
++        char template[8]="./XXXXXX";
++        return mkstemps(template, 3);
+     }
+     "
+     HAVE_MKSTEMPS)
+@@ -779,7 +780,8 @@ check_c_source_compiles(
+ 
+     int main(void)
+     {
+-        return mkstemp(\"abc\");
++        char template[8]="./XXXXXX";
++        return mkstemp(template);
+     }
+     "
+     HAVE_MKSTEMP)

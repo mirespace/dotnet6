@@ -1,0 +1,129 @@
+From 4582256e7ad537e315c5aa8f16bf049350d2de41 Mon Sep 17 00:00:00 2001
+From: MichaelSimons <msimons@microsoft.com>
+Date: Thu, 16 Dec 2021 02:29:27 +0000
+Subject: [PATCH 1/2] Add logic to convert internal repo uris in
+ version.details.xml
+
+---
+ ...ourceBuildIntermediateNupkgDependencies.cs | 38 +++++++++++++++++++
+ .../tools/SourceBuildArcadeTarball.targets    |  4 +-
+ 2 files changed, 41 insertions(+), 1 deletion(-)
+
+diff --git a/src/SourceBuild/Arcade/src/Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs b/src/SourceBuild/Arcade/src/Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs
+index 59f7eb49919..1217d166aae 100644
+--- a/src/SourceBuild/Arcade/src/Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs
++++ b/src/SourceBuild/Arcade/src/Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs
+@@ -3,6 +3,7 @@
+ 
+ using Microsoft.Build.Framework;
+ using Microsoft.Build.Utilities;
++using System;
+ using System.Collections.Generic;
+ using System.Linq;
+ using System.Xml.Linq;
+@@ -21,6 +22,11 @@ public class Tarball_ReadSourceBuildIntermediateNupkgDependencies : Task
+         [Required]
+         public string SourceBuildIntermediateNupkgPrefix { get; set; }
+ 
++        /// <summary>
++        /// Convert any internal repo references to the public GitHub repos.
++        /// </summary>
++        public bool ConvertInternalRepos { get; set; }
++
+         /// <summary>
+         /// The intermediate nupkg RID to use if any RID-specific intermediate nupkgs are required.
+         /// If this parameter isn't specified, RID-specific intermediate nupkgs can't be used and
+@@ -88,6 +94,11 @@ XName CreateQualifiedName(string plainName)
+                     string dependencyVersion = d.Attribute("Version")?.Value;
+ 
+                     string uri = d.Element(CreateQualifiedName("Uri"))?.Value;
++                    if (ConvertInternalRepos)
++                    {
++                        uri = ConvertInternalRepo(uri);
++                    }
++
+                     string sha = d.Element(CreateQualifiedName("Sha"))?.Value;
+                     string sourceBuildRepoName = sourceBuildElement.Attribute("RepoName")?.Value;
+ 
+@@ -137,5 +148,32 @@ XName CreateQualifiedName(string plainName)
+ 
+             return !Log.HasLoggedErrors;
+         }
++
++        private string ConvertInternalRepo(string uri)
++        {
++            if (uri.StartsWith("https://dev.azure.com", StringComparison.OrdinalIgnoreCase))
++            {
++                string[] repoParts = uri.Substring(uri.LastIndexOf('/')).Split('-', 2);
++
++                if (repoParts.Length != 2)
++                {
++                    Log.LogError($"Repo '{uri}' does not end with the expected <GH organization>-<GH repo> format");
++                    return null;
++                }
++
++                string org = repoParts[0];
++                string repo = repoParts[1];
++
++                // The internal Nuget.Client repo has suffix which needs to be accounted for.
++                if (uri.EndsWith("-Trusted", StringComparison.OrdinalIgnoreCase))
++                {
++                    repo = repo.Substring(0, repo.Length - 8);
++                }
++
++                uri = $"https://github.com/{org}/{repo}";
++            }
++
++            return uri;
++        }
+     }
+ }
+diff --git a/src/SourceBuild/Arcade/tools/SourceBuildArcadeTarball.targets b/src/SourceBuild/Arcade/tools/SourceBuildArcadeTarball.targets
+index 1717371dc87..9a49c349924 100644
+--- a/src/SourceBuild/Arcade/tools/SourceBuildArcadeTarball.targets
++++ b/src/SourceBuild/Arcade/tools/SourceBuildArcadeTarball.targets
+@@ -19,6 +19,7 @@
+     <TarballSourceDir>$(TarballRootDir)src/</TarballSourceDir>
+     <TarballGitInfoDir>$(TarballRootDir)git-info/</TarballGitInfoDir>
+     <CloneVerbosity>quiet</CloneVerbosity> <!-- Support quiet and full -->
++    <ConvertInternalRepos Condition="'$(ConvertInternalRepos)' == '' and '$(VSS_NUGET_EXTERNAL_FEED_ENDPOINTS)' == '' ">true</ConvertInternalRepos>
+   </PropertyGroup>
+ 
+   <Target Name="CreateSourceTarball"
+@@ -203,7 +204,8 @@
+     <Tarball_ReadSourceBuildIntermediateNupkgDependencies
+       VersionDetailsXmlFile="$([MSBuild]::NormalizePath($(TarballVersionDetailsFile)))"
+       SourceBuildIntermediateNupkgPrefix="$(SourceBuildIntermediateNupkgPrefix)"
+-      SourceBuildIntermediateNupkgRid="$(SourceBuildIntermediateNupkgRid)">
++      SourceBuildIntermediateNupkgRid="$(SourceBuildIntermediateNupkgRid)"
++      ConvertInternalRepos="$(ConvertInternalRepos)">
+       <Output TaskParameter="Dependencies" ItemName="SourceBuildRepos" />
+     </Tarball_ReadSourceBuildIntermediateNupkgDependencies>
+ 
+
+From 6e467b43033aefd1af39ddcbf625ef30d5440e7f Mon Sep 17 00:00:00 2001
+From: MichaelSimons <msimons@microsoft.com>
+Date: Thu, 16 Dec 2021 18:31:15 +0000
+Subject: [PATCH 2/2] code review updates
+
+---
+ .../Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs  | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/SourceBuild/Arcade/src/Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs b/src/SourceBuild/Arcade/src/Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs
+index 1217d166aae..9b6365dfccd 100644
+--- a/src/SourceBuild/Arcade/src/Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs
++++ b/src/SourceBuild/Arcade/src/Tarball_ReadSourceBuildIntermediateNupkgDependencies.cs
+@@ -165,9 +165,10 @@ private string ConvertInternalRepo(string uri)
+                 string repo = repoParts[1];
+ 
+                 // The internal Nuget.Client repo has suffix which needs to be accounted for.
+-                if (uri.EndsWith("-Trusted", StringComparison.OrdinalIgnoreCase))
++                const string trustedSuffix = "-Trusted";
++                if (uri.EndsWith(trustedSuffix, StringComparison.OrdinalIgnoreCase))
+                 {
+-                    repo = repo.Substring(0, repo.Length - 8);
++                    repo = repo.Substring(0, repo.Length - trustedSuffix.Length);
+                 }
+ 
+                 uri = $"https://github.com/{org}/{repo}";

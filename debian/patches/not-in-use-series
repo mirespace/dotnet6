@@ -1,0 +1,13 @@
+# You must remove unused comment lines for the released package.
+101runtime-mono-remove-ilstrip.patch
+103runtime-61442-disable-werror.patch
+300command-line-api-use-work-tree-with-git-apply.patch
+400vstest-use-work-tree-with-git-apply.patch
+500fsharp-use-work-tree-with-git-apply.patch
+600xliff-tasks-use-work-tree-with-git-apply.patch
+1000msbuild-no-systemsecurity.patch
+1001msbuild-no-systemconfiguration.patch
+1500sdk-telemetry-optout.patch
+1501sdk-22373-portablerid.patch
+1600installer-12516-portablerid.patch
+1602installer-12622-fix-runtime-symbols.patch

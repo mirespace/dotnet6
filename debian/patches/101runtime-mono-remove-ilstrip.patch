@@ -1,0 +1,33 @@
+diff --git a/src/mono/nuget/Microsoft.NET.Runtime.MonoTargets.Sdk/Microsoft.NET.Runtime.MonoTargets.Sdk.pkgproj b/src/mono/nuget/Microsoft.NET.Runtime.MonoTargets.Sdk/Microsoft.NET.Runtime.MonoTargets.Sdk.pkgproj
+index 724b704f864..3dabdc81dae 100644
+--- a/src/mono/nuget/Microsoft.NET.Runtime.MonoTargets.Sdk/Microsoft.NET.Runtime.MonoTargets.Sdk.pkgproj
++++ b/src/mono/nuget/Microsoft.NET.Runtime.MonoTargets.Sdk/Microsoft.NET.Runtime.MonoTargets.Sdk.pkgproj
+@@ -6,7 +6,7 @@
+   </PropertyGroup>
+ 
+   <ItemGroup>
+-    <ProjectReference Include="$(RepoTasksDir)ILStripTask\ILStrip.csproj" />
++    <ProjectReference Include="$(RepoTasksDir)ILStripTask\ILStrip.csproj" Condition="'$(DotNetBuildFromSource)' != 'true'" />
+     <ProjectReference Include="$(RepoTasksDir)RuntimeConfigParser\RuntimeConfigParser.csproj" />
+     <ProjectReference Include="$(RepoTasksDir)JsonToItemsTaskFactory\JsonToItemsTaskFactory.csproj" />
+   </ItemGroup>
+@@ -15,7 +15,7 @@
+     <PackageFile Include="Sdk\Sdk.props" TargetPath="Sdk" />
+     <PackageFile Include="Sdk\Sdk.targets" TargetPath="Sdk" />
+     <PackageFile Include="build\$(MSBuildProjectName).props" TargetPath="build" />
+-    <PackageFile Include="Sdk\ILStripTask.props" TargetPath="Sdk" />
++    <PackageFile Include="Sdk\ILStripTask.props" TargetPath="Sdk" Condition="'$(DotNetBuildFromSource)' != 'true'" />
+     <PackageFile Include="Sdk\RuntimeConfigParserTask.props" TargetPath="Sdk" />
+     <PackageFile Include="Sdk\RuntimeComponentManifest.props" TargetPath="Sdk" />
+     <PackageFile Include="Sdk\RuntimeComponentManifest.targets" TargetPath="Sdk" />
+diff --git a/src/mono/nuget/Microsoft.NET.Runtime.MonoTargets.Sdk/Sdk/Sdk.props b/src/mono/nuget/Microsoft.NET.Runtime.MonoTargets.Sdk/Sdk/Sdk.props
+index 8a7ede79242..cfd515eeca9 100644
+--- a/src/mono/nuget/Microsoft.NET.Runtime.MonoTargets.Sdk/Sdk/Sdk.props
++++ b/src/mono/nuget/Microsoft.NET.Runtime.MonoTargets.Sdk/Sdk/Sdk.props
+@@ -1,5 +1,5 @@
+ <Project>
+-  <Import Project="$(MSBuildThisFileDirectory)\ILStripTask.props" />
++  <Import Project="$(MSBuildThisFileDirectory)\ILStripTask.props" Condition="'$(DotNetBuildFromSource)' != 'true'" />
+   <Import Project="$(MSBuildThisFileDirectory)\RuntimeConfigParserTask.props" />
+   <Import Project="$(MSBuildThisFileDirectory)\RuntimeComponentManifest.props" />
+ </Project>
