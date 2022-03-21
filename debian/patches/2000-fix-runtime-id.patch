@@ -1,0 +1,12 @@
+diff --git a/.devcontainer/Dockerfile b/.devcontainer/Dockerfile
+index 9ffc7f9619..35f7538e25 100644
+--- a//.devcontainer/Dockerfile
++++ b//.devcontainer/Dockerfile
+@@ -5,6 +5,7 @@
+ 
+ FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+ 
++ENV DOTNET_RUNTIME_ID=ubuntu.22.04-x64
+ # Avoid warnings by switching to noninteractive
+ ENV DEBIAN_FRONTEND=noninteractive
+ 

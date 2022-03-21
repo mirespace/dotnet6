@@ -1,133 +1,126 @@
 Source: dotnet6
-Section: unknown
+Section: universe/devel
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Miriam España Acebal <miriam.espana@canonical.com>
-Build-Depends: debhelper (>=11~), clang, cmake, coreutils, findutils, locales-all, git, hostname, libkrb5-dev, libicu-dev, libunwind-dev, lld, llvm, liblttng-ust-dev, make, libssl-dev, python3, tar, util-linux, zlib1g-dev
+Build-Depends: debhelper (>=11~), clang, llvm, lld, cmake, locales-all, git, libkrb5-dev, libicu-dev, liblttng-ust-dev, libssl-dev, python3, zlib1g-dev, bash-completion
 Standards-Version: 4.1.4
-Homepage: <insert the upstream URL, if relevant>
+Homepage: https://dot.net/core
 
 Package: dotnet6
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: dotnet-sdk-6.0, ${misc:Depends}, ${shlibs:Depends}
-Description: .NET CLI tools and runtime
- .
- .NET is a fast, lightweight and modular platform for creating
+Description: dotNET CLI tools and runtime
+ dotNET is a fast, lightweight and modular platform for creating
  cross platform applications that work on Linux, macOS and Windows.
  .
  It particularly focuses on creating console applications, web
  applications and micro-services.
  .
- .NET contains a runtime conforming to .NET Standards a set of
+ dotNET contains a runtime conforming to .NET Standards a set of
  framework libraries, an SDK containing compilers and a 'dotnet'
  application to drive everything.
 
 Package: dotnet-host
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: .NET host command line
+Description: dotNET host command line
+ The dotNET host is a command line program that runs a standalone
+ dotNET application or launches the SDK.
  .
- The .NET host is a command line program that runs a standalone
- .NET application or launches the SDK.
- .
- .NET is a fast, lightweight and modular platform for creating
+ dotNET is a fast, lightweight and modular platform for creating
  cross platform applications that work on Linux, macOS and Windows.
  .
  It particularly focuses on creating console applications, web
  applications and micro-services.
 
 Package: dotnet-hostfxr-6.0
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: dotnet-host, ${misc:Depends}, ${shlibs:Depends}
-Description: ..NET host resolver
- .
- The .NET host resolver contains the logic to resolve and select
+Description: dotNET host resolver
+ The dotNET host resolver contains the logic to resolve and select
  the right version of the .NET SDK or runtime to use.
  .
- .NET is a fast, lightweight and modular platform for creating
+ dotNET is a fast, lightweight and modular platform for creating
  cross platform applications that work on Linux, macOS and Windows.
  .
  It particularly focuses on creating console applications, web
  applications and micro-services.
 
 Package: dotnet-runtime-6.0
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: dotnet-hostfxr-6.0, libicu67, libunwind-13, ${misc:Depends}, ${shlibs:Depends}
-Description: .NET runtime
- .
- The .NET runtime contains everything needed to run .NET applications.
+Description: dotNET runtime
+ The dotNET runtime contains everything needed to run .NET applications.
  It includes a high performance Virtual Machine as well as the framework
  libraries used by .NET applications.
  .
- .NET is a fast, lightweight and modular platform for creating
+ dotNET is a fast, lightweight and modular platform for creating
  cross platform applications that work on Linux, macOS and Windows.
  .
  It particularly focuses on creating console applications, web
  applications and micro-services.
 
 Package: aspnetcore-runtime-6.0
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: dotnet-runtime-6.0, ${misc:Depends}, ${shlibs:Depends}
-Description: ASP.NET Core runtime
- .
- The ASP.NET Core runtime contains everything needed to run .NET
+Description: ASP dotNET Core runtime
+ The ASP dotNET Core runtime contains everything needed to run .NET
  web applications. It includes a high performance Virtual Machine as
  well as the framework libraries used by .NET applications.
  .
- ASP .NET Core is a fast, lightweight and modular platform for creating
+ ASP dotNET Core is a fast, lightweight and modular platform for creating
  cross platform applications that work on Linux, macOS and Windows.
  .
  It particularly focuses on creating console applications, web
  applications and micro-services.
 
 Package: dotnet-templates-6.0
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: dotnet-host, ${misc:Depends}, ${shlibs:Depends}
-Description: .NET 6.0 templates
- .
+Description: dotNET 6.0 templates
  This package contains templates used by the .NET SDK.
  .
- .NET is a fast, lightweight and modular platform for creating
+ dotNET is a fast, lightweight and modular platform for creating
  cross platform applications that work on Linux, macOS and Windows.
  .
  It particularly focuses on creating console applications, web
  applications and micro-services.
 
 Package: dotnet-sdk-6.0
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: dotnet-runtime-6.0,aspnetcore-runtime-6.0, dotnet-targeting-pack-6.0, dotnet-templates-6.0, ${misc:Depends}, ${shlibs:Depends}
-Description: .NET 6.0 Software Development Kit
- .
- The .NET SDK is a collection of command line applications to
+Description: dotNET 6.0 Software Development Kit
+ The dotNET SDK is a collection of command line applications to
  create, build, publish and run .NET applications.
  .
- .NET is a fast, lightweight and modular platform for creating
+ dotNET is a fast, lightweight and modular platform for creating
  cross platform applications that work on Linux, macOS and Windows.
  .
  It particularly focuses on creating console applications, web
  applications and micro-services.
 
 Package: dotnet-sdk-6.0-source-built-artifacts
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Internal package for building .NET 6.0 Software Development Kit
  .
- The .NET source-built archive is a collection of packages needed
- to build the .NET SDK itself.
+ The dotNET source-built archive is a collection of packages needed
+ to build the dotNET SDK itself.
  .
  These are not meant for general use.
 
 Package: dotnet-targeting-pack-6.0
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Internal
- .
+Description: Internal packages
+ These are not meant for general use.
