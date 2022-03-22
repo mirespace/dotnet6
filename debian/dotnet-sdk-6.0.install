@@ -1,0 +1,5 @@
+/usr/lib/x86_64-linux-gnu/dotnet/sdk/6.0.103
+# FIXME hardcoded version?
+/usr/lib/x86_64-linux-gnu/dotnet/sdk-manifests/6.0.100
+/usr/lib/x86_64-linux-gnu/dotnet/metadata
+#/usr/lib/x86_64-linux-gnu/dotnet/packs

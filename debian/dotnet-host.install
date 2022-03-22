@@ -1,9 +1,5 @@
-/usr/lib/x86_64-linux-gnu/dotnet
-/usr/lib/x86_64-linux-gnu/dotnet/host
-/usr/lib/x86_64-linux-gnu/dotnet/host/fxr
+/usr/lib/x86_64-linux-gnu/dotnet/dotnet
 /usr/bin/dotnet
 /etc/profile.d/dotnet.sh
 /etc/dotnet
-/usr/share/bash-completion
-/usr/share/bash-completion/completions
 /usr/share/bash-completion/completions/dotnet

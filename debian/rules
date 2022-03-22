@@ -11,22 +11,23 @@ include /usr/share/dpkg/architecture.mk
 
 SHELL = /bin/bash
 export HOME=$(shell mktemp -d)
-export PREFIX = /usr
-export SYSCONFDIR = /etc
-export BINDIR = $(PREFIX)/bin
-export LIBDIR = $(PREFIX)/lib/$(DEB_HOST_MULTIARCH)
-export DATADIR = $(PREFIX)/share
-export MANDIR = $(DATADIR)/man
-export DESTDIR = $(CURDIR)/debian/tmp
+PREFIX = /usr
+SYSCONFDIR = /etc
+BINDIR = $(PREFIX)/bin
+LIBDIR = $(PREFIX)/lib/$(DEB_HOST_MULTIARCH)
+DATADIR = $(PREFIX)/share
+MANDIR = $(DATADIR)/man
+DESTDIR = $(CURDIR)/debian/tmp
 
 ifeq ($(DEB_HOST_ARCH), amd64)
-	export RUNTIME_ARCH = x64
+	_RUNTIME_ARCH = x64
 endif
-export RUNTIME_ID = $(shell . /etc/os-release; echo $${ID}.$${VERSION_ID})
-export _SDK_VERSION = $(DEB_VERSION_UPSTREAM)
-export _RUNTIME_VERSION = 6.0.3
+_RUNTIME_ID = $(shell . /etc/os-release; echo $${ID}.$${VERSION_ID})
+_SDK_VERSION = $(DEB_VERSION_UPSTREAM)
+_RUNTIME_VERSION = 6.0.3
+
 %:
-	dh $@ #--with bash-completion
+	dh $@ 
 
 override_dh_auto_build:
 
@@ -83,8 +84,8 @@ override_dh_install:
 
 	sed -e 's|[@]LIBDIR[@]|$(LIBDIR)|g' $(CURDIR)/debian/dotnet.sh.in > $(CURDIR)/debian/dotnet.sh
 	install -dm 0755 $(DESTDIR)/$(LIBDIR)/dotnet
-	ls artifacts/$(RUNTIME_ARCH)/Release
-	tar xf artifacts/$(RUNTIME_ARCH)/Release/dotnet-sdk-$(_SDK_VERSION)-$(RUNTIME_ID)-$(RUNTIME_ARCH).tar.gz -C $(DESTDIR)/$(LIBDIR)/dotnet/
+	ls artifacts/$(_RUNTIME_ARCH)/Release
+	tar xf artifacts/$(_RUNTIME_ARCH)/Release/dotnet-sdk-$(_SDK_VERSION)-$(_RUNTIME_ID)-$(_RUNTIME_ARCH).tar.gz -C $(DESTDIR)/$(LIBDIR)/dotnet/
 
 	# See https://github.com/dotnet/source-build/issues/2579
 	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'testhost.x86' -delete
@@ -108,9 +109,9 @@ override_dh_install:
 	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.targets' -exec chmod -x {} \;
 	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.txt' -exec chmod -x {} \;
 	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.xml' -exec chmod -x {} \;
-
+#
 	install -dm 0755 $(DESTDIR)$(SYSCONFDIR)/profile.d/
-	install dotnet.sh $(DESTDIR)$(SYSCONFDIR)/profile.d/
+	install $(CURDIR)/debian/dotnet.sh $(DESTDIR)$(SYSCONFDIR)/profile.d/
 
 	install -dm 0755 $(DESTDIR)/$(DATADIR)/bash-completion/completions
 	# dynamic completion needs the file to be named the same as the base command
@@ -126,22 +127,22 @@ override_dh_install:
 	install -dm 0755 $(DESTDIR)/$(SYSCONFDIR)/dotnet
 	echo "$(LIBDIR)/dotnet" >> install_location
 	install install_location $(DESTDIR)/$(SYSCONFDIR)/dotnet/
-	echo "$(LIBDIR)/dotnet" >> install_location_$(RUNTIME_ARCH)
-	install install_location_$(RUNTIME_ARCH) $(DESTDIR)/$(SYSCONFDIR)/dotnet/
+	echo "$(LIBDIR)/dotnet" >> install_location_$(_RUNTIME_ARCH)
+	install install_location_$(_RUNTIME_ARCH) $(DESTDIR)/$(SYSCONFDIR)/dotnet/
 
 	install -dm 0755 $(DESTDIR)$(LIBDIR)/dotnet/source-built-artifacts
-	install -m 0644 artifacts/$(RUNTIME_ARCH)/Release/Private.SourceBuilt.Artifacts.*.tar.gz $(DESTDIR)/$(LIBDIR)/dotnet/source-built-artifacts/
+	install -m 0644 artifacts/$(_RUNTIME_ARCH)/Release/Private.SourceBuilt.Artifacts.*.tar.gz $(DESTDIR)/$(LIBDIR)/dotnet/source-built-artifacts/
 
-override_dh_auto_test:
+	dh_install
 
-	# Quick and dirty check for https://github.com/dotnet/source-build/issues/2731
-	test -f $(DESTDIR)/$(LIBDIR)/dotnet/sdk/$(_SDK_VERSION)/Sdks/Microsoft.NET.Sdk/Sdk/Sdk.props
+#override_dh_auto_test:
 
-
-	# Check debug symbols in all elf objects. This is not in %%check
-	# because native binaries are stripped by rpm-build after %%install.
-	# So we need to do this check earlier.
-	echo "Testing build results for debug symbols..."
-	$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
-
-	$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
+	## Quick and dirty check for https://github.com/dotnet/source-build/issues/2731
+	#test -f $(DESTDIR)/$(LIBDIR)/dotnet/sdk/$(_SDK_VERSION)/Sdks/Microsoft.NET.Sdk/Sdk/Sdk.props
+#
+#
+	## Check debug symbols in all elf objects.
+	#echo "Testing build results for debug symbols..."
+	#$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
+#
+	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info

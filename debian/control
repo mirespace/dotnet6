@@ -3,7 +3,7 @@ Section: universe/devel
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Miriam España Acebal <miriam.espana@canonical.com>
-Build-Depends: debhelper (>=11~), clang, llvm, lld, cmake, locales-all, git, libkrb5-dev, libicu-dev, liblttng-ust-dev, libssl-dev, python3, zlib1g-dev, bash-completion
+Build-Depends: debhelper (>=11~), clang, llvm, lld, cmake, locales-all, git, libkrb5-dev, libicu-dev, liblttng-ust-dev, libssl-dev, python3, zlib1g-dev
 Standards-Version: 4.1.4
 Homepage: https://dot.net/core
 
@@ -118,9 +118,11 @@ Description: Internal package for building .NET 6.0 Software Development Kit
  .
  These are not meant for general use.
 
-Package: dotnet-targeting-pack-6.0
+Package: dotnet-targeting-packs-6.0
 Architecture: amd64
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Internal packages
- These are not meant for general use.
+ These are not meant for general use. Includes dotnet-apphost-pack-6.0,
+ dotnet-targeting-pack-6.0, aspnetcore-targeting-pack-6.0 and
+ netstandard-targeting-pack-2.1.
