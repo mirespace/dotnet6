@@ -28,7 +28,7 @@ function clean_dotnet_cache {
 }
 
 function check_bootstrap_environment {
-    if rpm -qa | grep dotnet ; then
+    if dpkg -l | grep dotnet ; then
         echo "error: dotnet is installed. Not a good idea for bootstrapping."
         exit 1
     fi

@@ -1,25 +1,38 @@
 #!/usr/bin/make -f
 # You must remove unused comment lines for the released package.
 export DH_VERBOSE = 1
-export DH_OPTIONS=-v
-export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DH_OPTIONS = -v
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
 export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-#export DEB_CXXFLAGS_MAINT_APPEND= -fno-stack-clash-protection
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
 include /usr/share/dpkg/pkg-info.mk
 include /usr/share/dpkg/architecture.mk
 
 SHELL = /bin/bash
-#DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 export HOME=$(shell mktemp -d)
+PREFIX = /usr
+SYSCONFDIR = /etc
+BINDIR = $(PREFIX)/bin
+LIBDIR = $(PREFIX)/lib/$(DEB_HOST_MULTIARCH)
+DATADIR = $(PREFIX)/share
+MANDIR = $(DATADIR)/man
+DESTDIR = $(CURDIR)/debian/tmp
+
+ifeq ($(DEB_HOST_ARCH), amd64)
+	_RUNTIME_ARCH = x64
+endif
+_RUNTIME_ID = $(shell . /etc/os-release; echo $${ID}.$${VERSION_ID})
+_SDK_VERSION = $(DEB_VERSION_UPSTREAM)
+_RUNTIME_VERSION = 6.0.3
 
 %:
-	dh $@
+	dh $@ 
 
 override_dh_auto_build:
+
 	pushd src/runtime.* \
-	&& patch -p1 -i $(CURDIR)/debian/patches/101runtime-mono-remove-ilstrip.patch \
-	&& patch -p1 -i $(CURDIR)/debian/patches/2000-mkstemps-fix-2.patch \
+		&& patch -p1 -i $(CURDIR)/debian/patches/66225-fix-runtime-id.patch \
 	&& popd
 
 	pushd src/command-line-api.* \
@@ -33,6 +46,7 @@ override_dh_auto_build:
 	pushd src/fsharp.* \
 		&& patch -p1 -i $(CURDIR)/debian/patches/500fsharp-use-work-tree-with-git-apply.patch \
 	&& popd
+#		&& patch -p1 -i $(CURDIR)/debian/patches/2000-fix-runtime-id.patch \
 
 	pushd src/xliff-tasks.* \
 		&& patch -p1 -i $(CURDIR)/debian/patches/600xliff-tasks-use-work-tree-with-git-apply.patch \
@@ -50,8 +64,8 @@ override_dh_auto_build:
 	pushd src/installer.* \
 		&& patch -p1 -i $(CURDIR)/debian/patches/1600installer-12516-portablerid.patch \
 		&& popd
-##sed -i 's|/usr/share/dotnet|$(LIBDIR)/$(DEB_HOST_MULTIARCH)/dotnet|' src/runtime.*/src/native/corehost/hostmisc/pal.unix.cpp
-##	mkdir -p $(HOME)
+
+#sed -i 's|/usr/share/dotnet|$(LIBDIR)/dotnet|' src/runtime.*/src/native/corehost/hostmisc/pal.unix.cpp
 
 	VERBOSE=1 ./build.sh \
     	-- \
@@ -64,5 +78,71 @@ override_dh_auto_build:
 #override_dh_clean:
 #	rm -rf .dotnet
 
+override_dh_install:
+# chmod +x dotnet.sh
+#./dotnet.sh
+
+	sed -e 's|[@]LIBDIR[@]|$(LIBDIR)|g' $(CURDIR)/debian/dotnet.sh.in > $(CURDIR)/debian/dotnet.sh
+	install -dm 0755 $(DESTDIR)/$(LIBDIR)/dotnet
+	ls artifacts/$(_RUNTIME_ARCH)/Release
+	tar xf artifacts/$(_RUNTIME_ARCH)/Release/dotnet-sdk-$(_SDK_VERSION)-$(_RUNTIME_ID)-$(_RUNTIME_ARCH).tar.gz -C $(DESTDIR)/$(LIBDIR)/dotnet/
+
+	# See https://github.com/dotnet/source-build/issues/2579
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'testhost.x86' -delete
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'vstest.console' -delete
 
 
+	# Fix executable permissions on files
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'apphost' -exec chmod +x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'singlefilehost' -exec chmod +x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'lib*so' -exec chmod +x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'apphost' -exec chmod +x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'singlefilehost' -exec chmod +x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'lib*so' -exec chmod +x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.a' -exec chmod -x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.dll' -exec chmod -x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.h' -exec chmod 0644 {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.json' -exec chmod -x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.pdb' -exec chmod -x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.props' -exec chmod -x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.pubxml' -exec chmod -x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.targets' -exec chmod -x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.txt' -exec chmod -x {} \;
+	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.xml' -exec chmod -x {} \;
+#
+	install -dm 0755 $(DESTDIR)$(SYSCONFDIR)/profile.d/
+	install $(CURDIR)/debian/dotnet.sh $(DESTDIR)$(SYSCONFDIR)/profile.d/
+
+	install -dm 0755 $(DESTDIR)/$(DATADIR)/bash-completion/completions
+	# dynamic completion needs the file to be named the same as the base command
+	install src/sdk.*/scripts/register-completions.bash $(DESTDIR)/$(DATADIR)/bash-completion/completions/dotnet
+
+
+	install -dm 0755 $(DESTDIR)/$(BINDIR)
+	ln -s ../../$(LIBDIR)/dotnet/dotnet $(DESTDIR)/$(BINDIR)/
+
+	install -dm 0755 $(DESTDIR)/$(MANDIR)/man1/
+	find -iname 'dotnet*.1' -type f -exec cp {} $(DESTDIR)/$(MANDIR)/man1/ \;
+
+	install -dm 0755 $(DESTDIR)/$(SYSCONFDIR)/dotnet
+	echo "$(LIBDIR)/dotnet" >> install_location
+	install install_location $(DESTDIR)/$(SYSCONFDIR)/dotnet/
+	echo "$(LIBDIR)/dotnet" >> install_location_$(_RUNTIME_ARCH)
+	install install_location_$(_RUNTIME_ARCH) $(DESTDIR)/$(SYSCONFDIR)/dotnet/
+
+	install -dm 0755 $(DESTDIR)$(LIBDIR)/dotnet/source-built-artifacts
+	install -m 0644 artifacts/$(_RUNTIME_ARCH)/Release/Private.SourceBuilt.Artifacts.*.tar.gz $(DESTDIR)/$(LIBDIR)/dotnet/source-built-artifacts/
+
+	dh_install
+
+#override_dh_auto_test:
+
+	## Quick and dirty check for https://github.com/dotnet/source-build/issues/2731
+	#test -f $(DESTDIR)/$(LIBDIR)/dotnet/sdk/$(_SDK_VERSION)/Sdks/Microsoft.NET.Sdk/Sdk/Sdk.props
+#
+#
+	## Check debug symbols in all elf objects.
+	#echo "Testing build results for debug symbols..."
+	#$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
+#
+	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
