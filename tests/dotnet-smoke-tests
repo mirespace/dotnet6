@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e 
+
+VERBOSE=1 ./build.sh --run-smoke-test

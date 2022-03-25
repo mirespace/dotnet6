@@ -1,0 +1,3 @@
+Tests: dotnet-smoke-tests
+Depends: @, @builddeps@
+Restrictions: isolation-container, needs-internet
