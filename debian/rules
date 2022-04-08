@@ -27,7 +27,7 @@ _SDK_VERSION = $(DEB_VERSION_UPSTREAM)
 _RUNTIME_VERSION = 6.0.3
 
 %:
-	dh $@ 
+	dh $@
 
 override_dh_auto_build:
 
@@ -63,7 +63,11 @@ override_dh_auto_build:
 
 	pushd src/installer.* \
 		&& patch -p1 -i $(CURDIR)/debian/patches/1600installer-12516-portablerid.patch \
-		&& popd
+	&& popd
+
+	patch -p1 -i $(CURDIR)/debian/patches/13485-fix-path-on-testing.patch
+	patch -p1 -i $(CURDIR)/debian/patches/13485-testing-without-internet.patch
+
 
 #sed -i 's|/usr/share/dotnet|$(LIBDIR)/dotnet|' src/runtime.*/src/native/corehost/hostmisc/pal.unix.cpp
 
@@ -137,12 +141,15 @@ override_dh_install:
 
 #override_dh_auto_test:
 
-	## Quick and dirty check for https://github.com/dotnet/source-build/issues/2731
-	#test -f $(DESTDIR)/$(LIBDIR)/dotnet/sdk/$(_SDK_VERSION)/Sdks/Microsoft.NET.Sdk/Sdk/Sdk.props
+#   #testsuite smoke tests
+#	update-ca-certificates
+#	VERBOSE=1 ./build.sh --run-smoke-test
+#	$(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/assets/smoke-tests/smoke-test.sh --dotnetDir $(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/bin/Release/net6.0/.dotnet --projectOutput --archiveRestoredPackages --targetRid ubuntu.22.04-x64 --minimal --excludeOnlineTests --excludeOmniSharpTests
 #
 #
-	## Check debug symbols in all elf objects.
-	#echo "Testing build results for debug symbols..."
-	#$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
+#	$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
+#	$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
 #
-	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
+#	# Check debug symbols in all elf objects.
+#	echo "Testing build results for debug symbols..."
+#	$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/

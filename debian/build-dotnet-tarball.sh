@@ -194,6 +194,9 @@ rm -r src/nuget-client.*/test/EndToEnd
 # https://github.com/Humanizr/sample-aspnetmvc/issues/1
 rm -r src/source-build.*/src/humanizer/samples/
 
+# grab online resources for testing
+#VERBOSE=1 ./build.sh --run-smoke-test
+
 popd
 
 if [[ ${build_bootstrap} == true ]]; then
