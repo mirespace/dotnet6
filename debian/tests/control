@@ -1,0 +1,3 @@
+Tests: basic-checks
+Depends: @
+Restrictions: superficial
