@@ -4,7 +4,7 @@ export DH_VERBOSE = 1
 export DH_OPTIONS = -v
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
 export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-export DEB_LDFLAGS_MAINT_APPEND = -Wl, -lm, --as-needed
+export DEB_LDFLAGS_MAINT_APPEND = -Wl, --as-needed
 
 include /usr/share/dpkg/pkg-info.mk
 include /usr/share/dpkg/architecture.mk
@@ -56,7 +56,6 @@ override_dh_auto_build:
 		&& patch -p1 -i $(CURDIR)/debian/patches/1600installer-12516-portablerid.patch \
 	&& popd
 
-
 	VERBOSE=1 ./build.sh \
     	-- \
     	/v:n \
@@ -65,6 +64,8 @@ override_dh_auto_build:
     	/p:MinimalConsoleLogOutput=false \
     	/p:ContinueOnPrebuiltBaselineError=true \
 
+#override_dh_clean:
+#	rm -rf .dotnet
 
 override_dh_install:
 
@@ -123,15 +124,4 @@ override_dh_install:
 
 override_dh_auto_test:
 
-	#update-ca-certificates
 	VERBOSE=1 ./build.sh --run-smoke-test
-	#$(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/assets/smoke-tests/smoke-test.sh --dotnetDir $(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/bin/Release/net6.0/.dotnet --projectOutput --archiveRestoredPackages --targetRid ubuntu.22.04-x64 --minimal --excludeOnlineTests --excludeOmniSharpTests
-
-
-	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
-	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
-
-	## Check debug symbols in all elf objects.
-	#echo "Testing build results for debug symbols..."
-	#$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
-

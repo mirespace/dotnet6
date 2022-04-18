@@ -1,5 +1,5 @@
-/usr/lib/x86_64-linux-gnu/dotnet/dotnet
-/usr/bin/dotnet
-/etc/profile.d/dotnet.sh
 /etc/dotnet
+/etc/profile.d/dotnet.sh
+/usr/bin/dotnet
+/usr/lib/x86_64-linux-gnu/dotnet/dotnet
 /usr/share/bash-completion/completions/dotnet

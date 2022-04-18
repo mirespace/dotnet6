@@ -1,9 +1,22 @@
 Source: dotnet6
-Section: universe/devel
+Section: devel
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Miriam España Acebal <miriam.espana@canonical.com>
-Build-Depends: debhelper (>=13), clang, llvm, lld, cmake, locales-all, git, libkrb5-dev, libicu-dev, liblttng-ust-dev, libssl-dev, python3, zlib1g-dev, ca-certificates
+Build-Depends: ca-certificates,
+               clang,
+               cmake,
+               debhelper (>=13),
+               git,
+               libicu-dev,
+               libkrb5-dev,
+               liblttng-ust-dev,
+               libssl-dev,
+               lld,
+               llvm,
+               locales-all,
+               python3,
+               zlib1g-dev
 Standards-Version: 4.6.0
 Rules-Requires-Root: binary-targets
 Homepage: https://dot.net/core
@@ -54,7 +67,11 @@ Description: dotNET host resolver
 Package: dotnet-runtime-6.0
 Architecture: amd64
 Multi-Arch: foreign
-Depends: dotnet-hostfxr-6.0, libicu67, libunwind-13, ${misc:Depends}, ${shlibs:Depends}
+Depends: dotnet-hostfxr-6.0,
+         libicu67,
+         libunwind-13,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: dotNET runtime
  The dotNET runtime contains everything needed to run dotNet applications.
  It includes a high performance Virtual Machine as well as the framework
@@ -97,7 +114,12 @@ Description: dotNET 6.0 templates
 Package: dotnet-sdk-6.0
 Architecture: amd64
 Multi-Arch: foreign
-Depends: dotnet-runtime-6.0,aspnetcore-runtime-6.0, dotnet-targeting-packs-6.0, dotnet-templates-6.0, ${misc:Depends}, ${shlibs:Depends}
+Depends: aspnetcore-runtime-6.0,
+         dotnet-runtime-6.0,
+         dotnet-targeting-packs-6.0,
+         dotnet-templates-6.0,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: dotNET 6.0 Software Development Kit
  The dotNET SDK is a collection of command line applications to
  create, build, publish and run dotNet applications.
