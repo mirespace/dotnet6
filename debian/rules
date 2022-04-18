@@ -4,7 +4,7 @@ export DH_VERBOSE = 1
 export DH_OPTIONS = -v
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
 export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+export DEB_LDFLAGS_MAINT_APPEND = -Wl, -lm, --as-needed
 
 include /usr/share/dpkg/pkg-info.mk
 include /usr/share/dpkg/architecture.mk
@@ -24,16 +24,12 @@ ifeq ($(DEB_HOST_ARCH), amd64)
 endif
 _RUNTIME_ID = $(shell . /etc/os-release; echo $${ID}.$${VERSION_ID})
 _SDK_VERSION = $(DEB_VERSION_UPSTREAM)
-_RUNTIME_VERSION = 6.0.3
+_RUNTIME_VERSION = 6.0.4
 
 %:
 	dh $@
 
 override_dh_auto_build:
-
-	pushd src/runtime.* \
-		&& patch -p1 -i $(CURDIR)/debian/patches/66225-fix-runtime-id.patch \
-	&& popd
 
 	pushd src/command-line-api.* \
 		&& patch -p1 -i $(CURDIR)/debian/patches/300command-line-api-use-work-tree-with-git-apply.patch \
@@ -46,14 +42,9 @@ override_dh_auto_build:
 	pushd src/fsharp.* \
 		&& patch -p1 -i $(CURDIR)/debian/patches/500fsharp-use-work-tree-with-git-apply.patch \
 	&& popd
-#		&& patch -p1 -i $(CURDIR)/debian/patches/2000-fix-runtime-id.patch \
 
 	pushd src/xliff-tasks.* \
 		&& patch -p1 -i $(CURDIR)/debian/patches/600xliff-tasks-use-work-tree-with-git-apply.patch \
-	&& popd
-
-#	pushd src/aspnetcore.* \
-		&& patch -p1 -i $(CURDIR)/debian/patches/1100aspnetcore-39471-build-all-packages.patch \
 	&& popd
 
 	pushd src/sdk.* \
@@ -65,11 +56,6 @@ override_dh_auto_build:
 		&& patch -p1 -i $(CURDIR)/debian/patches/1600installer-12516-portablerid.patch \
 	&& popd
 
-	patch -p1 -i $(CURDIR)/debian/patches/13485-fix-path-on-testing.patch
-	patch -p1 -i $(CURDIR)/debian/patches/13485-testing-without-internet.patch
-
-
-#sed -i 's|/usr/share/dotnet|$(LIBDIR)/dotnet|' src/runtime.*/src/native/corehost/hostmisc/pal.unix.cpp
 
 	VERBOSE=1 ./build.sh \
     	-- \
@@ -79,12 +65,8 @@ override_dh_auto_build:
     	/p:MinimalConsoleLogOutput=false \
     	/p:ContinueOnPrebuiltBaselineError=true \
 
-#override_dh_clean:
-#	rm -rf .dotnet
 
 override_dh_install:
-# chmod +x dotnet.sh
-#./dotnet.sh
 
 	sed -e 's|[@]LIBDIR[@]|$(LIBDIR)|g' $(CURDIR)/debian/dotnet.sh.in > $(CURDIR)/debian/dotnet.sh
 	install -dm 0755 $(DESTDIR)/$(LIBDIR)/dotnet
@@ -139,17 +121,17 @@ override_dh_install:
 
 	dh_install
 
-#override_dh_auto_test:
+override_dh_auto_test:
 
-#   #testsuite smoke tests
-#	update-ca-certificates
-#	VERBOSE=1 ./build.sh --run-smoke-test
-#	$(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/assets/smoke-tests/smoke-test.sh --dotnetDir $(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/bin/Release/net6.0/.dotnet --projectOutput --archiveRestoredPackages --targetRid ubuntu.22.04-x64 --minimal --excludeOnlineTests --excludeOmniSharpTests
-#
-#
-#	$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
-#	$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
-#
-#	# Check debug symbols in all elf objects.
-#	echo "Testing build results for debug symbols..."
-#	$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
+	#update-ca-certificates
+	VERBOSE=1 ./build.sh --run-smoke-test
+	#$(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/assets/smoke-tests/smoke-test.sh --dotnetDir $(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/bin/Release/net6.0/.dotnet --projectOutput --archiveRestoredPackages --targetRid ubuntu.22.04-x64 --minimal --excludeOnlineTests --excludeOmniSharpTests
+
+
+	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
+	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
+
+	## Check debug symbols in all elf objects.
+	#echo "Testing build results for debug symbols..."
+	#$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
+
