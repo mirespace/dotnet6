@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Usage:
-#   build-dotnet-tarball [--bootstrap] <tag-from-installer>
+#   build-dotnet-tarball [--bootstrap] <tag-from-installer-repo>
 #
 # Creates a source archive from a tag (or commit) at github.com/dotnet/installer
 
@@ -9,6 +9,9 @@
 # tag, build it and then create a tarball from the archive directory
 # it creates. Also, it is likely that the source archive is only
 # buildable on the OS it was initially created in.
+
+# This script has modifications on the work done
+# by Omair Majid <omajid@redhat.com>. Thanks to him!
 
 set -euo pipefail
 IFS=$'\n\t'

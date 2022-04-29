@@ -1,0 +1,4 @@
+Name: dotnet
+Link: /usr/bin/dotnet
+Alternative: @basedir@/dotnet
+Dependents:

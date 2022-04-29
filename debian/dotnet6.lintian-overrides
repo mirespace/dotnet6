@@ -2,3 +2,5 @@
 dotnet6: source-contains-prebuilt-windows-binary
 #patches are applied in the rules as folder changes between versions
 dotnet6: patch-file-present-but-not-mentioned-in-series
+#multilicense
+dotnet6: license-problem-non-free-RFC

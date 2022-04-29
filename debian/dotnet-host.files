@@ -1,9 +1,0 @@
-$(LIBDIR)/dotnet
-$(LIBDIR)/dotnet/host
-$(LIBDIR)/dotnet/host/fxr
-$(BINDIR)/dotnet
-$(SYSCONFDIR)/profile.d/dotnet.sh
-$(SYSCONFDIR)/dotnet
-$(DATADIR)/bash-completion
-$(DATADIR)/bash-completion/completions
-$(DATADIR)/bash-completion/completions/dotnet
