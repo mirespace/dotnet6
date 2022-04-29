@@ -1,3 +1,7 @@
-Tests: basic-checks
+Tests: basic-checks basic-commands
 Depends: @
 Restrictions: superficial
+
+Tests: basic-commands
+Depends: @
+Restrictions: isolation-container

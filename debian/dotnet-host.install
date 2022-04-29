@@ -1,5 +1,6 @@
-/etc/dotnet
+/etc/dotnet/
 /etc/profile.d/dotnet.sh
-/usr/bin/dotnet
-/usr/lib/x86_64-linux-gnu/dotnet/dotnet
+/usr/lib/dotnet/dotnet6/dotnet
+/usr/lib/dotnet/dotnet6/man
+/usr/lib/dotnet/dotnet6/install_location*
 /usr/share/bash-completion/completions/dotnet

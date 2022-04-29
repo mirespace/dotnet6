@@ -1,5 +1,4 @@
 #!/usr/bin/make -f
-# You must remove unused comment lines for the released package.
 export DH_VERBOSE = 1
 export DH_OPTIONS = -v
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
@@ -9,15 +8,19 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl, --as-needed
 include /usr/share/dpkg/pkg-info.mk
 include /usr/share/dpkg/architecture.mk
 
-SHELL = /bin/bash
+SHELL = /bin/bash 
 export HOME=$(shell mktemp -d)
 PREFIX = /usr
 SYSCONFDIR = /etc
 BINDIR = $(PREFIX)/bin
-LIBDIR = $(PREFIX)/lib/$(DEB_HOST_MULTIARCH)
+LIBDIR = $(PREFIX)/lib
 DATADIR = $(PREFIX)/share
 MANDIR = $(DATADIR)/man
 DESTDIR = $(CURDIR)/debian/tmp
+DOTNET_TOP = $(LIBDIR)/dotnet
+dotnet_dirname = dotnet6
+DOTNETLIBDIR=$(DOTNET_TOP)/$(dotnet_dirname)
+dotnet_etcdir=$(SYSCONFDIR)/dotnet
 
 ifeq ($(DEB_HOST_ARCH), amd64)
 	_RUNTIME_ARCH = x64
@@ -30,6 +33,10 @@ _RUNTIME_VERSION = 6.0.4
 	dh $@
 
 override_dh_auto_build:
+
+	pushd src/runtime.* \
+		&& patch -p1 -i $(CURDIR)/debian/patches/68212-shlibdeps-warning-log2.patch \
+	&& popd
 
 	pushd src/command-line-api.* \
 		&& patch -p1 -i $(CURDIR)/debian/patches/300command-line-api-use-work-tree-with-git-apply.patch \
@@ -64,39 +71,36 @@ override_dh_auto_build:
     	/p:MinimalConsoleLogOutput=false \
     	/p:ContinueOnPrebuiltBaselineError=true \
 
-#override_dh_clean:
-#	rm -rf .dotnet
-
 override_dh_install:
 
-	sed -e 's|[@]LIBDIR[@]|$(LIBDIR)|g' $(CURDIR)/debian/dotnet.sh.in > $(CURDIR)/debian/dotnet.sh
-	install -dm 0755 $(DESTDIR)/$(LIBDIR)/dotnet
+	sed -e 's|[@]LIBDIR[@]|$(DOTNETLIBDIR)|g' $(CURDIR)/debian/dotnet.sh.in > $(CURDIR)/debian/dotnet.sh
+	install -dm 0755 $(DESTDIR)/$(DOTNETLIBDIR)
 	ls artifacts/$(_RUNTIME_ARCH)/Release
-	tar xf artifacts/$(_RUNTIME_ARCH)/Release/dotnet-sdk-$(_SDK_VERSION)-$(_RUNTIME_ID)-$(_RUNTIME_ARCH).tar.gz -C $(DESTDIR)/$(LIBDIR)/dotnet/
+	tar xf artifacts/$(_RUNTIME_ARCH)/Release/dotnet-sdk-$(_SDK_VERSION)-$(_RUNTIME_ID)-$(_RUNTIME_ARCH).tar.gz -C $(DESTDIR)/$(DOTNETLIBDIR)
 
 	# See https://github.com/dotnet/source-build/issues/2579
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'testhost.x86' -delete
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'vstest.console' -delete
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'testhost.x86' -delete
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'vstest.console' -delete
 
 
 	# Fix executable permissions on files
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'apphost' -exec chmod +x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'singlefilehost' -exec chmod +x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'lib*so' -exec chmod +x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'apphost' -exec chmod +x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'singlefilehost' -exec chmod +x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name 'lib*so' -exec chmod +x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.a' -exec chmod -x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.dll' -exec chmod -x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.h' -exec chmod 0644 {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.json' -exec chmod -x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.pdb' -exec chmod -x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.props' -exec chmod -x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.pubxml' -exec chmod -x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.targets' -exec chmod -x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.txt' -exec chmod -x {} \;
-	find $(DESTDIR)/$(LIBDIR)/dotnet/ -type f -name '*.xml' -exec chmod -x {} \;
-#
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'apphost' -exec chmod +x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'singlefilehost' -exec chmod +x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'lib*so' -exec chmod +x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'apphost' -exec chmod +x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'singlefilehost' -exec chmod +x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'lib*so' -exec chmod +x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.a' -exec chmod -x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.dll' -exec chmod -x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.h' -exec chmod 0644 {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.json' -exec chmod -x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.pdb' -exec chmod -x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.props' -exec chmod -x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.pubxml' -exec chmod -x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.targets' -exec chmod -x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.txt' -exec chmod -x {} \;
+	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.xml' -exec chmod -x {} \;
+
 	install -dm 0755 $(DESTDIR)$(SYSCONFDIR)/profile.d/
 	install $(CURDIR)/debian/dotnet.sh $(DESTDIR)$(SYSCONFDIR)/profile.d/
 
@@ -106,22 +110,60 @@ override_dh_install:
 
 
 	install -dm 0755 $(DESTDIR)/$(BINDIR)
-	ln -s ../../$(LIBDIR)/dotnet/dotnet $(DESTDIR)/$(BINDIR)/
 
 	install -dm 0755 $(DESTDIR)/$(MANDIR)/man1/
-	find -iname 'dotnet*.1' -type f -exec cp {} $(DESTDIR)/$(MANDIR)/man1/ \;
+	install -dm 0755 $(DESTDIR)/$(DOTNETLIBDIR)/man/man1
+
+
+	find -iname 'dotnet*.1' -type f -exec cp {} $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/ \;	
+	gzip -9v -n $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/*
+
+
+	for f in $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/*.1.gz; do \
+                f=$$(basename $$f); \
+		echo " /usr/share/man/man1/$$f $$f $(DOTNETLIBDIR)/man/man1/$$f" >> debian/tmp/slave;  \
+	done
 
 	install -dm 0755 $(DESTDIR)/$(SYSCONFDIR)/dotnet
-	echo "$(LIBDIR)/dotnet" >> install_location
-	install install_location $(DESTDIR)/$(SYSCONFDIR)/dotnet/
-	echo "$(LIBDIR)/dotnet" >> install_location_$(_RUNTIME_ARCH)
-	install install_location_$(_RUNTIME_ARCH) $(DESTDIR)/$(SYSCONFDIR)/dotnet/
+	echo "$(DOTNETLIBDIR)" >> install_location
+	install install_location $(DESTDIR)/$(DOTNETLIBDIR)
+	echo "$(DOTNETLIBDIR)" >> install_location_$(_RUNTIME_ARCH)
+	install install_location_$(_RUNTIME_ARCH) $(DESTDIR)/$(DOTNETLIBDIR)
+	echo " /etc/dotnet/install_location install_location $(DOTNETLIBDIR)/install_location" >> debian/tmp/slave
+	echo " /etc/dotnet/install_location_$(_RUNTIME_ARCH) install_location_$(_RUNTIME_ARCH) $(DOTNETLIBDIR)/install_location_$(_RUNTIME_ARCH)" >> debian/tmp/slave
 
-	install -dm 0755 $(DESTDIR)$(LIBDIR)/dotnet/source-built-artifacts
-	install -m 0644 artifacts/$(_RUNTIME_ARCH)/Release/Private.SourceBuilt.Artifacts.*.tar.gz $(DESTDIR)/$(LIBDIR)/dotnet/source-built-artifacts/
+	install -dm 0755 $(DESTDIR)/$(DOTNETLIBDIR)/source-built-artifacts
+	install -m 0644 artifacts/$(_RUNTIME_ARCH)/Release/Private.SourceBuilt.Artifacts.*.tar.gz $(DESTDIR)/$(DOTNETLIBDIR)/source-built-artifacts/
+
+	cat debian/tmp/slave >> debian/dotnet-host.alternatives.in
+	echo "Priority: 60104" >> debian/dotnet-host.alternatives.in
+
+	for f in debian/*.in; do \
+	  f2=$$(echo $$f | sed 's/\.in$$//'); \
+	  sed -e 's,@DOTNET_TOP@,$(DOTNET_TOP),g' \
+	      -e 's,@basedir@,$(DOTNETLIBDIR),g' \
+	      -e 's,@dotnet_dirname@,$(dotnet_dirname),g' \
+	      -e 's,@etcdir@,$(dotnet_etcdir),g' \
+	      -e 's,@multiarch@,$(DEB_HOST_MULTIARCH),g' \
+	      -e 's,@hostarch@,$(DEB_HOST_ARCH),g' \
+	      -e 's,@runtimearch@,$(_RUNTIME_ARCH),g' \
+	    $$f > $$f2; \
+	done
+
 
 	dh_install
 
-override_dh_auto_test:
+#override_dh_auto_test:
 
-	VERBOSE=1 ./build.sh --run-smoke-test
+	#update-ca-certificates
+	#VERBOSE=1 ./build.sh --run-smoke-test
+	#$(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/assets/smoke-tests/smoke-test.sh --dotnetDir $(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/bin/Release/net6.0/.dotnet --projectOutput --archiveRestoredPackages --targetRid ubuntu.22.04-x64 --minimal --excludeOnlineTests --excludeOmniSharpTests
+
+
+	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
+	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
+
+	## Check debug symbols in all elf objects.
+	#echo "Testing build results for debug symbols..."
+	#$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
+

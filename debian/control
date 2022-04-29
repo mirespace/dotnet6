@@ -68,7 +68,7 @@ Package: dotnet-runtime-6.0
 Architecture: amd64
 Multi-Arch: foreign
 Depends: dotnet-hostfxr-6.0,
-         libicu67,
+         libicu70,
          libunwind-13,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -115,9 +115,12 @@ Package: dotnet-sdk-6.0
 Architecture: amd64
 Multi-Arch: foreign
 Depends: aspnetcore-runtime-6.0,
+         aspnetcore-targeting-pack-6.0,
+         dotnet-apphost-pack-6.0,
          dotnet-runtime-6.0,
-         dotnet-targeting-packs-6.0,
+         dotnet-targeting-pack-6.0,
          dotnet-templates-6.0,
+         netstandard-targeting-pack-2.1,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: dotNET 6.0 Software Development Kit
@@ -141,11 +144,40 @@ Description: Internal package for building dotNet 6.0 Software Development Kit
  .
  These are not meant for general use.
 
-Package: dotnet-targeting-packs-6.0
+Package: dotnet-targeting-pack-6.0
 Architecture: amd64
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Internal packages
- These are not meant for general use. Includes dotnet-apphost-pack-6.0,
- dotnet-targeting-pack-6.0, aspnetcore-targeting-pack-6.0 and
- netstandard-targeting-pack-2.1.
+Description: Internal - targeting pack for Microsoft.NETCore.App 6.0
+ This package provides a targeting pack for Microsoft.NETCore.App 6.0
+ that allows developers to compile against and target Microsoft.NETCore.App 6.0
+ applications using the .NET SDK. This are not meant for general use.
+
+Package: netstandard-targeting-pack-2.1
+Architecture: amd64
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Internal - targeting pack for NETStandard.Library 2.1
+ This package provides a targeting pack for NETStandard.Library 2.1
+ that allows developers to compile against and target NETStandard.Library 2.1
+ applications using the .NET SDK.
+ This are not meant for general use.
+
+Package: aspnetcore-targeting-pack-6.0
+Architecture: amd64
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Internal - targeting pack for Microsoft.AspNetCore.App 6.0
+ This package provides a targeting pack for Microsoft.AspNetCore.App 6.0
+ that allows developers to compile against and target
+ Microsoft.AspNetCore.App 6.0 applications using the .NET SDK.
+ This are not meant for general use.
+
+Package: dotnet-apphost-pack-6.0
+Architecture: amd64
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Internal - targeting pack for Microsoft.NETCore.App 6.0
+ This package provides a targeting pack for Microsoft.NETCore.App 6.0
+ that allows developers to compile against and target Microsoft.NETCore.App 6.0
+ applications using the .NET SDK. This not meant for general use.
