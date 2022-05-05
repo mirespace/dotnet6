@@ -18,7 +18,7 @@ IFS=$'\n\t'
 
 function print_usage {
     echo "Usage:"
-    echo "$0 [--bootstrap] <tag-from-installer>"
+    echo "$0 [--bootstrap] <tag-from-installer-repo>"
     echo
     echo "Creates a source archive from a tag at https://github.com/dotnet/installer"
     echo ""
@@ -26,8 +26,8 @@ function print_usage {
 }
 
 function clean_dotnet_cache {
-    sudo rm -rf ~/.aspnet ~/.dotnet/ ~/.nuget/ ~/.local/share/NuGet ~/.templateengine
-    sudo rm -rf /tmp/NuGet /tmp/NuGetScratch /tmp/.NETCore* /tmp/.NETStandard* /tmp/.dotnet /tmp/dotnet.* /tmp/clr-debug-pipe* /tmp/Razor-Server /tmp/CoreFxPipe* /tmp/VBCSCompiler /tmp/.NETFramework*
+    rm -rf ~/.aspnet ~/.dotnet/ ~/.nuget/ ~/.local/share/NuGet ~/.templateengine
+    rm -rf /tmp/NuGet /tmp/NuGetScratch /tmp/.NETCore* /tmp/.NETStandard* /tmp/.dotnet /tmp/dotnet.* /tmp/clr-debug-pipe* /tmp/Razor-Server /tmp/CoreFxPipe* /tmp/VBCSCompiler /tmp/.NETFramework*
 }
 
 function check_bootstrap_environment {
@@ -97,7 +97,7 @@ fi
 
 set -x
 
-dir_name="dotnet-${tag}"
+dir_name="dotnet6-${tag}"
 unmodified_tarball_name="${dir_name}.orig"
 tarball_name="${dir_name}"
 tarball_suffix=.tar.gz
@@ -118,7 +118,7 @@ if [ ! -f "${unmodified_tarball_name}.tar.gz" ]; then
     pushd "${temp_dir}"
     git clone https://github.com/dotnet/installer
     pushd installer
-    git checkout "v${tag%+ds1}-source-build"
+    git checkout "v${tag%+ds1}"
     git submodule update --init --recursive
     #patch -p1 -i ../../debian/patches/installer-12736-no-sudo.patch
     #patch -p1 -i ../../debian/patches/installer-12852-fix-internal-urls.patch
@@ -168,7 +168,7 @@ if [[ ${build_bootstrap} == true ]]; then
     mkdir -p fixup-previously-source-built-artifacts
     pushd fixup-previously-source-built-artifacts
     tar xf ../packages/archive/Private.SourceBuilt.Artifacts.*.tar.gz
-    find . -iname '*fedora*nupkg' -delete
+    find . -iname '*ubuntu*nupkg' -delete
     # We must keep the original file names in the archive, even prepending a ./ leads to issues
     tar -I 'gzip -1' -cf ../packages/archive/Private.SourceBuilt.Artifacts.*.tar.gz *
     popd

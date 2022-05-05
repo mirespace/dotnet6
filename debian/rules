@@ -1,15 +1,21 @@
 #!/usr/bin/make -f
-export DH_VERBOSE = 1
-export DH_OPTIONS = -v
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
-export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
 export DEB_LDFLAGS_MAINT_APPEND = -Wl, --as-needed
 
 include /usr/share/dpkg/pkg-info.mk
 include /usr/share/dpkg/architecture.mk
 
-SHELL = /bin/bash 
+SHELL = /bin/bash
 export HOME=$(shell mktemp -d)
+
+ifeq ($(DEB_HOST_ARCH), amd64)
+	_RUNTIME_ARCH = x64
+endif
+_RUNTIME_ID = $(shell . /etc/os-release; echo $${ID}.$${VERSION_ID})
+_SDK_VERSION = $(DEB_VERSION_UPSTREAM)
+_RUNTIME_VERSION = 6.0.4
+_VERSION = $(shell echo $(_SDK_VERSION) | cut -d'.' -f1)
+
 PREFIX = /usr
 SYSCONFDIR = /etc
 BINDIR = $(PREFIX)/bin
@@ -18,16 +24,11 @@ DATADIR = $(PREFIX)/share
 MANDIR = $(DATADIR)/man
 DESTDIR = $(CURDIR)/debian/tmp
 DOTNET_TOP = $(LIBDIR)/dotnet
-dotnet_dirname = dotnet6
+dotnet_version = dotnet$(_VERSION)
+dotnet_dirname = $(dotnet_version)-$(_SDK_VERSION)
 DOTNETLIBDIR=$(DOTNET_TOP)/$(dotnet_dirname)
 dotnet_etcdir=$(SYSCONFDIR)/dotnet
 
-ifeq ($(DEB_HOST_ARCH), amd64)
-	_RUNTIME_ARCH = x64
-endif
-_RUNTIME_ID = $(shell . /etc/os-release; echo $${ID}.$${VERSION_ID})
-_SDK_VERSION = $(DEB_VERSION_UPSTREAM)
-_RUNTIME_VERSION = 6.0.4
 
 %:
 	dh $@
@@ -100,7 +101,7 @@ override_dh_install:
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.targets' -exec chmod -x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.txt' -exec chmod -x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.xml' -exec chmod -x {} \;
-
+	
 	install -dm 0755 $(DESTDIR)$(SYSCONFDIR)/profile.d/
 	install $(CURDIR)/debian/dotnet.sh $(DESTDIR)$(SYSCONFDIR)/profile.d/
 
@@ -115,12 +116,12 @@ override_dh_install:
 	install -dm 0755 $(DESTDIR)/$(DOTNETLIBDIR)/man/man1
 
 
-	find -iname 'dotnet*.1' -type f -exec cp {} $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/ \;	
+	find -iname 'dotnet*.1' -type f -exec cp {} $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/ \;
 	gzip -9v -n $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/*
 
 
 	for f in $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/*.1.gz; do \
-                f=$$(basename $$f); \
+        f=$$(basename $$f); \
 		echo " /usr/share/man/man1/$$f $$f $(DOTNETLIBDIR)/man/man1/$$f" >> debian/tmp/slave;  \
 	done
 
@@ -138,11 +139,16 @@ override_dh_install:
 	cat debian/tmp/slave >> debian/dotnet-host.alternatives.in
 	echo "Priority: 60104" >> debian/dotnet-host.alternatives.in
 
+
 	for f in debian/*.in; do \
 	  f2=$$(echo $$f | sed 's/\.in$$//'); \
 	  sed -e 's,@DOTNET_TOP@,$(DOTNET_TOP),g' \
 	      -e 's,@basedir@,$(DOTNETLIBDIR),g' \
 	      -e 's,@dotnet_dirname@,$(dotnet_dirname),g' \
+	      -e 's,@major@,$(_VERSION),g' \
+     	  -e 's,@dotnet_version@,$(dotnet_version),g' \
+	      -e 's,@rid@,$(_RUNTIME_ID),g' \
+	      -e 's,@arch@,$(_RUNTIME_ARCH),g' \
 	      -e 's,@etcdir@,$(dotnet_etcdir),g' \
 	      -e 's,@multiarch@,$(DEB_HOST_MULTIARCH),g' \
 	      -e 's,@hostarch@,$(DEB_HOST_ARCH),g' \
@@ -162,8 +168,4 @@ override_dh_install:
 
 	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
 	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
-
-	## Check debug symbols in all elf objects.
-	#echo "Testing build results for debug symbols..."
-	#$(CURDIR)/debian/check-debug-symbols.py -v $(DESTDIR)/$(LIBDIR)/dotnet/
 
