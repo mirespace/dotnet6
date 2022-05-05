@@ -14,7 +14,7 @@ To recreate tarball and source code for building the package, the steps are the 
 0. Clone the repository and get into it
 1. `uscan --download-version 6.0.104`
 2. `uupdate dotnet-6.0.104.tar.xz`
-3. `cp dotnet-6.0.104.tar.xz ..`
+3. `cp dotnet6-6.0.104.tar.xz ..`
 4. `cd ../dotnet6-6.0.104`
 5. `sbuild -d jammy --arch=amd64  --purge-build=successful --debbuildopts='--buildinfo-option=-O' --build-dir=..`
 
