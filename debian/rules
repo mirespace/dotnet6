@@ -101,14 +101,9 @@ override_dh_install:
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.targets' -exec chmod -x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.txt' -exec chmod -x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.xml' -exec chmod -x {} \;
-	
+
 	install -dm 0755 $(DESTDIR)$(SYSCONFDIR)/profile.d/
 	install $(CURDIR)/debian/dotnet.sh $(DESTDIR)$(SYSCONFDIR)/profile.d/
-
-	install -dm 0755 $(DESTDIR)/$(DATADIR)/bash-completion/completions
-	# dynamic completion needs the file to be named the same as the base command
-	install src/sdk.*/scripts/register-completions.bash $(DESTDIR)/$(DATADIR)/bash-completion/completions/dotnet
-
 
 	install -dm 0755 $(DESTDIR)/$(BINDIR)
 
@@ -168,4 +163,3 @@ override_dh_install:
 
 	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
 	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
-

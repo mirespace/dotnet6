@@ -6,6 +6,7 @@ XSBC-Original-Maintainer: Miriam España Acebal <miriam.espana@canonical.com>
 Build-Depends: ca-certificates,
                clang,
                cmake,
+               bash-completion,
                debhelper (>=13),
                git,
                libicu-dev,

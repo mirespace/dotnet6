@@ -3,4 +3,3 @@
 @basedir@/dotnet
 @basedir@/man
 @basedir@/install_location*
-/usr/share/bash-completion/completions/dotnet
