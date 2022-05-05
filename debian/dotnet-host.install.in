@@ -1,0 +1,5 @@
+/etc/dotnet/
+/etc/profile.d/dotnet.sh
+@basedir@/dotnet
+@basedir@/man
+@basedir@/install_location*

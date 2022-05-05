@@ -2,3 +2,5 @@ Name: dotnet
 Link: /usr/bin/dotnet
 Alternative: @basedir@/dotnet
 Dependents:
+ @DOTNET_TOP@/@dotnet_version@ @dotnet_version@ @basedir@
+ /usr/share/bash-completion/completions/dotnet dotnet_completion @basedir@/bash-completion/completions/dotnet

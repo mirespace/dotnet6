@@ -97,7 +97,7 @@ fi
 
 set -x
 
-dir_name="dotnet-${tag}"
+dir_name="dotnet6-${tag}"
 unmodified_tarball_name="${dir_name}.orig"
 tarball_name="${dir_name}"
 tarball_suffix=.tar.gz
