@@ -118,7 +118,7 @@ if [ ! -f "${unmodified_tarball_name}.tar.gz" ]; then
     pushd "${temp_dir}"
     git clone https://github.com/dotnet/installer
     pushd installer
-    git checkout "v${tag%+ds1}"
+    git checkout "v${tag}"
     git submodule update --init --recursive
     #patch -p1 -i ../../debian/patches/installer-12736-no-sudo.patch
     #patch -p1 -i ../../debian/patches/installer-12852-fix-internal-urls.patch
