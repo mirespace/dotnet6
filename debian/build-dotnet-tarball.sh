@@ -13,6 +13,10 @@
 # This script has modifications on the work done
 # by Omair Majid <omajid@redhat.com>. Thanks to him!
 
+
+trap on_exit TERM
+trap on_exit EXIT 
+
 set -euo pipefail
 IFS=$'\n\t'
 
@@ -25,9 +29,46 @@ function print_usage {
     echo "  --bootstrap     build a source tarball usable for bootstrapping .NET"
 }
 
+function on_exit {
+
+    local tarballname
+    local tempdir
+
+    clean_dotnet_cache
+
+    tarballname=${tarball_name:-}
+    tempdir=${temp_dir:-}
+
+    folders_to_clean=("foo" "${tarballname}" "${tempdir}" \
+                      "fixup-previously-source-built-artifacts" ".dotnet")
+
+    for folder in ${folders_to_clean[@]}; do
+        if [ -d $folder ]; then
+            rm -rf "$folder"
+        fi
+    done
+
+    find . -type f -iname '*.tar.gz' -delete
+    
+}
+
 function clean_dotnet_cache {
-    rm -rf ~/.aspnet ~/.dotnet/ ~/.nuget/ ~/.local/share/NuGet ~/.templateengine
-    rm -rf /tmp/NuGet /tmp/NuGetScratch /tmp/.NETCore* /tmp/.NETStandard* /tmp/.dotnet /tmp/dotnet.* /tmp/clr-debug-pipe* /tmp/Razor-Server /tmp/CoreFxPipe* /tmp/VBCSCompiler /tmp/.NETFramework*
+
+    folders_cached=("/tmp/NuGet" "/tmp/NuGetScratch" "/tmp/.NETCore*" "/tmp/.NETStandard*" "/tmp/.dotnet" \
+                    "/tmp/dotnet.*" "/tmp/clr-debug-pipe*" "/tmp/Razor-Server" "/tmp/CoreFxPipe*" "/tmp/VBCSCompiler" \
+                    "/tmp/.NETFramework*")
+
+    for folder in ${folders_cached[@]}; do
+        if [ -d $folder ]; then
+            rm -rf "$folder"
+        fi
+    done
+								        
+}
+
+function clean_uscan_download {
+#	find -L .. -samefile "../${tarball_name}${tarball_suffix}" -delete
+   find .. -name "dotnet*${tag}*${tarball_suffix}" -delete
 }
 
 function check_bootstrap_environment {
@@ -97,10 +138,13 @@ fi
 
 set -x
 
-dir_name="dotnet6-${tag}"
-unmodified_tarball_name="${dir_name}.orig"
-tarball_name="${dir_name}"
+
+dir_name="dotnet6_${tag}"
+unmodified_tarball_name="${dir_name}.orig_not_clean"
+tarball_name="${dir_name}.orig"
 tarball_suffix=.tar.gz
+
+clean_uscan_download
 
 if [[ ${build_bootstrap} == true ]]; then
 #    unmodified_tarball_name="${unmodified_tarball_name}-${arch}-bootstrap"
@@ -109,8 +153,9 @@ if [[ ${build_bootstrap} == true ]]; then
 fi
 
 if [ -f "${tarball_name}${tarball_suffix}" ]; then
-    echo "error: ${tarball_name}${tarball_suffix} already exists"
-    exit 1
+    rm "${tarball_name}${tarball_suffix}" 
+    #echo "error: ${tarball_name}${tarball_suffix} already exists"
+    #exit 1
 fi
 
 if [ ! -f "${unmodified_tarball_name}.tar.gz" ]; then
@@ -120,8 +165,6 @@ if [ ! -f "${unmodified_tarball_name}.tar.gz" ]; then
     pushd installer
     git checkout "v${tag}"
     git submodule update --init --recursive
-    #patch -p1 -i ../../debian/patches/installer-12736-no-sudo.patch
-    #patch -p1 -i ../../debian/patches/installer-12852-fix-internal-urls.patch
     clean_dotnet_cache
     mkdir -p "../${unmodified_tarball_name}"
     ./build.sh /p:ArcadeBuildTarball=true /p:TarballDir="$(readlink -f ../"${unmodified_tarball_name}")" /p:CleanWhileBuilding=true
@@ -173,10 +216,6 @@ if [[ ${build_bootstrap} == true ]]; then
     tar -I 'gzip -1' -cf ../packages/archive/Private.SourceBuilt.Artifacts.*.tar.gz *
     popd
     rm -rf fixup-previously-source-built-artifacts
-
-else
-    find . -type f -iname '*.tar.gz' -delete
-    rm -rf .dotnet
 fi
 
 # Remove files with funny licenses, crypto implementations and other
@@ -200,7 +239,11 @@ rm -r src/source-build.*/src/humanizer/samples/
 popd
 
 if [[ ${build_bootstrap} == true ]]; then
-    tar -I 'xz -T 0' -cf "${tarball_name}${tarball_suffix}" "${tarball_name}"
+    tar -I 'xz -T 0' -cf "../${tarball_name}${tarball_suffix}" "${tarball_name}"
+    find . -type f -iname '*.tar.gz' -delete
+    rm -rf .dotnet
 else
-    tar -czf "${tarball_name}${tarball_suffix}" "${tarball_name}"
+    find . -type f -iname '*.tar.gz' -delete
+    rm -rf .dotnet
+    tar -czf "../${tarball_name}${tarball_suffix}" "${tarball_name}"
 fi
