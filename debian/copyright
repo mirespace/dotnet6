@@ -1,6 +1,3 @@
-# Please double check copyright with the licensecheck(1) command.
-
-#----------------------------------------------------------------------------
 # Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
 # license/copyright files.
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
@@ -28,86 +25,18 @@ src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore
 src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostresolver/2.1.0/THIRD-PARTY-NOTICES.TXT
 src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.platforms/5.0.0/THIRD-PARTY-NOTICES.TXT
 src/source-build.10d0f7e94aa45889155c312f51cfc01bf326b853/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
-
-Files: *
-Copyright: Microsoft
-License: MIT and Apache-2.0 and BSD-3 and LGPLv2+ and CC-BY-4.0 and CC0-1.0 and MS-PL and EPL-1.0 and GPL+ and GPLv2 and ISC and OFL and zlib
-
-
-Files: debian/*
-Copyright: 2022 Miriam España Acebal <miriam.espana@canonical.com>
-License: MIT or Apache-2.0
-
-
-# Please double check copyright with the licensecheck(1) command.
-
-#----------------------------------------------------------------------------
-# Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
-# license/copyright files.
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: dotnet
-Source: https://github.com/dotnet/
-Files-Excluded:
-.dotnet/ThirdPartyNotices.txt
-packages/text-only/microsoft.net.workload.mono.toolchain.manifest-6.0.100/6.0.?/THIRD-PARTY-NOTICES.TXT
-src/diagnostics.*/THIRD-PARTY-NOTICES.TXT
-src/installer.*/THIRD-PARTY-NOTICES
-src/runtime.*/THIRD-PARTY-NOTICES.TXT
-src/runtime.*/src/installer/pkg/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/3.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/3.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/5.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/netstandard.library.ref/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.net.sdk.il/6.0.0-rc.1.21415.6/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnetapphost/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnetapphost/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostpolicy/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostpolicy/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostresolver/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostresolver/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.platforms/5.0.0/THIRD-PARTY-NOTICES.TXT
 src/source-build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
 
+Files: *
+Copyright: The .NET Foundation and Contributors
+License: Expat
+
 Files: debian/*
 Copyright: 2022 Miriam España Acebal <miriam.espana@canonical.com>
 License: MIT or Apache-2.0
 
-Files: *
-Copyright: no-info-found
-License: Expat
-
 Files: .dotnet/*
-Copyright: UNKNOWN
-License: UNKNOWN
-
-Files: .dotnet/dotnet-install.sh
-Copyright: The .NET Foundation and contributors
-License: MIT
-
-Files: .dotnet/packs/*
-Copyright: no-info-found
-License: Expat
-
-Files: .dotnet/packs/Microsoft.NETCore.App.Host.linux-x64/6.0.2/runtimes/linux-x64/native/apphost/*.h
-Copyright: The .NET Foundation
-License: MIT
-
-Files: .dotnet/sdk/6.0.102/Roslyn/Microsoft.*
-Copyright: The .NET Foundation
-License: MIT
-
-Files: .dotnet/sdk/6.0.102/Sdks/*
-Copyright: The .Net Foundation
-License: All_rights_reserved
-
-Files: .dotnet/sdk/6.0.102/Sdks/Microsoft.Docker.Sdk/Sdk/*
-Copyright: The .Net Foundation
-License: MIT
-
-Files: .dotnet/sdk/6.0.102/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Compatibility.*
-Copyright: The .Net Foundation
+Copyright: The .NET Foundation and Contributors
 License: MIT
 
 Files: ArcadeOverrides/*
@@ -501,8 +430,8 @@ Copyright: Jörn Zaefferer
 License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer; Licensed MIT
-License: UNKNOWN
+Copyright: 2017, Jörn Zaefferer
+License: MIT
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -511,7 +440,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: UNKNOWN
+License: MIT
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -616,8 +545,8 @@ Copyright: Jörn Zaefferer
 License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer; Licensed MIT
-License: UNKNOWN
+Copyright: 2017, Jörn Zaefferer
+License: MIT
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -694,10 +623,6 @@ License: Expat
 Files: src/arcade.*/src/Microsoft.DotNet.Build.Tasks.Installers/src/BuildFPMToolPreReqs.cs
 Copyright: filesreplacing tokens with values from config json / (configJson);
 License: Expat
-
-Files: src/arcade.*/src/Microsoft.DotNet.SignTool/src/PEInfo.cs
-Copyright: string publicKeyToken, string targetFramework)
-License: UNKNOWN
 
 Files: src/arcade.*/src/Microsoft.DotNet.XUnitConsoleRunner/src/common/AssemblyResolution/Microsoft.DotNet.PlatformAbstractions/Platform.cs
  src/arcade.*/src/Microsoft.DotNet.XUnitConsoleRunner/src/common/AssemblyResolution/Microsoft.DotNet.PlatformAbstractions/RuntimeEnvironment.cs
@@ -873,8 +798,8 @@ Copyright: Jörn Zaefferer
 License: Expat
 
 Files: src/aspnetcore.*/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer; Licensed MIT
-License: UNKNOWN
+Copyright: 2017, Jörn Zaefferer
+License: MIT
 
 Files: src/aspnetcore.*/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/additional-methods.js
  src/aspnetcore.*/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -996,7 +921,7 @@ Copyright: 2011-2021, Twitter, Inc.
 License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/*
@@ -1039,15 +964,11 @@ Copyright: 2017, Yoshifumi Kawai and contributors
 License: BSD-2-clause and/or Expat
 
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/benchmark/*
-Copyright: All contributors.
-License: Expat
-
-Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/sandbox/*
-Copyright: All contributors.
-License: Expat
-
-Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/*
-Copyright: All contributors.
+ src/aspnetcore.*/src/submodules/MessagePack-CSharp/sandbox/*
+ src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/*
+ src/aspnetcore.*/src/submodules/MessagePack-CSharp/tests/*
+Copyright: Yoshifumi Kawai <ils@neue.cc>
+ Andrew Arnott <andrewarnott@gmail.com>
 License: Expat
 
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/BitOperations.cs
@@ -1055,7 +976,7 @@ Copyright: The .NET Foundation
 License: Expat
 
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/BufferWriter.cs
-Copyright: Andrew Arnott.
+Copyright: Andrew Arnott <andrewarnott@gmail.com>
 License: Apache-2.0
 
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/HashCode.cs
@@ -1067,19 +988,13 @@ Copyright: from file copied from https:github.com/AArnott/Nerdbank.Streams/blob/
 License: Expat
 
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/LZ4/*
-Copyright: All contributors.
+Copyright: Yoshifumi Kawai <ils@neue.cc>
+ Andrew Arnott <andrewarnott@gmail.com>
 License: BSD-2-clause and/or Expat
 
-Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/LZ4/LZ4Codec.Helper.cs
-Copyright: All contributors.
-License: Expat
-
-Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/tests/*
-Copyright: All contributors.
-License: Expat
-
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/tests/MessagePack.Tests/Utils/*
-Copyright: All contributors.
+Copyright: Yoshifumi Kawai <ils@neue.cc>
+ Andrew Arnott <andrewarnott@gmail.com>
 License: Expat and/or MS-PL
 
 Files: src/aspnetcore.*/src/submodules/googletest/*
@@ -1094,17 +1009,9 @@ Files: src/aspnetcore.*/src/submodules/googletest/googletest/test/gtest_skip_che
 Copyright: 2018, 2019, Google LLC.
 License: BSD-3-clause
 
-Files: src/deployment-tools.7431bf2f3c204cbbc326c8d55ce4ac5cad7661d6/src/clickonce/native/projects/NetCoreCheck/CA/version_info.h
-Copyright: Microsoft Corporation.
-License: Expat
-
-Files: src/deployment-tools.7431bf2f3c204cbbc326c8d55ce4ac5cad7661d6/src/clickonce/native/projects/NetCoreCheck/EXE/version_info.h
-Copyright: Microsoft Corporation.
-License: Expat
-
-Files: src/deployment-tools.7431bf2f3c204cbbc326c8d55ce4ac5cad7661d6/tools-local/tasks/installer.tasks/BuildFPMToolPreReqs.cs
-Copyright: filesreplacing tokens with values from config json / (configJson);
-License: Expat
+Files: src/deployment-tools.*/*
+Copyright: .NET Foundation and Contributors
+License: MIT
 
 Files: src/diagnostics.*/src/SOS/lldbplugin/swift-4.1/*
 Copyright: 2014, 2015, Apple Inc. and the Swift project authors
@@ -1132,18 +1039,28 @@ Copyright: The .Net Foundation
 License: Expat and/or public-domain
 
 Files: src/diagnostics.*/src/pal/src/poll/*
-Copyright: no-info-found
+Copyright: The .Net Foundation
+           December 2000 Greg Parker     gparker@cs.stanford.edu
 License: Expat and/or public-domain
 
-Files: src/format.68bc36719088c86b0ff01334039b0611741b8276/*
-Copyright: Microsoft.
-License: Expat
+Files: src/diagnostics.*/src/SOS/lldbplugin/swift-4.0/*
+ src/diagnostics.*/src/SOS/lldbplugin/swift-4.1/*
+Copyright: The LLVM Project
+License: Apache-2.0-LLVM-Exceptions
 
-Files: src/format.68bc36719088c86b0ff01334039b0611741b8276/.devcontainer/*
+Files: src/diagnostics.*/src/SOS/runcommand/runcommand.cpp
 Copyright: Microsoft Corporation.
 License: Expat
 
-Files: src/format.68bc36719088c86b0ff01334039b0611741b8276/src/Workspaces/MSBuildWorkspaceFinder.cs
+Files: src/format.*/*
+Copyright: .Net Foundation and Contributors
+License: MIT
+
+Files: src/format.*/.devcontainer/*
+Copyright: Microsoft Corporation.
+License: Expat
+
+Files: src/format.*/src/Workspaces/MSBuildWorkspaceFinder.cs
 Copyright: Microsoft.
 License: Apache-2.0 and/or Expat
 
@@ -1395,106 +1312,106 @@ Files: src/msbuild.*/src/Tasks/ManifestUtil/CngLightup.cs
 Copyright: Microsoft Corporation.
 License: UNKNOWN
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/*
+Files: src/nuget-client.*/*
 Copyright: no-info-found
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/docs/*
+Files: src/nuget-client.*/docs/*
 Copyright: header and license notice
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/scripts/*
+Files: src/nuget-client.*/scripts/*
 Copyright: no-info-found
 License: Expat
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Clients/NuGet.VisualStudio.Implementation/NullableAnnotations.cs
+Files: src/nuget-client.*/src/NuGet.Clients/NuGet.VisualStudio.Implementation/NullableAnnotations.cs
 Copyright: no-info-found
 License: Expat
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/*
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/*
 Copyright: .NET Foundation.
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/ConfigurationDefaults.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/IMachineWideSettings.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/ISettings.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/ImmutableSettings.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/NuGetPathContext.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/NullSettings.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/Settings.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/SettingsFile.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/SettingsLoadingContext.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/XPlatMachineWideSetting.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/ConfigurationDefaults.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/IMachineWideSettings.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/ISettings.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/ImmutableSettings.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/NuGetPathContext.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/NullSettings.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/Settings.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/SettingsFile.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/SettingsLoadingContext.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/XPlatMachineWideSetting.cs
 Copyright: no-info-found
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/Items/ClientCertItem.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/Items/FileClientCertItem.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Configuration/Settings/Items/StoreClientCertItem.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/Items/ClientCertItem.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/Items/FileClientCertItem.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/Items/StoreClientCertItem.cs
 Copyright: no-info-found
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.LibraryModel/CentralPackageVersion.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.LibraryModel/CentralPackageVersionNameComparer.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.LibraryModel/DownloadDependency.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.LibraryModel/FrameworkDependency.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.LibraryModel/CentralPackageVersion.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.LibraryModel/CentralPackageVersionNameComparer.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.LibraryModel/DownloadDependency.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.LibraryModel/FrameworkDependency.cs
 Copyright: .NET Foundation.
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/PackageCreation/Authoring/ManifestSchemaUtility.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/PackageCreation/Authoring/ManifestSchemaUtility.cs
 Copyright: s, references and release notes
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/PackageCreation/Extensions/FrameworksExtensions.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/PackageCreation/Extensions/FrameworksExtensions.cs
 Copyright: no-info-found
 License: Expat
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/Signing/Archive/Crc32.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Archive/Crc32.cs
 Copyright: no-info-found
 License: Expat
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/*
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/*
 Copyright: no-info-found
 License: Expat
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/DerGeneralizedTime.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/DerGeneralizedTime.cs
 Copyright: no-info-found
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampRequest.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampToken.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampTokenInfo.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampUtils.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampWin32.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampRequest.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampToken.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampTokenInfo.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampUtils.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampWin32.cs
 Copyright: no-info-found
 License: Expat
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.ProjectModel/LockFile/BuildAction.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.ProjectModel/LockFile/LockFileContentFile.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/src/NuGet.Core/NuGet.ProjectModel/LockFile/LockFileRuntimeTarget.cs
+Files: src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/BuildAction.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/LockFileContentFile.cs
+ src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/LockFileRuntimeTarget.cs
 Copyright: no-info-found
 License: Expat
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/NuGetPackCommandTest.cs
+Files: src/nuget-client.*/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/NuGetPackCommandTest.cs
 Copyright: 2013
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/NuGetSpecCommandTest.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/ProjectFactoryTest.cs
+Files: src/nuget-client.*/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/NuGetSpecCommandTest.cs
+ src/nuget-client.*/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/ProjectFactoryTest.cs
 Copyright: $</copyright>
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/SettingSectionTests.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/SettingTextTests.cs
- src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/UnknownItemTests.cs
+Files: src/nuget-client.*/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/SettingSectionTests.cs
+ src/nuget-client.*/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/SettingTextTests.cs
+ src/nuget-client.*/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/UnknownItemTests.cs
 Copyright: .NET Foundation.
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/test/NuGet.Core.Tests/NuGet.LibraryModel.Tests/FrameworkDependencyFlagsUtilsTests.cs
+Files: src/nuget-client.*/test/NuGet.Core.Tests/NuGet.LibraryModel.Tests/FrameworkDependencyFlagsUtilsTests.cs
 Copyright: .NET Foundation.
 License: Apache-2.0
 
-Files: src/nuget-client.078701b97eeef2283c1f4605032b5bcf55a80653/test/NuGet.Tests.Apex/NuGet.Tests.Apex/Utility/SigningUtility.cs
+Files: src/nuget-client.*/test/NuGet.Tests.Apex/NuGet.Tests.Apex/Utility/SigningUtility.cs
 Copyright: .NET Foundation.
 License: Apache-2.0
 
