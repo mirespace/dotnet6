@@ -116,8 +116,8 @@ override_dh_install:
 
 
 	for f in $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/*.1.gz; do \
-        f=$$(basename $$f); \
-		echo " /usr/share/man/man1/$$f $$f $(DOTNETLIBDIR)/man/man1/$$f" >> debian/tmp/slave;  \
+       	f=$$(basename $$f); \
+		echo " /usr/share/man/man1/$$f $$f $(DOTNETLIBDIR)/man/man1/$$f" >> debian/tmp/dependants;  \
 	done
 
 	install -dm 0755 $(DESTDIR)/$(SYSCONFDIR)/dotnet
@@ -125,13 +125,13 @@ override_dh_install:
 	install install_location $(DESTDIR)/$(DOTNETLIBDIR)
 	echo "$(DOTNETLIBDIR)" >> install_location_$(_RUNTIME_ARCH)
 	install install_location_$(_RUNTIME_ARCH) $(DESTDIR)/$(DOTNETLIBDIR)
-	echo " /etc/dotnet/install_location install_location $(DOTNETLIBDIR)/install_location" >> debian/tmp/slave
-	echo " /etc/dotnet/install_location_$(_RUNTIME_ARCH) install_location_$(_RUNTIME_ARCH) $(DOTNETLIBDIR)/install_location_$(_RUNTIME_ARCH)" >> debian/tmp/slave
+	echo " /etc/dotnet/install_location install_location $(DOTNETLIBDIR)/install_location" >> debian/tmp/dependants
+	echo " /etc/dotnet/install_location_$(_RUNTIME_ARCH) install_location_$(_RUNTIME_ARCH) $(DOTNETLIBDIR)/install_location_$(_RUNTIME_ARCH)" >> debian/tmp/dependants
 
 	install -dm 0755 $(DESTDIR)/$(DOTNETLIBDIR)/source-built-artifacts
 	install -m 0644 artifacts/$(_RUNTIME_ARCH)/Release/Private.SourceBuilt.Artifacts.*.tar.gz $(DESTDIR)/$(DOTNETLIBDIR)/source-built-artifacts/
 
-	cat debian/tmp/slave >> debian/dotnet-host.alternatives.in
+	cat debian/tmp/dependants >> debian/dotnet-host.alternatives.in
 	echo "Priority: 60104" >> debian/dotnet-host.alternatives.in
 
 
@@ -141,7 +141,7 @@ override_dh_install:
 	      -e 's,@basedir@,$(DOTNETLIBDIR),g' \
 	      -e 's,@dotnet_dirname@,$(dotnet_dirname),g' \
 	      -e 's,@major@,$(_VERSION),g' \
-     	  -e 's,@dotnet_version@,$(dotnet_version),g' \
+    	  -e 's,@dotnet_version@,$(dotnet_version),g' \
 	      -e 's,@rid@,$(_RUNTIME_ID),g' \
 	      -e 's,@arch@,$(_RUNTIME_ARCH),g' \
 	      -e 's,@etcdir@,$(dotnet_etcdir),g' \
