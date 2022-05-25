@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
-export DEB_LDFLAGS_MAINT_APPEND = -Wl, --as-needed
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 include /usr/share/dpkg/pkg-info.mk
 include /usr/share/dpkg/architecture.mk
@@ -86,11 +86,8 @@ override_dh_install:
 
 	# Fix executable permissions on files
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'apphost' -exec chmod +x {} \;
-	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'singlefilehost' -exec chmod +x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'lib*so' -exec chmod +x {} \;
-	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'apphost' -exec chmod +x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'singlefilehost' -exec chmod +x {} \;
-	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name 'lib*so' -exec chmod +x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.a' -exec chmod -x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.dll' -exec chmod -x {} \;
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.h' -exec chmod 0644 {} \;
