@@ -1,12 +1,12 @@
 Source: dotnet6
 Section: devel
 Priority: optional
-Maintainer: Ubuntu Developers <cpc@canonical.com>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: ca-certificates,
                clang,
                cmake,
                bash-completion,
-               debhelper-compat (=13),
+               debhelper-compat (= 13),
                git,
                libicu-dev,
                libkrb5-dev,
