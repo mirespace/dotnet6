@@ -1,1 +1,1 @@
-@basedir@/source-built-artifacts
+artifacts/@runtimearch@/Release/Private.SourceBuilt.Artifacts.*.tar.gz @basedir@/source-built-artifacts/
