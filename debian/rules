@@ -75,7 +75,6 @@ override_dh_auto_build:
 
 override_dh_install:
 
-#	sed -e 's|[@]LIBDIR[@]|$(DOTNETLIBDIR)|g' $(CURDIR)/debian/dotnet.sh.in > $(CURDIR)/debian/dotnet.sh
 	install -dm 0755 $(DESTDIR)/$(DOTNETLIBDIR)
 	ls artifacts/$(_RUNTIME_ARCH)/Release
 	tar xf artifacts/$(_RUNTIME_ARCH)/Release/dotnet-sdk-$(_SDK_VERSION)-$(_RUNTIME_ID)-$(_RUNTIME_ARCH).tar.gz -C $(DESTDIR)/$(DOTNETLIBDIR)
@@ -101,26 +100,16 @@ override_dh_install:
 	find $(DESTDIR)/$(DOTNETLIBDIR) -type f -name '*.xml' -exec chmod -x {} \;
 
 
-#	install -dm 0755 $(DESTDIR)/$(BINDIR)
-
-#	install -dm 0755 $(DESTDIR)/$(MANDIR)/man1/
 	install -dm 0755 $(DESTDIR)/$(DOTNETLIBDIR)/man/man1
-
-
 	find -iname 'dotnet*.1' -type f -exec cp {} $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/ \;
 	gzip -9v -n $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/*
-
 
 	for f in $(DESTDIR)/$(DOTNETLIBDIR)/man/man1/*.1.gz; do \
        	f=$$(basename $$f); \
 		echo " /usr/share/man/man1/$$f $$f $(DOTNETLIBDIR)/man/man1/$$f" >> debian/tmp/dependants;  \
 	done
 
-#	install -dm 0755 $(DESTDIR)/$(SYSCONFDIR)/dotnet
-#	echo "$(DOTNETLIBDIR)" >> install_location
-#	install install_location $(DESTDIR)/$(DOTNETLIBDIR)
 	echo "$(DOTNETLIBDIR)" > install_location_$(_RUNTIME_ARCH)
-	install install_location_$(_RUNTIME_ARCH) $(DESTDIR)/$(DOTNETLIBDIR)
 	echo " /etc/dotnet/install_location install_location $(DOTNETLIBDIR)/install_location" >> debian/tmp/dependants
 	echo " /etc/dotnet/install_location_$(_RUNTIME_ARCH) install_location_$(_RUNTIME_ARCH) $(DOTNETLIBDIR)/install_location_$(_RUNTIME_ARCH)" >> debian/tmp/dependants
 
@@ -147,19 +136,9 @@ override_dh_install:
 	    $$f > $$f2; \
 	done
 
-#	install -dm 0755 $(DESTDIR)$(SYSCONFDIR)/profile.d/
-#	install $(CURDIR)/debian/dotnet.sh $(DESTDIR)$(SYSCONFDIR)/profile.d/
+	cp $(CURDIR)/debian/install_location $(CURDIR)/debian/install_location_$(_RUNTIME_ARCH)
 	rm debian/tmp/dependants
 	dh_install
 
 override_dh_dwz:
-	#Leaving it empty due to "dwz: Unknown debugging section .debug_addr"
-#override_dh_auto_test:
-
-	#update-ca-certificates
-	#VERBOSE=1 ./build.sh --run-smoke-test
-	#$(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/assets/smoke-tests/smoke-test.sh --dotnetDir $(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/bin/Release/net6.0/.dotnet --projectOutput --archiveRestoredPackages --targetRid ubuntu.22.04-x64 --minimal --excludeOnlineTests --excludeOmniSharpTests
-
-
-	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
-	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
+#	Leaving it empty due to "dwz: Unknown debugging section .debug_addr"
