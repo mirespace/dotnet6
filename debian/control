@@ -6,6 +6,8 @@ Build-Depends: clang,
                cmake,
                bash-completion,
                debhelper-compat (= 13),
+	       dotnet-sdk-6.0,
+	       dotnet-sdk-6.0-source-built-artifacts,
                git,
                libicu-dev,
                libkrb5-dev,
@@ -129,7 +131,6 @@ Package: dotnet-sdk-6.0-source-built-artifacts
 Architecture: amd64
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Internal package for building dotNet 6.0 Software Development Kit
- .
  The dotNET source-built archive is a collection of packages needed
  to build the dotNET SDK itself.
  .

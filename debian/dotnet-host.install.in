@@ -1,3 +1,4 @@
+@etcdir@
 debian/dotnet.sh /etc/profile.d/
 @basedir@/dotnet
 @basedir@/LICENSE.txt
