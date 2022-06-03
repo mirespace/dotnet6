@@ -68,6 +68,7 @@ function clean_dotnet_cache {
 
 function clean_uscan_download {
    find .. -name "dotnet*${tag}*${tarball_suffix}" -delete
+   find .. -name "dotnet*${tag}*.tar.xz" -delete
 }
 
 function check_bootstrap_environment {
@@ -245,7 +246,7 @@ if [[ ${build_bootstrap} == true ]]; then
     find . -type f -iname '*.tar.gz' -delete
     rm -rf .dotnet
 else
-    find . -type f -iname '*.tar.gz' -delete
+    find . -type f -iname '*.tar.xz' -delete
     rm -rf .dotnet
     tar -czf "../${tarball_name}${tarball_suffix}" "${tarball_name}"
 fi
