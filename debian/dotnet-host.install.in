@@ -1,3 +1,4 @@
+@etcdir@
 debian/dotnet.sh /etc/profile.d/
 @basedir@/dotnet
 @basedir@/LICENSE.txt
@@ -5,3 +6,4 @@ debian/dotnet.sh /etc/profile.d/
 @basedir@/man
 debian/install_location /@basedir@/
 debian/install_location_@arch@ /@basedir@/
+src/sdk.*/scripts/register-completions.bash @basedir@/bash-completion/completions/
