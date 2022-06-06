@@ -217,6 +217,7 @@ if [[ ${build_bootstrap} == true ]]; then
     rm -rf fixup-previously-source-built-artifacts
 fi
 
+
 # Remove files with funny licenses, crypto implementations and other
 # not-very-useful artifacts to reduce tarball size
 
@@ -236,7 +237,9 @@ rm -r src/nuget-client.*/test/EndToEnd
 rm -r src/source-build.*/src/humanizer/samples/
 
 #Non-free and unnecesary help file for 7-zip
-#rm src/build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
+rm src/source-build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
+
+
 
 popd
 
