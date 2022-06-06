@@ -1,6 +1,67 @@
-#the tarball always contains this
+#the tarball always contains this, as result of the bootstrapping process
 dotnet6: source-contains-prebuilt-windows-binary
 #patches are applied in the rules as folder changes between versions
 dotnet6: patch-file-present-but-not-mentioned-in-series
 #multilicense
 dotnet6: license-problem-non-free-RFC
+#The *.js * files all contain the full source code  and license headers.
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js * *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js * *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js * *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js * *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.4/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Components/Web.js/dist/Release/blazor.server.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Components/Web.js/dist/Release/blazor.webview.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Components/benchmarkapps/Wasm.Performance/TestApp/wwwroot/benchmarks/jsonHandlingData.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Http/Routing/test/testassets/RoutingSandbox/wwwroot/full.render.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Identity/UI/src/assets/V4/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Identity/UI/src/assets/V5/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Mvc/Mvc.TagHelpers/src/compiler/resources/LinkTagHelper_FallbackJavaScript.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing src/sdk.50e695e438ba9f826633d4127d891d53fd972314/src/BuiltInTools/BrowserRefresh/WebSocketScriptInjection.js *
+#Same for HTML
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Mvc/test/Mvc.FunctionalTests/compiler/resources/HtmlGenerationWebSite.HtmlGeneration_Home.Link.Encoded.html *
+dotnet6 source: source-is-missing src/aspnetcore.f9ae0f5d30be2de3c0de61b5673bd8873231d70a/src/Mvc/test/Mvc.FunctionalTests/compiler/resources/HtmlGenerationWebSite.HtmlGeneration_Home.Link.html *
+#The following ones are also used only for the bootstrapping release
+#and are been prebuilts in Arcade MS
+dotnet6 source: source-is-missing .dotnet/dotnet
+dotnet6 source: source-is-missing .dotnet/host/fxr/6.0.3/libhostfxr.so
+dotnet6 source: source-is-missing .dotnet/packs/Microsoft.NETCore.App.Host.linux-x64/6.0.3/runtimes/linux-x64/native/apphost
+dotnet6 source: source-is-missing .dotnet/packs/Microsoft.NETCore.App.Host.linux-x64/6.0.3/runtimes/linux-x64/native/libnethost.so
+dotnet6 source: source-is-missing .dotnet/packs/Microsoft.NETCore.App.Host.linux-x64/6.0.3/runtimes/linux-x64/native/singlefilehost
+dotnet6 source: source-is-missing .dotnet/sdk/6.0.103/AppHostTemplate/apphost
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/createdump
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libSystem.Globalization.Native.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libSystem.IO.Compression.Native.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libSystem.Native.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libSystem.Net.Security.Native.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libSystem.Security.Cryptography.Native.OpenSsl.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libclrjit.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libcoreclr.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libcoreclrtraceptprovider.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libdbgshim.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libhostpolicy.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libmscordaccore.so
+dotnet6 source: source-is-missing .dotnet/shared/Microsoft.NETCore.App/6.0.3/libmscordbi.so
