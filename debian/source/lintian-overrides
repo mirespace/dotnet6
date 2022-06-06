@@ -4,6 +4,31 @@ dotnet6: source-contains-prebuilt-windows-binary
 dotnet6: patch-file-present-but-not-mentioned-in-series
 #multilicense
 dotnet6: license-problem-non-free-RFC
-#The *.js files all contain the full source code  and license headers. 
-dotnet6: source-is-missing *.js
-
+#The *.js files all contain the full source code  and license headers.
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Components/Web.JS/dist/Release/blazor.server.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Components/Web.JS/dist/Release/blazor.webview.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Components/benchmarkapps/Wasm.Performance/TestApp/wwwroot/benchmarks/jsonHandlingData.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Http/Routing/test/testassets/RoutingSandbox/wwwroot/full.render.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Identity/UI/src/assets/V4/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Identity/UI/src/assets/V5/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Mvc/Mvc.TagHelpers/src/compiler/resources/LinkTagHelper_FallbackJavaScript.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
+dotnet6 source: source-is-missing src/sdk.ce948f426d1c884d4a7315bd4d745590a797bd48/src/BuiltInTools/BrowserRefresh/WebSocketScriptInjection.js *
+#Same for HTML files
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Mvc/test/Mvc.FunctionalTests/compiler/resources/HtmlGenerationWebSite.HtmlGeneration_Home.Link.Encoded.html *
+dotnet6 source: source-is-missing src/aspnetcore.e5f183b656a0e8bc087108130a5a9b54ae94494e/src/Mvc/test/Mvc.FunctionalTests/compiler/resources/HtmlGenerationWebSite.HtmlGeneration_Home.Link.html *
