@@ -3,29 +3,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: dotnet
 Source: https://github.com/dotnet/
-Files-Excluded:
-.dotnet/ThirdPartyNotices.txt
-packages/text-only/microsoft.net.workload.mono.toolchain.manifest-6.0.100/6.0.?/THIRD-PARTY-NOTICES.TXT
-src/diagnostics.*/THIRD-PARTY-NOTICES.TXT
-src/installer.*/THIRD-PARTY-NOTICES
-src/runtime.*/THIRD-PARTY-NOTICES.TXT
-src/runtime.*/src/installer/pkg/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/3.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/3.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/5.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/netstandard.library.ref/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.net.sdk.il/6.0.0-rc.1.21415.6/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnetapphost/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnetapphost/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostpolicy/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostpolicy/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostresolver/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostresolver/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.platforms/5.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build.10d0f7e94aa45889155c312f51cfc01bf326b853/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
-src/source-build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
 
 Files: *
 Copyright: The .NET Foundation and Contributors
