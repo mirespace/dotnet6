@@ -582,12 +582,13 @@ Copyright: 2014, 2015, Apple Inc. and the Swift project authors
            1990- 1993, 1996 Open Software Foundation, Inc.
            1989 by Hewlett-Packard Company, Palo Alto, Ca. &
             Digital Equipment Corporation, Maynard, Mass.
+           1998 Microsoft.
 License: Apache-2.0 and Expat
 
 Files: src/diagnostics.*/src/pal/inc/rt/xmmintrin.h
 Copyright: .NET Foundation
            LLVM Project
-License: Expat and Apache-2.0 WITH LLVM-exception
+License: Expat and Apache-2.0-LLVM-exception
 
 Files: src/diagnostics.*/src/SOS/runcommand/*
 Copyright: Microsoft Corporation.
@@ -621,6 +622,10 @@ Files: src/diagnostics.*/src/SOS/lldbplugin/swift-4.0/*
 Copyright: The LLVM Project
 License: Apache-2.0-LLVM-Exceptions
 
+Files: src/diagnostics.*/src/SOS/lldbplugin/swift-4.1/lldb/Core/SwiftForward.h
+Copyright: 2014, 2015, Apple Inc. and the Swift project authors
+License: Apache-2.0-Runtime-Library-Exception
+
 Files: src/diagnostics.*/src/SOS/runcommand/runcommand.cpp
 Copyright: Microsoft Corporation.
 License: Expat
@@ -631,6 +636,14 @@ License: Expat
 
 Files: src/format.*/.devcontainer/*
 Copyright: Microsoft Corporation.
+License: Expat
+
+Files: src/format.*/perf/Utilities/*.cs src/format.*/perf/*.cs
+Copyright: Microsoft.
+License: Expat
+
+Files: src/format.*/src/*/*.cs src/format.*/*.cs
+Copyright: Microsoft.
 License: Expat
 
 Files: src/format.*/src/Workspaces/MSBuildWorkspaceFinder.cs
