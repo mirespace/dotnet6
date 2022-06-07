@@ -28,432 +28,6 @@ Files: packages/*
 Copyright: JS Foundation and other contributors
 License: Expat
 
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2016, Twitter, Inc.
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*/bootstrap.*
-Copyright: 2011-2019, Twitter, Inc.
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/*
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: .NET Foundation
-License: Apache 2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors | jquery.org/license
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2019, Twitter, Inc.
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css
-Copyright: 2011-2019, Twitter, Inc.
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2019, Twitter, Inc.
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css
-Copyright: 2011-2019, Twitter, Inc.
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/BlazorServerWeb-CSharp/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/BlazorServerWeb-CSharp/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/BlazorServerWeb-CSharp/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/ComponentsWebAssembly-CSharp/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors | jquery.org/license
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/css/*
-Copyright: 2011-2021, Twitter, Inc.
- 2011-2021, The Bootstrap Authors
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery-validation-unobtrusive/*
-Copyright: Microsoft Corporation.
-License: Apache-2.0
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery-validation/*
-Copyright: Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer;
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
-Copyright: 2017, Jörn Zaefferer
-License: Expat
-
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
-Copyright: JS Foundation and other contributors | jquery.org/license
-License: Expat
-
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/BlazorServerWeb-CSharp/*
 Copyright: 2011-2021, Twitter, Inc.
  2011-2021, The Bootstrap Authors
@@ -570,19 +144,19 @@ Copyright: JS Foundation and other contributors | jquery.org/license
 License: Expat
 
 Files: packages/text-only/microsoft.net.sdk.ios.manifest-6.0.100/*
-Copyright: 2006-2009, The Open Toolkit library.
+Copyright: .NET Foundation Contributors
 License: Expat
 
 Files: packages/text-only/microsoft.net.sdk.maccatalyst.manifest-6.0.100/*
-Copyright: 2006-2009, The Open Toolkit library.
+Copyright: .NET Foundation Contributors
 License: Expat
 
 Files: packages/text-only/microsoft.net.sdk.macos.manifest-6.0.100/*
-Copyright: 2006-2009, The Open Toolkit library.
+Copyright: .NET Foundation Contributors
 License: Expat
 
 Files: packages/text-only/microsoft.net.sdk.tvos.manifest-6.0.100/*
-Copyright: 2006-2009, The Open Toolkit library.
+Copyright: .NET Foundation Contributors
 License: Expat
 
 Files: packages/text-only/microsoft.net.workload.emscripten.manifest-6.0.100/*
@@ -598,13 +172,18 @@ Copyright: .NET Foundation and Contributors
 License: Expat
 
 Files: src/arcade.*/src/Microsoft.DotNet.Build.Tasks.Installers/src/BuildFPMToolPreReqs.cs
-Copyright: filesreplacing tokens with values from config json / (configJson);
+Copyright: .NET Foundation and Contributors
 License: Expat
 
-Files: src/arcade.*/src/Microsoft.DotNet.XUnitConsoleRunner/src/common/AssemblyResolution/Microsoft.DotNet.PlatformAbstractions/Platform.cs
- src/arcade.*/src/Microsoft.DotNet.XUnitConsoleRunner/src/common/AssemblyResolution/Microsoft.DotNet.PlatformAbstractions/RuntimeEnvironment.cs
+Files: src/arcade.*/src/Microsoft.DotNet.XUnitConsoleRunner/src/*
 Copyright: .NET Foundation and contributors.
-License: Expat
+           Brad Wilson and Oren Novotny.
+License: Expat and Apache-2.0
+
+Files: src/arcade.*/src/Microsoft.DotNet.XUnitConsoleRunner/src/CommandLine.cs
+Copyright: .NET Foundation and contributors.
+           Nate McMaster
+License: Expat and Apache
 
 Files: src/aspnetcore.*/src/Components/Samples/BlazorServerApp/wwwroot/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -945,7 +524,7 @@ Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/benchmark/*
  src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/*
  src/aspnetcore.*/src/submodules/MessagePack-CSharp/tests/*
 Copyright: Yoshifumi Kawai <ils@neue.cc>
- Andrew Arnott <andrewarnott@gmail.com>
+           Andrew Arnott <andrewarnott@gmail.com>
 License: Expat
 
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/BitOperations.cs
@@ -966,7 +545,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/LZ4/*
 Copyright: Yoshifumi Kawai <ils@neue.cc>
- Andrew Arnott <andrewarnott@gmail.com>
+           Andrew Arnott <andrewarnott@gmail.com>
 License: BSD-2-clause and/or Expat
 
 Files: src/aspnetcore.*/src/submodules/MessagePack-CSharp/tests/MessagePack.Tests/Utils/*
@@ -990,16 +569,33 @@ Files: src/deployment-tools.*/*
 Copyright: .NET Foundation and Contributors
 License: Expat
 
+Files: src/diagnostics.*/src/Microsoft.Diagnostics.TestHelpers/Xunit.Extensions/*
+Copyright: .NET Foundation and Contributors
+License: Apache-2.0
+
 Files: src/diagnostics.*/src/SOS/lldbplugin/swift-4.1/*
 Copyright: 2014, 2015, Apple Inc. and the Swift project authors
 License: Apache-2.0
+
+Files: src/diagnostics.*/src/SOS/lldbplugin/swift-4.1/lldb/Utility/*UUID.h
+Copyright: 2014, 2015, Apple Inc. and the Swift project authors
+           1990- 1993, 1996 Open Software Foundation, Inc.
+           1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+            Digital Equipment Corporation, Maynard, Mass.
+License: Apache-2.0 and Expat
+
+Files: src/diagnostics.*/src/pal/inc/rt/xmmintrin.h
+Copyright: .NET Foundation
+           LLVM Project
+License: Expat and Apache-2.0 WITH LLVM-exception
 
 Files: src/diagnostics.*/src/SOS/runcommand/*
 Copyright: Microsoft Corporation.
 License: Expat
 
 Files: src/diagnostics.*/src/inc/llvm/*
-Copyright: 2003-2015, University of Illinois at Urbana-Champaign.
+Copyright: .NET Foundation
+           2003-2015, University of Illinois at Urbana-Champaign.
 License: Expat
 
 Files: src/diagnostics.*/src/pal/inc/unixasmmacrosmips64.inc
@@ -1007,7 +603,7 @@ Copyright: Loongson Technology.
 License: Expat
 
 Files: src/diagnostics.*/src/pal/prebuilt/inc/fxverstrings.h
-Copyright: Microsoft Corporation. / Microsoft Corporation.
+Copyright: Microsoft Corporation.
 License: Expat
 
 Files: src/diagnostics.*/src/pal/src/include/pal/fakepoll.h
