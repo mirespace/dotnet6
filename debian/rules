@@ -67,7 +67,7 @@ override_dh_auto_build:
 
 	mkdir -p $(CURDIR)/packages/archive
 	ln -s $(DOTNET_TOP)/$(dotnet_version)/source-built-artifacts/Private.SourceBuilt.Artifacts.*.tar.gz $(CURDIR)/packages/archive/
-	cp -a $(DOTNET_TOP)/$(dotnet_version) $(CURDIR)/previously-built-dotnet
+	cp -RLp $(DOTNET_TOP)/$(dotnet_version) $(CURDIR)/previously-built-dotnet
 	find previously-built-dotnet
 	
 	
