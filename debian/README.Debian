@@ -29,7 +29,7 @@ dotnet for Debian
 
     Whichever method you choose before, you should now have a folder called `dotnet6-6.0.105` 
     and in its parent directory a file called `dotnet6_6.0.105.orig.tar.xz` (with a size of about 4.4 GB 
-    for the 6.0.105 version, and 527 MB for the subsequents ones).
+    for the previous version, and 527 MB for the 6.0.105).
 
     Please, check that you have installed `sbuild` and `debhelper` on your system. Also, a
     schroot for kinetic is needed (you can create it with
@@ -42,7 +42,7 @@ dotnet for Debian
     * `sbuild -d kinetic --arch=amd64 --purge-build=successful --debbuildopts='--buildinfo-option=-O' --build-dir=..`
     
 
-    In next releases, we are not going to use such a complex tarball, as we
+    For v6.0.105 and next releases, we are not going to use such a complex tarball, as we
     already would have the prebuilds binaries packaged in a deb file
     (dotnet-sdk-6.0-source-built-artifacts*.deb). For testing the use of this
     prebuild deb package, and until we release officialy dotnet, you should add
