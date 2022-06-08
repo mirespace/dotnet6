@@ -12,10 +12,6 @@ Files: debian/*
 Copyright: 2022 Miriam España Acebal <miriam.espana@canonical.com>
 License: Expat or Apache-2.0
 
-Files: .dotnet/*
-Copyright: .NET Foundation and Contributors
-License: Expat
-
 Files: ArcadeOverrides/*
 Copyright: .NET Foundation
 License: Expat
@@ -161,18 +157,6 @@ License: Expat
 
 Files: packages/text-only/microsoft.net.workload.emscripten.manifest-6.0.100/*
 Copyright: 2018, Emscripten authors (see AUTHORS in Emscripten)
-License: Expat
-
-Files: src/arcade.*/src/Microsoft.DotNet.Build.Tasks.Installers/build/deb-package-tool/scripts/config_template_generator.py
-Copyright: .NET Foundation and Contributors
-License: Expat
-
-Files: src/arcade.*/src/Microsoft.DotNet.Build.Tasks.Installers/build/rpm_templates/*
-Copyright: .NET Foundation and Contributors
-License: Expat
-
-Files: src/arcade.*/src/Microsoft.DotNet.Build.Tasks.Installers/src/BuildFPMToolPreReqs.cs
-Copyright: .NET Foundation and Contributors
 License: Expat
 
 Files: src/arcade.*/src/Microsoft.DotNet.XUnitConsoleRunner/src/*
@@ -581,7 +565,7 @@ Files: src/diagnostics.*/src/SOS/lldbplugin/swift-4.1/lldb/Utility/*UUID.h
 Copyright: 2014, 2015, Apple Inc. and the Swift project authors
            1990- 1993, 1996 Open Software Foundation, Inc.
            1989 by Hewlett-Packard Company, Palo Alto, Ca. &
-            Digital Equipment Corporation, Maynard, Mass.
+           Digital Equipment Corporation, Maynard, Mass.
            1998 Microsoft.
 License: Apache-2.0 and Expat
 
@@ -631,10 +615,6 @@ Copyright: Microsoft Corporation.
 License: Expat
 
 Files: src/format.*/*
-Copyright: .Net Foundation and Contributors
-License: Expat
-
-Files: src/format.*/.devcontainer/*
 Copyright: Microsoft Corporation.
 License: Expat
 
@@ -650,37 +630,27 @@ Files: src/format.*/src/Workspaces/MSBuildWorkspaceFinder.cs
 Copyright: Microsoft.
 License: Apache-2.0 and/or Expat
 
-Files: src/fsharp.*/.devcontainer/*
+Files: src/fsharp.*/*
 Copyright: Microsoft Corporation.
 License: Expat
 
-Files: src/fsharp.*/docs/*
+Files: src/fsharp.*/src/fsharp/BuildGraph.fs?
 Copyright: Microsoft Corporation.
-License: Expat
+License: Apache-2.0 and/or Expat
 
-Files: src/fsharp.*/release-notes.md
+Files: src/fsharp.*/src/fsharp/DependencyManager/*.fs?
 Copyright: Microsoft Corporation.
-License: Expat
-
-Files: src/fsharp.*/scripts/diff-fsharp-repos.sh
-Copyright: Microsoft Corporation.
-License: Expat
-
-Files: src/fsharp.*/tests/*
-Copyright: Microsoft Corporation.
-License: Expat
-
-Files: src/fsharp.*/tests/FSharp.Core.UnitTests/*
-Copyright: Microsoft Corporation.
-License: Expat
+License: Apache-2.0 and/or Expat
 
 Files: src/fsharp.*/tests/fsharpqa/testenv/src/PEVerify/CLRHelpers.cs
 Copyright: Microsoft.
 License: Apache-2.0
 
-Files: src/fsharp.*/vsintegration/*
+Files: src/fsharp.*/vsintegration/src/FSharp.Editor/Formatting/EditorFormattingService.fs
+       src/fsharp.*/vsintegration/tests/UnitTests/EditorFormattingServiceTests.fs
+       src/fsharp.*/vsintegration/tests/UnitTests/UnusedOpensTests.fs
 Copyright: Microsoft Corporation.
-License: Expat
+License: Apache-2.0 and/or Expat
 
 Files: src/installer.*/src/SourceBuild/tarball/content/tools-local/tasks/Microsoft.DotNet.SourceBuild.Tasks.XPlat/DownloadFileSB.cs
 Copyright: Microsoft.
@@ -4078,14 +4048,6 @@ Files: src/source-build.*/src/humanizer/*
 Copyright: 2012-2014, Mehdi Khalili
 License: Expat
 
-Files: src/source-build.*/src/humanizer/readme.md
-Copyright: no-info-found
-License: Expat
-
-Files: src/source-build.*/src/humanizer/src/*
-Copyright: 2015
-License: UNKNOWN
-
 Files: src/source-build.*/src/humanizer/src/Humanizer/*
 Copyright: 2012-2017 Mehdi Khalili
            Oren Novotny
@@ -4163,12 +4125,16 @@ Files: src/vstest.*/*
 Copyright: 2018-2020, Microsoft Corporation
 License: Expat
 
+Files: src/xliff-tasks.*/eng/common/internal/*
+Copyright: .NET Foundation
+License: Expat
+
 Files: tools-local/tasks/Microsoft.DotNet.SourceBuild.Tasks.XPlat/DownloadFileSB.cs
 Copyright: Microsoft.
 License: Expat
 
 Files: tools-local/tasks/Microsoft.DotNet.SourceBuild.Tasks.XPlat/RepoTasks/*
-Copyright: no-info-found
+Copyright: .NET Foundation.
 License: Apache-2.0
 
 
