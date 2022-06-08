@@ -7,26 +7,47 @@ dotnet for Debian
     size limitations.
 
     It's prepared to recreate v6.0.104. (for doing for higher versions, please
-    change the number).
+    change the number in the following steps).
 
     To recreate tarball and source code for building the package, the steps are
     the following:
 
     * Clone the repository and get into it
-    * remove the README file
-    * uscan --download-version 6.0.104
-    * (optional) uupdate dotnet-6.0.104.tar.xz
-    * (optional) cp dotnet6-6.0.104.tar.xz ..
-    * (optional) cd ../dotnet6-6.0.104
-    * sbuild -d jammy --arch=amd64 --purge-build=successful --debbuildopts='--buildinfo-option=-O' --build-dir=..
+    * Remove the README file outside the `debian` folder if it is present
+    * `uscan --download-version 6.0.104`
+    
+    Now, a `dotnet6_6.0.104.orig.tar.xz` tarball file has been generated in the parent
+    folder (the actual folder remains the same). At this point, there are two possibilities:
+
+    - 1. If you want to check the source code before doing the building:
+      * `uupdate -b ../dotnet6_6.0.104.orig.tar.xz`
+      * `cd ../dotnet6-6.0.104`
+    
+    _
+    - 2. If you want to build the package directly:
+      * mv dotnet6 `dotnet6-6.0.104`
+
+    Whichever method you choose before, you should now have a folder called `dotnet6-6.0.104` 
+    and in its parent directory a file called `dotnet6_6.0.104.orig.tar.xz` (with a size of about 4.4 GB 
+    for the 6.0.104 version, and 527 MB for the subsequents ones).
+
+    Please, check that you have installed `sbuild` and `debhelper` on your system. Also, a
+    schroot for kinetic is needed (you can create it with
+    `sudo sbuild-createchroot --arch=amd64 kinetic /var/lib/schroot/chroot/kinetic-amd64  http://archive.ubuntu.com/ubuntu/`).
+
+    Now, we use the following command for the building (you can use `DEB_BUILD_OPTIONS="parallel=n"`
+    on front of the command, changing n to the number of parallel 
+    process you can dedicate to it if any):
+
+    * `sbuild -d kinetic --arch=amd64 --purge-build=successful --debbuildopts='--buildinfo-option=-O' --build-dir=..`
     
 
     In next releases, we are not going to use such a complex tarball, as we
     already would have the prebuilds binaries packaged in a deb file
     (dotnet-sdk-6.0-source-built-artifacts*.deb). For testing the use of this
     prebuild deb package, and until we release officialy dotnet, you should add
-    the following flag to the sbuild command in order to add the PPA where you
-    built the packages before (e.g., for kinetic):
+    the following flag to the previous sbuild command in order to add the PPA where
+    you built the packages before (e.g., for kinetic):
     
     `--extra-repository="deb [trusted=yes]
     http://ppa.launchpad.net/cloud-images/dotnet/ubuntu kinetic main" `
@@ -102,13 +123,27 @@ dotnet for Debian
 
     For that reason, .manpages , .bash-completions or .dirs files are not being used (as they need to
     be set before update-alternatives comes to play). Therefore, some of these are being done manually
-    in the overriding install section of the rules files, as wel as the generation of the .update-alternatives
+    in the overriding install section of the rules files, as well as the generation of the .update-alternatives
     file (on-the-fly).
 
     *Lintian Overrides*
-    
-    * license-problem-non-free-RFC: Every folder under src includes a THIRD_PARTY_NOTICES.TXT file. Also
-      the file src/runtime.*/src/coreclr/utilcode/guidfromname.cpp is multilicensed.
+
+    * license-problem-non-free-RFC: Every folder under src includes a THIRD_PARTY_NOTICES.TXT file 
+      (that triggers the error). Also the file
+      src/runtime.*/src/coreclr/utilcode/guidfromname.cpp is multilicensed.
+
+    * source-is-missing: We have three cases here for overriding this:
+      - 1. JS files: It looks like these are all false-positives.
+           The *.js files all contain the full source code  and license headers.
+           Also, there are *.min.js files available; these would be a problem if
+           they were not accompanied by the corresponding *.js, but that doesn't
+           seem to be the case here.
+      - 2. HTML files: Also a false positive due to the use of the substring ".Link"
+           in their names.
+      - 3. prebuilds from MS Arcade: This files are needed for boostrapping the first
+           release of the package (they will disappear in upcoming releases).
+
+
 
      -- Miriam España Acebal <miriam.espana@canonical.com>  Tue, 01 Feb 2022
      20:58:49 +0100
