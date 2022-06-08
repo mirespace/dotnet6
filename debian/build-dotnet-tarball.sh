@@ -67,7 +67,7 @@ function clean_dotnet_cache {
 }
 
 function clean_uscan_download {
-   find .. -name "dotnet*${tag}*${tarball_suffix}" -delete
+   find .. -name "dotnet*${tag}*.tar.*" -delete
 }
 
 function check_bootstrap_environment {
