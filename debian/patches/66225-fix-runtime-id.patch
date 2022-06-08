@@ -1,0 +1,140 @@
+From 089eea06df1ede8aea22df895500d4c728700cce Mon Sep 17 00:00:00 2001
+From: wfurt <tweinfurt@yahoo.com>
+Date: Fri, 4 Mar 2022 15:23:15 -0800
+Subject: [PATCH] RID for Ubuntu 22.10
+
+---
+ .../src/runtime.compatibility.json            | 65 +++++++++++++++++++
+ .../src/runtime.json                          | 29 +++++++++
+ .../src/runtimeGroups.props                   |  2 +-
+ 3 files changed, 94 insertions(+), 2 deletions(-)
+
+diff --git a/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json b/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
+index bf6dfc3c1a1d7..59c1b26eadc46 100644
+--- a/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
++++ b/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
+@@ -8026,6 +8026,71 @@
+     "any",
+     "base"
+   ],
++  "ubuntu.22.10": [
++    "ubuntu.22.10",
++    "ubuntu",
++    "debian",
++    "linux",
++    "unix",
++    "any",
++    "base"
++  ],
++  "ubuntu.22.10-arm": [
++    "ubuntu.22.10-arm",
++    "ubuntu.22.10",
++    "ubuntu-arm",
++    "ubuntu",
++    "debian-arm",
++    "debian",
++    "linux-arm",
++    "linux",
++    "unix-arm",
++    "unix",
++    "any",
++    "base"
++  ],
++  "ubuntu.22.10-arm64": [
++    "ubuntu.22.10-arm64",
++    "ubuntu.22.10",
++    "ubuntu-arm64",
++    "ubuntu",
++    "debian-arm64",
++    "debian",
++    "linux-arm64",
++    "linux",
++    "unix-arm64",
++    "unix",
++    "any",
++    "base"
++  ],
++  "ubuntu.22.10-x64": [
++    "ubuntu.22.10-x64",
++    "ubuntu.22.10",
++    "ubuntu-x64",
++    "ubuntu",
++    "debian-x64",
++    "debian",
++    "linux-x64",
++    "linux",
++    "unix-x64",
++    "unix",
++    "any",
++    "base"
++  ],
++  "ubuntu.22.10-x86": [
++    "ubuntu.22.10-x86",
++    "ubuntu.22.10",
++    "ubuntu-x86",
++    "ubuntu",
++    "debian-x86",
++    "debian",
++    "linux-x86",
++    "linux",
++    "unix-x86",
++    "unix",
++    "any",
++    "base"
++  ],
+   "unix": [
+     "unix",
+     "any",
+diff --git a/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json b/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
+index 2e6ec616b7420..c9329e769798a 100644
+--- a/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
++++ b/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
+@@ -3333,6 +3333,35 @@
+         "ubuntu-x86"
+       ]
+     },
++    "ubuntu.22.10": {
++      "#import": [
++        "ubuntu"
++      ]
++    },
++    "ubuntu.22.10-arm": {
++      "#import": [
++        "ubuntu.22.10",
++        "ubuntu-arm"
++      ]
++    },
++    "ubuntu.22.10-arm64": {
++      "#import": [
++        "ubuntu.22.10",
++        "ubuntu-arm64"
++      ]
++    },
++    "ubuntu.22.10-x64": {
++      "#import": [
++        "ubuntu.22.10",
++        "ubuntu-x64"
++      ]
++    },
++    "ubuntu.22.10-x86": {
++      "#import": [
++        "ubuntu.22.10",
++        "ubuntu-x86"
++      ]
++    },
+     "unix": {
+       "#import": [
+         "any"
+diff --git a/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props b/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
+index 1945bb9af0e5a..200baf2907082 100644
+--- a/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
++++ b/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
+@@ -236,7 +236,7 @@
+     <RuntimeGroup Include="ubuntu">
+       <Parent>debian</Parent>
+       <Architectures>x64;x86;arm;arm64</Architectures>
+-      <Versions>16.04;16.10;17.04;17.10;18.04;18.10;19.04;19.10;20.04;20.10;21.04;21.10;22.04</Versions>
++      <Versions>16.04;16.10;17.04;17.10;18.04;18.10;19.04;19.10;20.04;20.10;21.04;21.10;22.04;22.10</Versions>
+       <TreatVersionsAsCompatible>false</TreatVersionsAsCompatible>
+     </RuntimeGroup>
+ 

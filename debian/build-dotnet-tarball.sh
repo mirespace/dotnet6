@@ -15,7 +15,7 @@
 
 
 trap on_exit TERM
-trap on_exit EXIT 
+trap on_exit EXIT
 
 set -euo pipefail
 IFS=$'\n\t'
@@ -49,7 +49,7 @@ function on_exit {
     done
 
     find . -type f -iname '*.tar.gz' -delete
-    
+
 }
 
 function clean_dotnet_cache {
@@ -59,16 +59,15 @@ function clean_dotnet_cache {
                     "/tmp/.NETFramework*")
 
     for folder in ${folders_cached[@]}; do
-        if [ -d $folder ]; then
+        if [ -d "$folder" ]; then
             rm -rf "$folder"
         fi
     done
-								        
+
 }
 
 function clean_uscan_download {
-#	find -L .. -samefile "../${tarball_name}${tarball_suffix}" -delete
-   find .. -name "dotnet*${tag}*${tarball_suffix}" -delete
+   find .. -name "dotnet*${tag}*.tar.*" -delete
 }
 
 function check_bootstrap_environment {
@@ -153,9 +152,9 @@ if [[ ${build_bootstrap} == true ]]; then
 fi
 
 if [ -f "${tarball_name}${tarball_suffix}" ]; then
-    rm "${tarball_name}${tarball_suffix}" 
-    #echo "error: ${tarball_name}${tarball_suffix} already exists"
-    #exit 1
+    #rm "${tarball_name}${tarball_suffix}"
+    echo "error: ${tarball_name}${tarball_suffix} already exists"
+    exit 1
 fi
 
 if [ ! -f "${unmodified_tarball_name}.tar.gz" ]; then
@@ -218,6 +217,7 @@ if [[ ${build_bootstrap} == true ]]; then
     rm -rf fixup-previously-source-built-artifacts
 fi
 
+
 # Remove files with funny licenses, crypto implementations and other
 # not-very-useful artifacts to reduce tarball size
 
@@ -235,6 +235,11 @@ rm -r src/nuget-client.*/test/EndToEnd
 
 # https://github.com/Humanizr/sample-aspnetmvc/issues/1
 rm -r src/source-build.*/src/humanizer/samples/
+
+#Non-free and unnecesary help file for 7-zip
+rm src/source-build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
+
+
 
 popd
 
