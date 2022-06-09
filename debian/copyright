@@ -4117,8 +4117,28 @@ Files: src/templating.*/*
 Copyright: 2016 .NET Foundation
 License: Expat
 
-Files: src/test-templates.*/*
-Copyright: Microsoft Corporation.
+Files: src/test-templates.*/eng/common/internal/*
+Copyright: .NET Foundation
+License: Expat
+
+Files: src/test-templates.*/template_feed/Microsoft.DotNet.Test.ProjectTemplates.*/Microsoft.DotNet.Test.ProjectTemplates.*.csproj
+Copyright: Microsoft Corporation and .NET Foundation and Contributors
+License: Expat
+
+Files: src/test-templates.*/Templates/VisualBasic/Desktop/Properties/*
+Copyright: Microsoft Corporation
+License: Expat
+
+Files: src/test-templates.*/test/Microsoft.TestTemplates.Acceptance.Tests/*.cs
+Copyright: Microsoft Corporation
+License: Expat
+
+Files: src/test-templates.*/WizardExtensions/MSTestv2IntelliTestExtension/*.cs
+Copyright: Microsoft Corporation
+License: Expat
+
+Files: src/test-templates.*/WizardExtensions/MSTestv2UnitTestExtension/*.cs
+Copyright: Microsoft Corporation
 License: Expat
 
 Files: src/vstest.*/*
