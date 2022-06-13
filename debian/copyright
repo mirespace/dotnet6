@@ -4109,6 +4109,18 @@ Files: src/symreader.*/*
 Copyright: .NET Foundation and Contributors
 License: Expat
 
+Files: src/symreader.*/src/*
+Copyright: .NET Foundation
+License: Expat
+
+Files: src/symreader.*/eng/*.props
+Copyright: .NET Foundation
+License: Expat
+
+Files: src/symreader.*/eng/common/internal/*
+Copyright: .NET Foundation
+License: Expat
+
 Files: src/symreader.*/src/PdbTestResources/TestResources.cs
 Copyright: Microsoft and .NET Foundation
 License: Apache-2.0 and/or Expat
