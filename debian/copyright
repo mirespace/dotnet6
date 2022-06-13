@@ -8,15 +8,15 @@ Files: *
 Copyright: .NET Foundation and Contributors
 License: Expat
 
+Files: *eng/common/*
+Copyright: .NET Foundation
+License: Expat
+
 Files: debian/*
 Copyright: 2022 Miriam España Acebal <miriam.espana@canonical.com>
 License: Expat or Apache-2.0
 
 Files: ArcadeOverrides/*
-Copyright: .NET Foundation
-License: Expat
-
-Files: eng/common/internal/*
 Copyright: .NET Foundation
 License: Expat
 
@@ -668,10 +668,6 @@ Files: src/installer.*/src/redist/targets/packaging/rpm/templates/*
 Copyright: Microsoft Corporation.
 License: Expat
 
-Files: src/linker.*/*
-Copyright: .NET Foundation and Contributors
-License: Expat
-
 Files: src/linker.*/external/Mono.Options/*
 Copyright: 2017, Microsoft Corporation (http:www.microsoft.com)
  2012, Xamarin Inc (http:www.xamarin.com)
@@ -834,12 +830,12 @@ Files: src/linker.*/test/Mono.Linker.Tests.Cases/PreserveDependencies/*
 Copyright: 2018-2020, Microsoft Corporation
 License: Expat
 
-Files: src/msbuild.*/*
-Copyright: .Net Foundation and Contributors
+Files: src/msbuild.*/ref/* src/msbuild.*/src/*
+Copyright: Microsoft.
 License: Expat
 
-Files: src/msbuild.*/src/Xunit.NetCore.Extensions/*
-Copyright: .NET Foundation and Contributors
+Files: src/msbuild.*/src/Package/MSBuild.VSSetup/MSBuild.VSSetup.csproj
+Copyright: Microsoft.
 License: Apache-2.0
 
 Files: src/msbuild.*/src/Shared/CoreCLRAssemblyLoader.cs
@@ -854,110 +850,104 @@ Files: src/msbuild.*/src/Tasks/LockCheck.cs
 Copyright: Christian Klutz
 License: Expat
 
+Files: src/msbuild.*/src/Xunit.NetCore.Extensions/*
+Copyright: .NET Foundation and Contributors
+License: Apache-2.0
+
 Files: src/nuget-client.*/*
-Copyright: no-info-found
+Copyright: .NET Foundation and Contributors.
 License: Apache-2.0
 
-Files: src/nuget-client.*/docs/*
-Copyright: header and license notice
+Files: src/nuget-client.*/build/*/*.cs
+Copyright: .NET Foundation
 License: Apache-2.0
 
-Files: src/nuget-client.*/scripts/*
-Copyright: no-info-found
+Files: src/nuget-client.*/docs/coding-guidelines.md
+Copyright: .NET Foundation
+License: Apache-2.0
+
+Files: src/nuget-client.*/scripts/funcTests/*
+Copyright: .NET Foundation and contributors
 License: Expat
+
+Files: src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/[!EFN]*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/C*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/DiagnosticCommands.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/GlobalSuppressions.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/M*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/P*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/RegistryKeyUtility.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/AddCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/ClientCertificatesCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/Command.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/ConfigCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/DownloadCommandBase.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/In*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/L*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/PackCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/PushCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/RestoreCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/SearchCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/SourcesCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/SpecCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/TrustedSignersCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/UpdateCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/VerifyCommand.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Commands/Pack/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Common/CommandLineRepositoryFactory.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Common/CommandLineUtility.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Common/DependencyBehaviorHelper.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Common/ExitCodeException.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Common/InstallCommandProject.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Common/MSBuildProjectSystem.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Common/SelfUpdater.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Common/Verbosity.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Credentials/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.CommandLine/Properties/AssemblyInfo.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.Console/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.Indexing/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.MSSigning.Extensions/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.P*/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.SolutionRestoreManager/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.Tools/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGet.V*/*.cs
+       src/nuget-client.*/src/NuGet.Clients/NuGetConsole.Host.PowerShell/*.cs
+       src/nuget-client.*/src/NuGet.Core/*.cs
+Copyright: .NET Foundation
+License: Apache-2.0
 
 Files: src/nuget-client.*/src/NuGet.Clients/NuGet.VisualStudio.Implementation/NullableAnnotations.cs
-Copyright: no-info-found
+       src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Archive/Crc32.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/DerEncoder.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/DerSequenceReader.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampRequest.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampToken.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampTokenInfo.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampUtils.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampWin32.cs
+Copyright: .NET Foundation
 License: Expat
-
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/*
-Copyright: .NET Foundation.
-License: Apache-2.0
-
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/ConfigurationDefaults.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/IMachineWideSettings.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/ISettings.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/ImmutableSettings.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/NuGetPathContext.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/NullSettings.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/Settings.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/SettingsFile.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/SettingsLoadingContext.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/XPlatMachineWideSetting.cs
-Copyright: no-info-found
-License: Apache-2.0
-
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/Items/ClientCertItem.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/Items/FileClientCertItem.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Configuration/Settings/Items/StoreClientCertItem.cs
-Copyright: no-info-found
-License: Apache-2.0
-
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.LibraryModel/CentralPackageVersion.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.LibraryModel/CentralPackageVersionNameComparer.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.LibraryModel/DownloadDependency.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.LibraryModel/FrameworkDependency.cs
-Copyright: .NET Foundation.
-License: Apache-2.0
-
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/PackageCreation/Authoring/ManifestSchemaUtility.cs
-Copyright: s, references and release notes
-License: Apache-2.0
 
 Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/PackageCreation/Extensions/FrameworksExtensions.cs
-Copyright: no-info-found
+       src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/BuildAction.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/LockFileContentFile.cs
+       src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/LockFileRuntimeTarget.cs
+Copyright: .NET Foundation and contributors
 License: Expat
 
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Archive/Crc32.cs
-Copyright: no-info-found
-License: Expat
-
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/*
-Copyright: no-info-found
-License: Expat
-
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/DerGeneralizedTime.cs
-Copyright: no-info-found
+Files: src/nuget-client.*/test/NuGet.Clients.FuncTests/NuGet*/*.cs
+       src/nuget-client.*/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/Caching/Tests/*
+       src/nuget-client.*/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/Caching/CachingTests*.cs
+       src/nuget-client.*/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/Commands/*.cs
+       src/nuget-client.*/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/CommandRunnerTest.cs
+       src/nuget-client.*/test/NuGet.Clients.FuncTests/NuGet.MSSigning.Extensions.FuncTest/*.cs
+       src/nuget-client.*/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/*.cs
+       src/nuget-client.*/test/NuGet.Core.Tests/*.cs
+       src/nuget-client.*/test/NuGet.Tests.Apex/*.cs
+Copyright: .NET Foundation
 License: Apache-2.0
 
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampRequest.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampToken.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampTokenInfo.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampUtils.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.Packaging/Signing/Timestamp/Rfc3161TimestampWin32.cs
-Copyright: no-info-found
-License: Expat
-
-Files: src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/BuildAction.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/LockFileContentFile.cs
- src/nuget-client.*/src/NuGet.Core/NuGet.ProjectModel/LockFile/LockFileRuntimeTarget.cs
-Copyright: no-info-found
-License: Expat
-
-Files: src/nuget-client.*/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/NuGetPackCommandTest.cs
-Copyright: 2013
-License: Apache-2.0
-
-Files: src/nuget-client.*/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/NuGetSpecCommandTest.cs
- src/nuget-client.*/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/ProjectFactoryTest.cs
-Copyright: $</copyright>
-License: Apache-2.0
-
-Files: src/nuget-client.*/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/SettingSectionTests.cs
- src/nuget-client.*/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/SettingTextTests.cs
- src/nuget-client.*/test/NuGet.Core.Tests/NuGet.Configuration.Test/SettingsFileParsingTests/UnknownItemTests.cs
-Copyright: .NET Foundation.
-License: Apache-2.0
-
-Files: src/nuget-client.*/test/NuGet.Core.Tests/NuGet.LibraryModel.Tests/FrameworkDependencyFlagsUtilsTests.cs
-Copyright: .NET Foundation.
-License: Apache-2.0
-
-Files: src/nuget-client.*/test/NuGet.Tests.Apex/NuGet.Tests.Apex/Utility/SigningUtility.cs
-Copyright: .NET Foundation.
-License: Apache-2.0
-
-Files: src/roslyn-analyzers.c750b5a665adb75b528a93d844f238bd1360a91a/*
+Files: src/roslyn-analyzers.*/*
 Copyright: Microsoft.
 License: Expat
 
