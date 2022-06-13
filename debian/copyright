@@ -4117,6 +4117,10 @@ Files: src/templating.*/*
 Copyright: 2016 .NET Foundation
 License: Expat
 
+Files: src/templating.*/*/Directory.Build.props
+Copyright: 2016 .NET Foundation and Contributors
+License: Expat
+
 Files: src/test-templates.*/eng/common/internal/*
 Copyright: .NET Foundation
 License: Expat
