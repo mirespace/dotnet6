@@ -948,78 +948,32 @@ Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/roslyn-analyzers.*/*
-Copyright: Microsoft.
+Copyright: .NET Foundation and Contributors
 License: Expat
 
-Files: src/roslyn-analyzers.c750b5a665adb75b528a93d844f238bd1360a91a/src/Tools/PerfDiff/BDN/*
-Copyright: no-info-found
+Files: src/roslyn-analyzers.*/*.md src/roslyn-analyzers.*/Directory* src/roslyn-analyzers.*/*.targets
+       src/roslyn-analyzers.*/*.Package.csproj src/roslyn-analyzers.*/*.vb
+       src/roslyn-analyzers.*/src/Microsoft.*/*
+       src/*.cs
+Copyright: Microsoft
 License: Expat
 
-Files: src/roslyn-analyzers.c750b5a665adb75b528a93d844f238bd1360a91a/src/Tools/PerfDiff/BDN/BenchmarkDotNetDiffer.cs
+Files: src/roslyn-analyzers.*/src/Utilities/Compiler/RoslynHashCode.cs
 Copyright: Microsoft.
-License: Expat
-
-Files: src/roslyn-analyzers.c750b5a665adb75b528a93d844f238bd1360a91a/src/Utilities/Compiler/RoslynHashCode.cs
-Copyright: Microsoft.
+           2012-2016, Yann Collet
 License: BSD-2-clause and/or Expat
 
 Files: src/roslyn.*/*
 Copyright: .NET Foundation and Contributors
 License: Expat and Apache-2.0
 
-Files: src/roslyn.*/src/Analyzers/CSharp/Tests/RemoveUnnecessaryImports/*
-Copyright: Somebody.
+Files: src/roslyn.*/*.cs src/roslyn.*/*.cpp
+Copyright: .NET Foundation
 License: Expat
-
-Files: src/roslyn.*/src/Analyzers/CSharp/Tests/RemoveUnnecessaryImports/RemoveUnnecessaryImportsTests_FixAllTests.cs
-Copyright: no-info-found
-License: Expat
-
-Files: src/roslyn.*/src/Analyzers/Core/Analyzers/FileHeaders/FileHeader.cs
-Copyright: Text, int fileHeaderStart, int fileHeaderEnd, int commentPrefixLength) / Text">The copyright string, as parsed from the header.</param>
-License: Expat
-
-Files: src/roslyn.*/src/Compilers/Core/Portable/Symbols/Attributes/AttributeUsageInfo.cs
-Copyright: Inherited: true
-License: Expat
-
-Files: src/roslyn.*/src/Compilers/RealParserTests/CLibraryShim/AssemblyInfo.cpp
-Copyright: Attribute(L"Copyright 2015")];
-License: Expat
-
-Files: src/roslyn.*/src/Compilers/RealParserTests/Properties/*
-Copyright: 2015
-License: UNKNOWN
 
 Files: src/roslyn.*/src/Compilers/Test/Core/Assert/UseCultureAttribute.cs
-Copyright: 2014, Outercurve Foundation and licensed under the Apache License
+Copyright: 2014, Outercurve Foundation
 License: Apache-2.0 and/or Expat
-
-Files: src/roslyn.*/src/Compilers/Test/Resources/Core/MetadataTests/NetModule01/*
-Copyright: UNKNOWN
-License: UNKNOWN
-
-Files: src/roslyn.*/src/Compilers/Test/Resources/Core/MetadataTests/NetModule01/AppCS.cs
- src/roslyn.*/src/Compilers/Test/Resources/Core/MetadataTests/NetModule01/ModuleCS00.cs
- src/roslyn.*/src/Compilers/Test/Resources/Core/MetadataTests/NetModule01/ModuleCS01.cs
-Copyright: no-info-found
-License: Expat
-
-Files: src/roslyn.*/src/EditorFeatures/CSharpTest/SplitOrMergeIfStatements/MergeConsecutiveIfStatementsTests_ElseIf_Middle.cs
-Copyright: System.Console.WriteLine();
-License: Expat
-
-Files: src/roslyn.*/src/EditorFeatures/CSharpTest/SplitOrMergeIfStatements/MergeConsecutiveIfStatementsTests_Statements_Middle.cs
-Copyright: return;
-License: Expat
-
-Files: src/roslyn.*/src/Workspaces/Core/Portable/CodeFixes/FixAllOccurrences/FixAllProvider.cs
-Copyright: <see cref="FixAllScope.Solution"/>
-License: Expat
-
-Files: src/roslyn.*/src/Workspaces/MSBuildTest/Resources/SourceFiles/CSharp/AssemblyInfo.cs
-Copyright: Microsoft 2011")]
-License: Expat
 
 Files: src/runtime.*/docs/*
 Copyright: combining metrics across benchmarks
