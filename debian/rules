@@ -11,7 +11,7 @@ export HOME=$(shell mktemp -d)
 ifeq ($(DEB_HOST_ARCH), amd64)
 	_RUNTIME_ARCH = x64
 endif
-_RUNTIME_ID = $(shell . /etc/os-release; echo $${ID}.$${VERSION_ID})
+_RUNTIME_ID = $(shell . /etc/os-release; [ ! -z $${VERSION_ID} ] && echo $${ID}.$${VERSION_ID} || echo $${ID})
 _SDK_VERSION = $(DEB_VERSION_UPSTREAM)
 _RUNTIME_VERSION = 6.0.4
 _VERSION = $(shell echo $(_SDK_VERSION) | cut -d'.' -f1)
