@@ -65,14 +65,7 @@ override_dh_auto_build:
 		&& patch -p1 -i $(CURDIR)/debian/patches/1600installer-12516-portablerid.patch \
 	&& popd
 
-	mkdir -p $(CURDIR)/packages/archive
-	ln -s $(DOTNET_TOP)/$(dotnet_version)/source-built-artifacts/Private.SourceBuilt.Artifacts.*.tar.gz $(CURDIR)/packages/archive/
-	cp -RLp $(DOTNET_TOP)/$(dotnet_version) $(CURDIR)/previously-built-dotnet
-	find previously-built-dotnet
-	
-	
 	VERBOSE=1 ./build.sh \
-	--with-sdk $(CURDIR)/previously-built-dotnet \
     	-- \
     	/v:n \
     	/p:SkipPortableRuntimeBuild=true \
