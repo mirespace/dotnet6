@@ -248,7 +248,7 @@ if [[ ${build_bootstrap} == true ]]; then
     find . -type f -iname '*.tar.gz' -delete
     rm -rf .dotnet
 else
-    find . -type f -iname '*.tar.xz' -delete
+    find . -type f -iname '*.tar.gz' -delete
     rm -rf .dotnet
     tar -czf "../${tarball_name}${tarball_suffix}" "${tarball_name}"
 fi
