@@ -146,17 +146,5 @@ override_dh_install:
 	rm debian/tmp/dependants
 	dh_install
 
-<<<<<<< HEAD
-#override_dh_auto_test:
-
-	#update-ca-certificates
-	#VERBOSE=1 ./build.sh --run-smoke-test
-	#$(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/assets/smoke-tests/smoke-test.sh --dotnetDir $(CURDIR)/test/Microsoft.DotNet.SourceBuild.SmokeTests/bin/Release/net6.0/.dotnet --projectOutput --archiveRestoredPackages --targetRid ubuntu.22.04-x64 --minimal --excludeOnlineTests --excludeOmniSharpTests
-
-
-	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --info
-	#$(DESTDIR)/$(LIBDIR)/dotnet/dotnet --version
-=======
 override_dh_dwz:
 #	Leaving it empty due to "dwz: Unknown debugging section .debug_addr"
->>>>>>> origin/v6.0.105-kinetic
