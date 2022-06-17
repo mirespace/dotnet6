@@ -3916,13 +3916,10 @@ Files: src/source-build.*/src/humanizer/*
 Copyright: 2012-2014, Mehdi Khalili
 License: Expat
 
-#not sure
 Files: src/source-build.*/src/humanizer/src/Humanizer/*
 Copyright: 2012-2017 Mehdi Khalili
-           Oren Novotny
 License: Expat
 
-#not sure
 Files: src/source-build.*/src/humanizer/src/Humanizer.Tests.Shared/*
 Copyright: 2013, 2014, Omar Khudeira
 License: Expat
@@ -3931,7 +3928,6 @@ Files: src/source-build.*/src/humanizer/src/Humanizer.Tests.Shared/InflectorTest
 Copyright: 2013, Scott Kirkland
 License: Expat
 
-#not sure
 Files: src/source-build.*/src/humanizer/src/Humanizer/*
 Copyright: 2013, 2014, Omar Khudeira
 License: Expat
@@ -3942,11 +3938,6 @@ License: Expat
 
 Files: src/source-build.*/src/humanizer/src/Humanizer/MetricNumeralExtensions.cs
 Copyright: 2015, Alois de Gouvello
-License: Expat
-
-#not sure
-Files: src/source-build.*/src/humanizer/src/Humanizer/RomanNumeralExtensions.cs
-Copyright: Jesse Slicer
 License: Expat
 
 Files: src/source-build.*/src/newtonsoft-json*/*
