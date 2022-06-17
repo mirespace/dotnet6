@@ -40,8 +40,8 @@ dotnet for Debian
     process you can dedicate to it if any):
 
     * `sbuild -d kinetic --arch=amd64 --purge-build=successful --debbuildopts='--buildinfo-option=-O' --build-dir=..`
-   
-   
+    
+
     In next releases, we are not going to use such a complex tarball, as we
     already would have the prebuilds binaries packaged in a deb file
     (dotnet-sdk-6.0-source-built-artifacts*.deb). For testing the use of this
