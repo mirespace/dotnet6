@@ -1,5 +1,149 @@
 dotnet for Debian
 
-    Dotnet for Ubuntu
+    Packaging .Net 6 on Ubuntu
+    ==========================
 
- -- Miriam España Acebal <miriam.espana@canonical.com>  Tue, 01 Feb 2022 20:58:49 +0100
+    Here we have only the debian folder for packaging .Net 6 on Ubuntu, due to
+    size limitations.
+
+    It's prepared to recreate v6.0.105. (for doing for higher versions, please
+    change the number in the following steps).
+
+    To recreate tarball and source code for building the package, the steps are
+    the following:
+
+    * Clone the repository and get into it
+    * Remove the README file outside the `debian` folder if it is present
+    * `uscan --download-version 6.0.105`
+    
+    Now, a `dotnet6_6.0.105.orig.tar.xz` tarball file has been generated in the parent
+    folder (the actual folder remains the same). At this point, there are two possibilities:
+
+    - 1. If you want to check the source code before doing the building:
+      * `uupdate -b ../dotnet6_6.0.105.orig.tar.xz`
+      * `cd ../dotnet6-6.0.105`
+    
+    _
+    - 2. If you want to build the package directly:
+      * mv dotnet6 `dotnet6-6.0.105`
+
+    Whichever method you choose before, you should now have a folder called `dotnet6-6.0.105` 
+    and in its parent directory a file called `dotnet6_6.0.105.orig.tar.xz` (with a size of about 4.4 GB 
+    for the previous version, and 527 MB for the 6.0.105).
+
+    Please, check that you have installed `sbuild` and `debhelper` on your system. Also, a
+    schroot for kinetic is needed (you can create it with
+    `sudo sbuild-createchroot --arch=amd64 kinetic /var/lib/schroot/chroot/kinetic-amd64  http://archive.ubuntu.com/ubuntu/`).
+
+    Now, we use the following command for the building (you can use `DEB_BUILD_OPTIONS="parallel=n"`
+    on front of the command, changing n to the number of parallel 
+    process you can dedicate to it if any):
+
+    * `sbuild -d kinetic --arch=amd64 --purge-build=successful --debbuildopts='--buildinfo-option=-O' --build-dir=..`
+    
+
+    For v6.0.105 and next releases, we are not going to use such a complex tarball, as we
+    already would have the prebuilds binaries packaged in a deb file
+    (dotnet-sdk-6.0-source-built-artifacts*.deb). For testing the use of this
+    prebuild deb package, and until we release officialy dotnet, you should add
+    the following flag to the previous sbuild command in order to add the PPA where
+    you built the packages before (e.g., for kinetic):
+    
+    `--extra-repository="deb [trusted=yes]
+    http://ppa.launchpad.net/cloud-images/dotnet/ubuntu kinetic main" `
+
+    Some context
+    ============
+
+    (Please, Note that there is work currently on the MSFT side to have a proper
+    upstream git repo to avoid the following inconveniences).
+
+    The source code is a conglomerate of the entire dotnet repo suite
+    (https://github.com/dotnet): from their ~25 different repos, we get a copy
+    of them at a certain commit (src/<dotnet_repo_name>.), which we get using an
+    MSBuild tool to build the tarball using the release tag (6.0.103, 6.0.105,
+    et al.):
+
+        * Source tarball is 5.5GB (0.5 GB when we use our previuos debs built for previous release).
+        * There is no upstream git repo as-is to work from: the way we work and deal with it is by
+          creating the tarball via a script, deploying it locally and keepìng the debian folder in
+          a github repo (cf: https://github.com/canonical/dotnet). We’re working on how to allocate this
+          local snapshot of the upstream code as it exceeds the default GitHub
+          repository size. This makes it impossible to use the series files for
+          patching, as the path from one release to another is changing due to the
+          commit hash. We cannot minimize delta as the source code is always removed
+          and added back, sadly. Building time is nearly an hour or more (even through
+          Launchpad). Tarball build is about 30~40 min. We have preliminary versions
+          of the packages here:
+          https://launchpad.net/~cloud-images/+archive/ubuntu/dotnet/+packages
+
+    Requirements for building
+    =========================
+
+    Locally: For the above timing, I use DEB_BUILD_OPTIONS="parallel=16" in
+    front of the sbuild command (my machine has 64 MB RAM and an AMD 9 Ryzen
+    5000 series processor). The space needed is ~50 GB (including the generated
+    .deb files in parent directory. Build log file is ~125MB). To install the
+    debs in a VM, I used to create it with 30GB of disk space.
+
+    PPA: It's necessary to ask to increase disk space to at least to 10GB
+
+    Now, the package is prepared to be build using sbuild, without the
+    need of extract the source tarball.
+
+    Packaging Desing considerations
+    ===============================
+
+    *Patching*
+
+    We cannot apply the patch via quilt, using the series files, as the path for the target file for
+    patching will change from one release to the following one. Due to this, we apply the patches manually
+    before building starts, in the overriding building section of the rules files.
+
+    d/p/500fsharp-use-work-tree-with-git-apply.patch is exactly the same as 
+    d/p/600xliff-tasks-use-work-tree-with-git-apply.patch, but applied to two different folders
+    (for that reason we keep both).
+
+    *Using alternatives*
+
+    One of the requirements for dotnet was to allow multiple SDKs (major versions)
+    installed at the same time on a machine. For that reason, we are using update-alternatives
+    for implementing it.
+
+    The path would be /usr/lib/dotnet/dotnet6 and this would be a simlink (via /etc/alternatives)
+    to /usr/lib/dotnet/dotnet-6.0.105 (e.g., in the case of SDK v6.0.105).
+
+    As the dotnet-host is the package that contains the binary dotnet cli, these operations are
+    being made around it. The items that has to be conducted by the alternatives are:
+
+    * The binary.
+    * The bash completion script for that binary
+    * The man pages of that binary.
+    * The configuration files (install_location) that points to a concrete SDK.
+
+    For that reason, .manpages , .bash-completions or .dirs files are not being used (as they need to
+    be set before update-alternatives comes to play). Therefore, some of these are being done manually
+    in the overriding install section of the rules files, as well as the generation of the .update-alternatives
+    file (on-the-fly).
+
+    *Lintian Overrides*
+
+    * license-problem-non-free-RFC: Every folder under src includes a THIRD_PARTY_NOTICES.TXT file 
+      (that triggers the error). Also the file
+      src/runtime.*/src/coreclr/utilcode/guidfromname.cpp is multilicensed.
+
+    * source-is-missing: We have three cases here for overriding this:
+      - 1. JS files: It looks like these are all false-positives.
+           The *.js files all contain the full source code  and license headers.
+           Also, there are *.min.js files available; these would be a problem if
+           they were not accompanied by the corresponding *.js, but that doesn't
+           seem to be the case here.
+      - 2. HTML files: Also a false positive due to the use of the substring ".Link"
+           in their names.
+      - 3. prebuilds from MS Arcade: This files are needed for boostrapping the first
+           release of the package (they will disappear in upcoming releases).
+
+
+
+     -- Miriam España Acebal <miriam.espana@canonical.com>  Tue, 01 Feb 2022
+     20:58:49 +0100

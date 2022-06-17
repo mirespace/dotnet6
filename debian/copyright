@@ -3,29 +3,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: dotnet
 Source: https://github.com/dotnet/
-Files-Excluded:
-.dotnet/ThirdPartyNotices.txt
-packages/text-only/microsoft.net.workload.mono.toolchain.manifest-6.0.100/6.0.?/THIRD-PARTY-NOTICES.TXT
-src/diagnostics.*/THIRD-PARTY-NOTICES.TXT
-src/installer.*/THIRD-PARTY-NOTICES
-src/runtime.*/THIRD-PARTY-NOTICES.TXT
-src/runtime.*/src/installer/pkg/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/3.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/3.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app.ref/5.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/microsoft.netcore.app/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/targetPacks/ILsrc/netstandard.library.ref/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.net.sdk.il/6.0.0-rc.1.21415.6/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnetapphost/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnetapphost/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostpolicy/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostpolicy/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostresolver/2.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.dotnethostresolver/2.1.0/THIRD-PARTY-NOTICES.TXT
-src/source-build-reference-packages.*/src/textOnlyPackages/src/microsoft.netcore.platforms/5.0.0/THIRD-PARTY-NOTICES.TXT
-src/source-build.10d0f7e94aa45889155c312f51cfc01bf326b853/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
-src/source-build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
 
 Files: *
 Copyright: The .NET Foundation and Contributors
@@ -33,19 +10,19 @@ License: Expat
 
 Files: debian/*
 Copyright: 2022 Miriam España Acebal <miriam.espana@canonical.com>
-License: MIT or Apache-2.0
+License: Expat or Apache-2.0
 
 Files: .dotnet/*
 Copyright: The .NET Foundation and Contributors
-License: MIT
+License: Expat
 
 Files: ArcadeOverrides/*
 Copyright: The .NET Foundation
-License: MIT
+License: Expat
 
 Files: eng/common/internal/*
 Copyright: The .NET Foundation
-License: MIT
+License: Expat
 
 Files: packages/*
 Copyright: JS Foundation and other contributors
@@ -53,15 +30,15 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2016, Twitter, Inc.
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*/bootstrap.*
 Copyright: 2011-2019, Twitter, Inc.
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/*
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
 Copyright: The .NET Foundation
@@ -69,11 +46,11 @@ License: Apache 2.0
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/*
 Copyright: Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -82,7 +59,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2019, Twitter, Inc.
@@ -102,7 +79,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -111,7 +88,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2019, Twitter, Inc.
@@ -131,7 +108,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -140,7 +117,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.2.1/2.1.30/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/BlazorServerWeb-CSharp/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -171,7 +148,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -180,7 +157,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -206,7 +183,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -215,7 +192,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -241,7 +218,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -250,7 +227,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/BlazorServerWeb-CSharp/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -281,7 +258,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -290,7 +267,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -316,7 +293,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -325,7 +302,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -351,7 +328,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -360,7 +337,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.3.1/3.1.22/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/BlazorServerWeb-CSharp/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -396,7 +373,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -405,7 +382,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -431,7 +408,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -440,7 +417,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -466,7 +443,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer;
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -475,7 +452,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.5.0/5.0.14/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/BlazorServerWeb-CSharp/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -511,7 +488,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer;
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -520,7 +497,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -546,7 +523,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -555,7 +532,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -581,7 +558,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -590,7 +567,7 @@ License: Expat
 
 Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: packages/text-only/microsoft.net.sdk.ios.manifest-6.0.100/*
 Copyright: 2006-2009, The Open Toolkit library.
@@ -725,7 +702,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/Identity/UI/src/assets/V4/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/Identity/UI/src/assets/V4/lib/jquery-validation/dist/additional-methods.js
  src/aspnetcore.*/src/Identity/UI/src/assets/V4/lib/jquery-validation/dist/jquery.validate.js
@@ -734,7 +711,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/Identity/UI/src/assets/V4/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/Identity/UI/src/assets/V5/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -760,7 +737,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/Identity/UI/src/assets/V5/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/Identity/UI/src/assets/V5/lib/jquery-validation/dist/additional-methods.js
  src/aspnetcore.*/src/Identity/UI/src/assets/V5/lib/jquery-validation/dist/jquery.validate.js
@@ -769,7 +746,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/Identity/UI/src/assets/V5/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/*
 Copyright: JS Foundation and other contributors
@@ -799,7 +776,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/additional-methods.js
  src/aspnetcore.*/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -808,7 +785,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/Installers/Windows/AspNetCoreModule-Setup/IIS-Setup/*
 Copyright: Microsoft Corporation.
@@ -860,7 +837,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -869,7 +846,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -895,7 +872,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -904,7 +881,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -930,7 +907,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
 Copyright: 2017, Jörn Zaefferer
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
  src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/jquery.validate.js
@@ -939,7 +916,7 @@ License: Expat
 
 Files: src/aspnetcore.*/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
-License: MIT
+License: Expat
 
 Files: src/aspnetcore.*/src/Servers/IIS/AspNetCoreModuleV2/CommonLib/EventTracing.h
  src/aspnetcore.*/src/Servers/IIS/AspNetCoreModuleV2/CommonLib/ServerErrorApplication.h
@@ -1011,7 +988,7 @@ License: BSD-3-clause
 
 Files: src/deployment-tools.*/*
 Copyright: .NET Foundation and Contributors
-License: MIT
+License: Expat
 
 Files: src/diagnostics.*/src/SOS/lldbplugin/swift-4.1/*
 Copyright: 2014, 2015, Apple Inc. and the Swift project authors
@@ -1054,7 +1031,7 @@ License: Expat
 
 Files: src/format.*/*
 Copyright: .Net Foundation and Contributors
-License: MIT
+License: Expat
 
 Files: src/format.*/.devcontainer/*
 Copyright: Microsoft Corporation.
@@ -1070,23 +1047,23 @@ License: Expat
 
 Files: src/fsharp.*/docs/*
 Copyright: Microsoft Corporation.
-License: MIT
+License: Expat
 
 Files: src/fsharp.*/release-notes.md
 Copyright: Microsoft Corporation.
-License: MIT
+License: Expat
 
 Files: src/fsharp.*/scripts/diff-fsharp-repos.sh
 Copyright: Microsoft Corporation.
-License: MIT
+License: Expat
 
 Files: src/fsharp.*/tests/*
 Copyright: Microsoft Corporation.
-License: MIT
+License: Expat
 
 Files: src/fsharp.*/tests/FSharp.Core.UnitTests/*
 Copyright: Microsoft Corporation.
-License: MIT
+License: Expat
 
 Files: src/fsharp.*/tests/fsharpqa/testenv/src/PEVerify/CLRHelpers.cs
 Copyright: Microsoft.
@@ -1094,7 +1071,7 @@ License: Apache-2.0
 
 Files: src/fsharp.*/vsintegration/*
 Copyright: Microsoft Corporation.
-License: MIT
+License: Expat
 
 Files: src/installer.*/src/SourceBuild/tarball/content/tools-local/tasks/Microsoft.DotNet.SourceBuild.Tasks.XPlat/DownloadFileSB.cs
 Copyright: Microsoft.
@@ -1106,7 +1083,7 @@ License: Apache-2.0
 
 Files: src/installer.*/src/core-sdk-tasks/BuildFPMToolPreReqs.cs
 Copyright: Microsoft Corporation.
-License: MIT
+License: Expat
 
 Files: src/installer.*/src/redist/targets/packaging/rpm/templates/*
 Copyright: Microsoft Corporation.
@@ -1114,7 +1091,7 @@ License: Expat
 
 Files: src/linker.*/*
 Copyright: The .NET Foundation and Contributors
-License: MIT
+License: Expat
 
 Files: src/linker.*/external/Mono.Options/*
 Copyright: 2017, Microsoft Corporation (http:www.microsoft.com)
@@ -1280,15 +1257,11 @@ License: Expat
 
 Files: src/msbuild.*/*
 Copyright: The .Net Foundation and Contributors
-License: MIT
+License: Expat
 
 Files: src/msbuild.*/src/Build.UnitTests/SolutionFileBuilder.cs
 Copyright: Microsoft Corporation.
 License: All_rights_reserved
-
-Files: src/msbuild.*/src/Build/BackEnd/Components/SdkResolution/SdkResolverException.cs
-Copyright: no-info-found
-License: Expat
 
 Files: src/msbuild.*/src/Shared/CoreCLRAssemblyLoader.cs
 Copyright: Microsoft.
@@ -1573,7 +1546,7 @@ Copyright: 2001-2005, Hewlett-Packard Development Company, L.P.
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/include/libunwind-aarch64.h
-Copyright: 2013, Linaro Limited
+Copyright: 2013, Linaro LiExpated
  2001-2005, Hewlett-Packard Co
 License: Expat
 
@@ -1602,18 +1575,18 @@ Copyright: 2014, Tilera Corp.
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/include/tdep-aarch64/*
-Copyright: 2013, Linaro Limited
+Copyright: 2013, Linaro LiExpated
  2012, Tommi Rantala <tt.rantala@gmail.com>
  2008, CodeSourcery
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/include/tdep-aarch64/jmpbuf.h
-Copyright: 2011-2013, Linaro Limited
+Copyright: 2011-2013, Linaro LiExpated
  2008, CodeSourcery
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/include/tdep-aarch64/libunwind_i.h
-Copyright: 2013, Linaro Limited
+Copyright: 2013, Linaro LiExpated
  2001-2005, Hewlett-Packard Co
 License: Expat
 
@@ -1627,7 +1600,7 @@ Copyright: 2012, Tommi Rantala <tt.rantala@gmail.com>
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/include/tdep-arm/ex_tables.h
-Copyright: 2011, Linaro Limited
+Copyright: 2011, Linaro LiExpated
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/include/tdep-hppa/dwarf-config.h
@@ -1690,7 +1663,7 @@ Copyright: 2001-2005, Hewlett-Packard Co
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/*
-Copyright: 2013, Linaro Limited
+Copyright: 2013, Linaro LiExpated
  2012, Tommi Rantala <tt.rantala@gmail.com>
  2008, CodeSourcery
 License: Expat
@@ -1704,7 +1677,7 @@ Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/Gcreate_addr_spac
  src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/Gis_signal_frame.c
  src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/init.h
  src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/regname.c
-Copyright: 2013, Linaro Limited
+Copyright: 2013, Linaro LiExpated
  2012, Tommi Rantala <tt.rantala@gmail.com>
 License: Expat
 
@@ -1716,14 +1689,14 @@ License: Expat
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/Ginit_local.c
  src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/is_fpreg.c
  src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/unwind_i.h
-Copyright: 2011-2013, Linaro Limited
+Copyright: 2011-2013, Linaro LiExpated
  2008, CodeSourcery
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/Gresume.c
  src/runtime.*/src/coreclr/pal/src/libunwind/src/aarch64/Gstep.c
 Copyright: 2012, Tommi Rantala <tt.rantala@gmail.com>
- 2011-2013, Linaro Limited
+ 2011-2013, Linaro LiExpated
  2008, CodeSourcery
 License: Expat
 
@@ -1748,18 +1721,18 @@ Copyright: 2001-2005, Hewlett-Packard Development Company, L.P.
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/arm/Gex_tables.c
-Copyright: 2011, Linaro Limited
+Copyright: 2011, Linaro LiExpated
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/arm/Ginit_local.c
-Copyright: 2011-2013, Linaro Limited
+Copyright: 2011-2013, Linaro LiExpated
  2008, CodeSourcery
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/arm/Gos-freebsd.c
 Copyright: 2015, The FreeBSD Foundation
  2012, Tommi Rantala <tt.rantala@gmail.com>
- 2011, Linaro Limited
+ 2011, Linaro LiExpated
  2008, CodeSourcery
 License: Expat
 
@@ -1768,7 +1741,7 @@ Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/arm/Gos-linux.c
  src/runtime.*/src/coreclr/pal/src/libunwind/src/arm/Gresume.c
  src/runtime.*/src/coreclr/pal/src/libunwind/src/arm/Gstep.c
 Copyright: 2012, Tommi Rantala <tt.rantala@gmail.com>
- 2011-2013, Linaro Limited
+ 2011-2013, Linaro LiExpated
  2008, CodeSourcery
 License: Expat
 
@@ -1860,7 +1833,7 @@ License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/mips/Gis_signal_frame.c
  src/runtime.*/src/coreclr/pal/src/libunwind/src/mips/Gstep.c
-Copyright: 2015, Imagination Technologies Limited
+Copyright: 2015, Imagination Technologies LiExpated
  2008, CodeSourcery
 License: Expat
 
@@ -1926,7 +1899,7 @@ Copyright: 2007, David Mosberger-Tang
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/ptrace/_UPT_reg_offset.c
-Copyright: 2013, Linaro Limited
+Copyright: 2013, Linaro LiExpated
  2001-2005, Hewlett-Packard Co
 License: Expat
 
@@ -1953,7 +1926,7 @@ License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/s390x/Gis_signal_frame.c
 Copyright: 2017, IBM
- 2013, Linaro Limited
+ 2013, Linaro LiExpated
  2012, Tommi Rantala <tt.rantala@gmail.com>
 License: Expat
 
@@ -1992,14 +1965,14 @@ Copyright: 2012, Tommi Rantala <tt.rantala@gmail.com>
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/sh/Ginit_local.c
-Copyright: 2011-2013, Linaro Limited
+Copyright: 2011-2013, Linaro LiExpated
  2008, CodeSourcery
 License: Expat
 
 Files: src/runtime.*/src/coreclr/pal/src/libunwind/src/sh/Gresume.c
  src/runtime.*/src/coreclr/pal/src/libunwind/src/sh/Gstep.c
 Copyright: 2012, Tommi Rantala <tt.rantala@gmail.com>
- 2011-2013, Linaro Limited
+ 2011-2013, Linaro LiExpated
  2008, CodeSourcery
 License: Expat
 
@@ -2542,7 +2515,7 @@ Copyright: 2004-2009, Novell, Inc (http:www.novell.com)
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Drawing.Common/src/System/Drawing/Image.Unix.cs
-Copyright: 2013, Kristof Ralovich, changes are available under the terms of the MIT X11 license
+Copyright: 2013, Kristof Ralovich, changes are available under the terms of the Expat X11 license
  2004, 2007, Novell, Inc (http:www.novell.com)
  2002, Ximian, Inc. http:www.ximian.com
 License: Expat
@@ -2701,7 +2674,7 @@ Copyright: Attribute(string copyright) / Attribute : Attribute
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Private.CoreLib/src/System/Runtime/InteropServices/NativeMemory.cs
-Copyright: 2019, Microsoft Corporation, Daan Leijen. Licensed under the MIT license
+Copyright: 2019, Microsoft Corporation, Daan Leijen. Licensed under the Expat license
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Private.CoreLib/src/System/Text/EncoderLatin1BestFitFallback.Data.cs
@@ -2725,7 +2698,7 @@ Copyright: Netscape Communications, 1999
 License: UNKNOWN
 
 Files: src/runtime.*/src/libraries/System.Private.Xml/src/Utils/DTDs/XHTML10/*
-Copyright: 1998-2002, W3C (MIT, INRIA, Keio)
+Copyright: 1998-2002, W3C (Expat, INRIA, Keio)
 License: UNKNOWN
 
 Files: src/runtime.*/src/libraries/System.Private.Xml/tests/Xslt/TestFiles/*
@@ -2889,30 +2862,30 @@ Copyright: 2013, Xamarin, Inc (http:www.xamarin.com)
  2002, 2003, Ximian, Inc. (http:www.ximian.com)
 License: Expat
 
-Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/*
+Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/*
 Copyright: 2004-2011, Novell, Inc (http:www.novell.com)
 License: Expat
 
-Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/AssemblyBuilder.Mono.cs
- src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/ConstructorBuilder.Mono.cs
- src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/DynamicMethod.cs
- src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/MethodBuilder.Mono.cs
- src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/MonoArrayMethod.cs
- src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/TypeBuilder.Mono.cs
+Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/AssemblyBuilder.Mono.cs
+ src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/ConstructorBuilder.Mono.cs
+ src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/DynamicMethod.cs
+ src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/MethodBuilder.Mono.cs
+ src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/MonoArrayMethod.cs
+ src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/TypeBuilder.Mono.cs
 Copyright: 2004-2009, Novell, Inc (http:www.novell.com)
  2001-2004, Ximian, Inc. http:www.ximian.com
 License: Expat
 
-Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/DynamicMethod.notsupported.cs
+Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/DynamicMethod.notsupported.cs
 Copyright: 2012-2016, Xamarin Inc (http:www.xamarin.com)
 License: Expat
 
-Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/GenericTypeParameterBuilder.cs
+Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/GenericTypeParameterBuilder.cs
 Copyright: 2004, Novell, Inc.
  2004, Novell, Inc (http:www.novell.com)
 License: Expat
 
-Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/Emit/TypeBuilderInstantiation.cs
+Files: src/runtime.*/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/TypeBuilderInstantiation.cs
 Copyright: 2004, Novell, Inc (http:www.novell.com)
  2001, Ximian, Inc.
 License: Expat
@@ -3950,7 +3923,7 @@ Copyright: 1995-2017, Jean-loup Gailly and Mark Adler
 License: Zlib
 
 Files: src/runtime.*/src/native/corehost/json/*
-Copyright: 2015, THL A29 Limited, a Tencent company, and Milo Yip.
+Copyright: 2015, THL A29 LiExpated, a Tencent company, and Milo Yip.
 License: Expat
 
 Files: src/runtime.*/src/native/corehost/json/rapidjson/msinttypes/*
@@ -3958,7 +3931,7 @@ Copyright: 2006-2013, Alexander Chemeris
 License: BSD-3-clause
 
 Files: src/runtime.*/src/native/corehost/json/rapidjson/schema.h
-Copyright: 2015, THL A29 Limited, a Tencent company, and Milo Yip->
+Copyright: 2015, THL A29 LiExpated, a Tencent company, and Milo Yip->
 License: Expat
 
 Files: src/runtime.*/src/tests/Common/Platform/*
@@ -4296,7 +4269,7 @@ Copyright: Jörn Zaefferer
 License: Expat
 
 Files: src/source-build-reference-packages.ed58779fdb436582d28af4a356180090d11e1159/src/textOnlyPackages/src/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer; Licensed MIT
+Copyright: 2017, Jörn Zaefferer; Licensed Expat
 License: UNKNOWN
 
 Files: src/source-build-reference-packages.ed58779fdb436582d28af4a356180090d11e1159/src/textOnlyPackages/src/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
@@ -4331,7 +4304,7 @@ Copyright: Jörn Zaefferer
 License: Expat
 
 Files: src/source-build-reference-packages.ed58779fdb436582d28af4a356180090d11e1159/src/textOnlyPackages/src/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer; Licensed MIT
+Copyright: 2017, Jörn Zaefferer; Licensed Expat
 License: UNKNOWN
 
 Files: src/source-build-reference-packages.ed58779fdb436582d28af4a356180090d11e1159/src/textOnlyPackages/src/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
@@ -4366,7 +4339,7 @@ Copyright: Jörn Zaefferer
 License: Expat
 
 Files: src/source-build-reference-packages.ed58779fdb436582d28af4a356180090d11e1159/src/textOnlyPackages/src/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
-Copyright: 2017, Jörn Zaefferer; Licensed MIT
+Copyright: 2017, Jörn Zaefferer; Licensed Expat
 License: UNKNOWN
 
 Files: src/source-build-reference-packages.ed58779fdb436582d28af4a356180090d11e1159/src/textOnlyPackages/src/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
@@ -4380,7 +4353,7 @@ License: UNKNOWN
 
 Files: src/source-build.*/*
 Copyright: The .NET Foundation and Contributors.
-License: MIT
+License: Expat
 
 Files: src/source-build.*/src/*
 Copyright: Microsoft Corporation.
@@ -4446,8 +4419,8 @@ Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Chann
 Copyright: file="ITelemetryChannel.cs" company="Microsoft"> / Microsoft.
 License: UNKNOWN
 
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Channel/InMemoryTransmitter.cs
-Copyright: file="InMemoryTransmitter.cs" company="Microsoft"> / Microsoft.
+Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Channel/InMemoryTransExpatter.cs
+Copyright: file="InMemoryTransExpatter.cs" company="Microsoft"> / Microsoft.
 License: UNKNOWN
 
 Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/*
@@ -4537,7 +4510,7 @@ License: UNKNOWN
 Files: src/source-build.*/src/humanizer/src/Humanizer/*
 Copyright: 2012-2017 Mehdi Khalili
            Oren Novotny
-License: MIT
+License: Expat
 
 Files: src/source-build.*/src/humanizer/src/Humanizer.Tests.Shared/*
 Copyright: 2013, 2014, Omar Khudeira (http:omar.io)
@@ -4553,11 +4526,11 @@ License: Expat
 
 Files: src/source-build.*/src/humanizer/src/Humanizer/InflectorExtensions.cs
 Copyright: 2013, Scott Kirkland
-License: MIT
+License: Expat
 
 Files: src/source-build.*/src/humanizer/src/Humanizer/MetricNumeralExtensions.cs
 Copyright: 2015, Alois de Gouvello
-License: MIT
+License: Expat
 
 Files: src/source-build.*/src/humanizer/src/Humanizer/RomanNumeralExtensions.cs
 Copyright: Jesse Slicer https://github.com/jslicer
@@ -4569,7 +4542,7 @@ License: Expat
 
 Files: src/source-build.*/src/newtonsoft-json901/*
 Copyright: 2007, James Newton-King
-License: MIT
+License: Expat
 
 Files: src/source-build.*/src/newtonsoft-json901/Src/Newtonsoft.Json/Utilities/LinqBridge.cs
 Copyright: 2007-2009, Atif Aziz, Joseph Albahari.
@@ -4585,7 +4558,7 @@ License: Expat
 
 Files: src/sourcelink.*/*
 Copyright: The .NET Foundation and Contributors
-License: MIT
+License: Expat
 
 Files: src/sourcelink.*/docs/GitSpec/*
 Copyright: Microsoft.
@@ -4593,7 +4566,7 @@ License: GPL-2.0
 
 Files: src/symreader.*/*
 Copyright: The .NET Foundation and Contributors
-License: MIT
+License: Expat
 
 Files: src/symreader.*/src/PdbTestResources/TestResources.cs
 Copyright: Microsoft and The .NET Foundation
@@ -4626,7 +4599,7 @@ License: Apache-2.0
 
 License: BSD-3
  Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions
+ modification, are perExpatted provided that the following conditions
  are met:
  .
     1. Redistributions of source code must retain the above copyright
@@ -4641,11 +4614,11 @@ License: BSD-3
        without specific prior written permission.
  .
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIExpatED TO, THE
     IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
     ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
     LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIExpatED TO, PROCUREMENT OF
     SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
     INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
     CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
@@ -4695,8 +4668,8 @@ License: CC-SA-1.0
  previously violated the terms of this License with respect to the Work, or who
  has received express permission from the Licensor to exercise rights under
  this License despite a previous violation.  2. Fair Use Rights. Nothing in
- this license is intended to reduce, limit, or restrict any rights arising from
- fair use, first sale or other limitations on the exclusive rights of the
+ this license is intended to reduce, liExpat, or restrict any rights arising from
+ fair use, first sale or other liExpatations on the exclusive rights of the
  copyright owner under copyright law or other applicable laws.
  .
  3. License Grant. Subject to the terms and conditions of this License,
@@ -4718,7 +4691,7 @@ License: CC-SA-1.0
  hereby reserved.
  .
  4. Restrictions. The license granted in Section 3 above is expressly made
- subject to and limited by the following restrictions:
+ subject to and liExpated by the following restrictions:
  .
  You may distribute, publicly display, publicly perform, or publicly digitally
  perform the Work only under the terms of this License, and You must include a
@@ -4759,7 +4732,7 @@ License: CC-SA-1.0
  By offering the Work for public release under this License, Licensor
  represents and warrants that, to the best of Licensor's knowledge after
  reasonable inquiry: Licensor has secured all rights in the Work necessary to
- grant the license rights hereunder and to permit the lawful exercise of the
+ grant the license rights hereunder and to perExpat the lawful exercise of the
  rights granted hereunder without You having any obligation to pay any
  royalties, compulsory license fees, residuals or any other payments; The Work
  does not infringe the copyright, trademark, publicity rights, common law
@@ -4767,8 +4740,8 @@ License: CC-SA-1.0
  invasion of privacy or other tortious injury to any third party.  EXCEPT AS
  EXPRESSLY STATED IN THIS LICENSE OR OTHERWISE AGREED IN WRITING OR REQUIRED BY
  APPLICABLE LAW, THE WORK IS LICENSED ON AN "AS IS" BASIS, WITHOUT WARRANTIES
- OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
- WARRANTIES REGARDING THE CONTENTS OR ACCURACY OF THE WORK.  6. Limitation on
+ OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIExpatATION, ANY
+ WARRANTIES REGARDING THE CONTENTS OR ACCURACY OF THE WORK.  6. LiExpatation on
  Liability. EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, AND EXCEPT FOR
  DAMAGES ARISING FROM LIABILITY TO A THIRD PARTY RESULTING FROM BREACH OF THE
  WARRANTIES IN SECTION 5, IN NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY
@@ -4842,7 +4815,7 @@ License: CC-BY-4.0
      accordance with the terms and conditions of this Public License.
  .
   c. Copyright and Similar Rights means copyright and/or similar rights
-     closely related to copyright including, without limitation,
+     closely related to copyright including, without liExpatation,
      performance, broadcast, sound recording, and Sui Generis Database
      Rights, without regard to how the rights are labeled or
      categorized. For purposes of this Public License, the rights
@@ -4855,8 +4828,8 @@ License: CC-BY-4.0
      Treaty adopted on December 20, 1996, and/or similar international
      agreements.
  .
-  e. Exceptions and Limitations means fair use, fair dealing, and/or
-     any other exception or limitation to Copyright and Similar Rights
+  e. Exceptions and LiExpatations means fair use, fair dealing, and/or
+     any other exception or liExpatation to Copyright and Similar Rights
      that applies to Your use of the Licensed Material.
  .
   f. Licensed Material means the artistic or literary work, database,
@@ -4864,7 +4837,7 @@ License: CC-BY-4.0
      License.
  .
   g. Licensed Rights means the rights granted to You subject to the
-     terms and conditions of this Public License, which are limited to
+     terms and conditions of this Public License, which are liExpated to
      all Copyright and Similar Rights that apply to Your use of the
      Licensed Material and that the Licensor has authority to license.
  .
@@ -4902,8 +4875,8 @@ License: CC-BY-4.0
  .
             b. produce, reproduce, and Share Adapted Material.
  .
-       2. Exceptions and Limitations. For the avoidance of doubt, where
-          Exceptions and Limitations apply to Your use, this Public
+       2. Exceptions and LiExpatations. For the avoidance of doubt, where
+          Exceptions and LiExpatations apply to Your use, this Public
           License does not apply, and You do not need to comply with
           its terms and conditions.
  .
@@ -4950,7 +4923,7 @@ License: CC-BY-4.0
           licensed under this Public License, nor are publicity,
           privacy, and/or other similar personality rights; however, to
           the extent possible, the Licensor waives and/or agrees not to
-          assert any such rights held by the Licensor to the limited
+          assert any such rights held by the Licensor to the liExpated
           extent necessary to allow You to exercise the Licensed
           Rights, but not otherwise.
  .
@@ -5036,13 +5009,13 @@ License: CC-BY-4.0
  replace Your obligations under this Public License where the Licensed
  Rights include other Copyright and Similar Rights.
  .
- Section 5 -- Disclaimer of Warranties and Limitation of Liability.
+ Section 5 -- Disclaimer of Warranties and LiExpatation of Liability.
  .
   a. UNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE
      EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS
      AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF
      ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS,
-     IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION,
+     IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIExpatATION,
      WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
      PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS,
      ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT
@@ -5050,16 +5023,16 @@ License: CC-BY-4.0
      ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.
  .
   b. TO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE
-     TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION,
+     TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIExpatATION,
      NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT,
      INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES,
      COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR
      USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN
      ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR
-     DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR
-     IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.
+     DAMAGES. WHERE A LIExpatATION OF LIABILITY IS NOT ALLOWED IN FULL OR
+     IN PART, THIS LIExpatATION MAY NOT APPLY TO YOU.
  .
-  c. The disclaimer of warranties and limitation of liability provided
+  c. The disclaimer of warranties and liExpatation of liability provided
      above shall be interpreted in a manner that, to the extent
      possible, most closely approximates an absolute disclaimer and
      waiver of all liability.
@@ -5104,7 +5077,7 @@ License: CC-BY-4.0
  Section 8 -- Interpretation.
  .
   a. For the avoidance of doubt, this Public License does not, and
-     shall not be interpreted to, reduce, limit, restrict, or impose
+     shall not be interpreted to, reduce, liExpat, restrict, or impose
      conditions on any use of the Licensed Material that could lawfully
      be made without permission under this Public License.
  .
@@ -5120,7 +5093,7 @@ License: CC-BY-4.0
      Licensor.
  .
   d. Nothing in this Public License constitutes or may be interpreted
-     as a limitation upon, or waiver of, any privileges and immunities
+     as a liExpatation upon, or waiver of, any privileges and immunities
      that apply to the Licensor or You, including from the legal
      processes of any jurisdiction or authority.
 
@@ -5273,12 +5246,12 @@ License: EPL-1.0
  .
  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS PROVIDED ON
  AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER
- EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR
+ EXPRESS OR IMPLIED INCLUDING, WITHOUT LIExpatATION, ANY WARRANTIES OR
  CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A
  PARTICULAR PURPOSE. Each Recipient is solely responsible for determining the
  appropriateness of using and distributing the Program and assumes all risks
  associated with its exercise of rights under this Agreement , including but
- not limited to the risks and costs of program errors, compliance with
+ not liExpated to the risks and costs of program errors, compliance with
  applicable laws, damage to or loss of data, programs or equipment, and
  unavailability or interruption of operations.
  .
@@ -5286,7 +5259,7 @@ License: EPL-1.0
  .
  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT NOR ANY
  CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING WITHOUT LIMITATION
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING WITHOUT LIExpatATION
  LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  ARISING IN ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
@@ -5316,7 +5289,7 @@ License: EPL-1.0
  Agreement and any licenses granted by Recipient relating to the Program shall
  continue and survive.
  .
- Everyone is permitted to copy and distribute copies of this Agreement, but in
+ Everyone is perExpatted to copy and distribute copies of this Agreement, but in
  order to avoid inconsistency the Agreement is copyrighted and may only be
  modified in the following manner. The Agreement Steward reserves the right to
  publish new versions (including revisions) of this Agreement from time to
@@ -5382,19 +5355,19 @@ License: LGPLv2+
   On Debian systems, the complete text of the GNU Lesser General Public
   License can be found in "/usr/share/common-licenses/LGPL-2".
 
-License: MIT
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the "Software"),
- to deal in the Software without restriction, including without limitation
+ to deal in the Software without restriction, including without liExpatation
  the rights to use, copy, modify, merge, publish, distribute, sublicense,
- and/or sell copies of the Software, and to permit persons to whom the
+ and/or sell copies of the Software, and to perExpat persons to whom the
  Software is furnished to do so, subject to the following conditions:
  .
  The above copyright notice and this permission notice shall be included
  in all copies or substantial portions of the Software.
  .
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ IMPLIED, INCLUDING BUT NOT LIExpatED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
@@ -5416,18 +5389,18 @@ License: MS-PL
  .
  2. Grant of Rights
  (A) Copyright Grant- Subject to the terms of this license, including the
- license conditions and limitations in section 3, each contributor grants you
+ license conditions and liExpatations in section 3, each contributor grants you
  a non-exclusive, worldwide, royalty-free copyright license to reproduce its
  contribution, prepare derivative works of its contribution, and distribute
  its contribution or any derivative works that you create.
  (B) Patent Grant- Subject to the terms of this license, including the license
- conditions and limitations in section 3, each contributor grants you a
+ conditions and liExpatations in section 3, each contributor grants you a
  non-exclusive, worldwide, royalty-free license under its licensed patents to
  make, have made, use, sell, offer for sale, import, and/or otherwise dispose
  of its contribution in the software or derivative works of the contribution
  in the software.
  .
- 3. Conditions and Limitations
+ 3. Conditions and LiExpatations
  (A) No Trademark License- This license does not grant you rights to use any
  contributors' name, logo, or trademarks.
  (B) If you bring a patent claim against any contributor over patents that you
@@ -5444,7 +5417,7 @@ License: MS-PL
  (E) The software is licensed "as-is." You bear the risk of using it. The
  contributors give no express warranties, guarantees or conditions. You may
  have additional consumer rights under your local laws which this license
- cannot change. To the extent permitted under your local laws, the
+ cannot change. To the extent perExpatted under your local laws, the
  contributors exclude the implied warranties of merchantability, fitness for a
  particular purpose and non-infringement.
 
@@ -5539,7 +5512,7 @@ License: OFL-1.1
  .
  DISCLAIMER
  THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIExpatED TO ANY WARRANTIES OF
  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
  OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
  COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,

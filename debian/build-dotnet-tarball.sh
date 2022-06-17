@@ -15,7 +15,7 @@
 
 
 trap on_exit TERM
-trap on_exit EXIT 
+trap on_exit EXIT
 
 set -euo pipefail
 IFS=$'\n\t'
@@ -49,7 +49,7 @@ function on_exit {
     done
 
     find . -type f -iname '*.tar.gz' -delete
-    
+
 }
 
 function clean_dotnet_cache {
@@ -63,12 +63,12 @@ function clean_dotnet_cache {
             rm -rf "$folder"
         fi
     done
-								        
+
 }
 
 function clean_uscan_download {
-#	find -L .. -samefile "../${tarball_name}${tarball_suffix}" -delete
    find .. -name "dotnet*${tag}*${tarball_suffix}" -delete
+   find .. -name "dotnet*${tag}*.tar.xz" -delete
 }
 
 function check_bootstrap_environment {
@@ -153,9 +153,9 @@ if [[ ${build_bootstrap} == true ]]; then
 fi
 
 if [ -f "${tarball_name}${tarball_suffix}" ]; then
-    rm "${tarball_name}${tarball_suffix}" 
-    #echo "error: ${tarball_name}${tarball_suffix} already exists"
-    #exit 1
+    #rm "${tarball_name}${tarball_suffix}"
+    echo "error: ${tarball_name}${tarball_suffix} already exists"
+    exit 1
 fi
 
 if [ ! -f "${unmodified_tarball_name}.tar.gz" ]; then
@@ -236,6 +236,9 @@ rm -r src/nuget-client.*/test/EndToEnd
 # https://github.com/Humanizr/sample-aspnetmvc/issues/1
 rm -r src/source-build.*/src/humanizer/samples/
 
+#Non-free and unnecesary help file for 7-zip
+rm src/source-build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
+
 popd
 
 if [[ ${build_bootstrap} == true ]]; then
@@ -243,7 +246,7 @@ if [[ ${build_bootstrap} == true ]]; then
     find . -type f -iname '*.tar.gz' -delete
     rm -rf .dotnet
 else
-    find . -type f -iname '*.tar.gz' -delete
+    find . -type f -iname '*.tar.xz' -delete
     rm -rf .dotnet
     tar -czf "../${tarball_name}${tarball_suffix}" "${tarball_name}"
 fi
