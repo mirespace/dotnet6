@@ -3541,95 +3541,75 @@ Files: src/runtime.*/src/tests/Loader/NativeLibs/FromNativePaths_lib.cpp
 Copyright: Microsoft.
 License: Expat
 
-Files: src/sdk.*/documentation/manpages/sdk/*
-Copyright: message.
-License: UNKNOWN
-
-Files: src/sdk.*/src/Assets/TestProjects/AllResourcesInSatelliteDisableVersionGenerate/*
-Copyright: 2008, My Company")]
-License: Expat
-
 Files: src/sdk.*/src/Assets/TestProjects/CppWinMDComponent/*
-Copyright: Microsoft.
-License: Expat
-
-Files: src/sdk.*/src/Assets/TestProjects/SlnFileWithNoProjectReferencesAndCSharpProject/CSharpProject/Properties/*
-Copyright: 2016
+Copyright: Microsoft
 License: Expat
 
 Files: src/sdk.*/src/Assets/TestProjects/WatchAppWithProjectDeps/*
-Copyright: no-info-found
+Copyright: NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Assets/TestProjects/WatchBrowserLaunchApp/*
-Copyright: no-info-found
+Copyright: NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Assets/TestProjects/WatchGlobbingApp/*
-Copyright: no-info-found
+Copyright: NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Assets/TestProjects/WatchKitchenSink/*
-Copyright: no-info-found
+Copyright: NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Assets/TestProjects/WatchNoDepsApp/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
-Files: src/sdk.*/src/Assets/TestProjects/WindowsFormsHelloWorldFullFramework/*
-Copyright: 2019
-License: UNKNOWN
-
-Files: src/sdk.*/src/Assets/TestProjects/WpfHelloWorldFullFramework/*
-Copyright: 2019
-License: UNKNOWN
-
 Files: src/sdk.*/src/BlazorWasmSdk/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/BlazorWasmSdk/Tasks/ComputeBlazorBuildAssets.cs
  src/sdk.*/src/BlazorWasmSdk/Tasks/ComputeBlazorFilesToCompress.cs
  src/sdk.*/src/BlazorWasmSdk/Tasks/ComputeBlazorPublishAssets.cs
  src/sdk.*/src/BlazorWasmSdk/Tasks/GenerateBlazorWebAssemblyBootJson.cs
-Copyright: no-info-found
+Copyright: NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/BlazorWasmSdk/Tool/*
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/BuiltInTools/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/BuiltInTools/BrowserRefresh/ApplicationPaths.cs
  src/sdk.*/src/BuiltInTools/BrowserRefresh/BlazorWasmHotReloadMiddleware.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/BuiltInTools/DotNetDeltaApplier/HotReloadAgent.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/BuiltInTools/dotnet-watch/Filters/DotNetBuildFilter.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/BuiltInTools/dotnet-watch/HotReload/*
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/BuiltInTools/dotnet-watch/HotReload/CompilationHandler.cs
  src/sdk.*/src/BuiltInTools/dotnet-watch/HotReload/HotReloadEventSource.cs
  src/sdk.*/src/BuiltInTools/dotnet-watch/HotReload/ScopedCssFileHandler.cs
  src/sdk.*/src/BuiltInTools/dotnet-watch/HotReload/StaticFileHandler.cs
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/BuiltInTools/dotnet-watch/Internal/DotnetMuxer.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/Cli/Microsoft.DotNet.Cli.Sln.Internal/FileManipulation/*
@@ -3640,66 +3620,44 @@ Files: src/sdk.*/src/Cli/Microsoft.DotNet.Cli.Sln.Internal/SlnFile.cs
 Copyright: 2013-2016, Xamarin, Inc (http:www.xamarin.com)
 License: Expat
 
-Files: src/sdk.*/src/Cli/dotnet/commands/dotnet-fsi/Program.cs
-Copyright: .NET Foundation and contributors.
-License: Expat
-
-Files: src/sdk.*/src/Cli/dotnet/commands/dotnet-test/Program.cs
-Copyright: .NET Foundation and contributors.
-License: Expat
-
-Files: src/sdk.*/src/Cli/dotnet/commands/dotnet-vstest/Program.cs
-Copyright: .NET Foundation and contributors.
-License: Expat
-
 Files: src/sdk.*/src/RazorSdk/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/RazorSdk/SourceGenerators/RazorSourceGeneratorEventSource.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/RazorSdk/Tasks/GenerateStaticWebAsssetsPropsFile.cs
  src/sdk.*/src/RazorSdk/Tasks/GenerateV1StaticWebAssetsManifest.cs
  src/sdk.*/src/RazorSdk/Tasks/StaticWebAssetsGeneratePackagePropsFile.cs
  src/sdk.*/src/RazorSdk/Tasks/ValidateStaticWebAssetsUniquePaths.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/RazorSdk/Tasks/StaticWebAssets/*
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
-Files: src/sdk.*/src/RazorSdk/Tool/DefaultExtensionAssemblyLoader.cs
- src/sdk.*/src/RazorSdk/Tool/ExtensionAssemblyLoader.cs
- src/sdk.*/src/RazorSdk/Tool/ShadowCopyManager.cs
+Files: src/sdk.*/src/RazorSdk/Tool/*
+Copyright: .NET Foundation.
+License: Apache-2.0
+
+Files: src/sdk.*/src/RazorSdk/Tool/*/*
 Copyright: .NET Foundation.
 License: Apache-2.0
 
 Files: src/sdk.*/src/RazorSdk/Tool/Properties/*
-Copyright: no-info-found
-License: Expat
-
-Files: src/sdk.*/src/Tasks/Microsoft.NET.Build.Tasks/GetAssemblyAttributes.cs
-Copyright: Attribute"] = fileVersionInfo.LegalCopyright
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/Tests/Microsoft.AspNetCore.Watch.BrowserRefresh.Tests/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Tests/Microsoft.AspNetCore.Watch.BrowserRefresh.Tests/BlazorWasmHotReloadMiddlewareTest.cs
  src/sdk.*/src/Tests/Microsoft.AspNetCore.Watch.BrowserRefresh.Tests/HostingStartupTest.cs
-Copyright: no-info-found
-License: Expat
-
-Files: src/sdk.*/src/Tests/Microsoft.DotNet.Tools.Tests.Utilities.Tests/NuGetTransientErrorDetectorTests.cs
-Copyright: Microsoft " +
-License: Expat
-
-Files: src/sdk.*/src/Tests/Microsoft.NET.Build.Tests/GivenThatWeWantToControlGeneratedAssemblyInfo.cs
-Copyright: Attribute")]
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/BlazorReadSatelliteAssemblyFileTest.cs
@@ -3709,64 +3667,60 @@ Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/BlazorReadS
  src/sdk.*/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/WasmCompressionTests.cs
  src/sdk.*/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/WasmPublishIntegrationTest.cs
  src/sdk.*/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/WasmPwaManifestTests.cs
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.SourceGenerators.Tests/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.SourceGenerators.Tests/RazorDiagnosticTest.cs
  src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.SourceGenerators.Tests/RazorEventListener.cs
  src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.SourceGenerators.Tests/RazorSourceGeneratorTests.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.Tests/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.Tests/AspNetSdkBaselineTest.cs
  src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.Tests/GenerateStaticWebAssetsDevelopmentManifestTest.cs
  src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.Tests/JsModulesIntegrationTest.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
-Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.Tests/StaticWebAssets/*
-Copyright: no-info-found
-License: Expat
-
-Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.Tool.Tests/*
-Copyright: no-info-found
+Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.Tool.Tests/*.cs
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Tests/Microsoft.NET.Sdk.Razor.Tool.Tests/Properties/*
-Copyright: .NET Foundation.
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Tests/Microsoft.NET.TestFramework/AspNetSdkTest.cs
  src/sdk.*/src/Tests/Microsoft.NET.TestFramework/NuGetTestLogger.cs
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
 Files: src/sdk.*/src/Tests/Microsoft.NET.TestFramework/Utilities/FileThumbPrint.cs
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Apache-2.0
 
-Files: src/sdk.*/src/Tests/dotnet-watch.Tests/*
-Copyright: no-info-found
+Files: src/sdk.*/src/Tests/dotnet-watch.Tests/*.cs
+Copyright: .NET Foundation
 License: Apache-2.0
 
-Files: src/sdk.*/src/Tests/dotnet-watch.Tests/HotReload/*
-Copyright: no-info-found
-License: Expat
+Files: src/sdk.*/src/Tests/dotnet-watch.Tests/Properties/*
+Copyright: .NET Foundation
+License: Apache-2.0
 
-Files: src/sdk.*/src/Tests/dotnet-watch.Tests/Internal/*
-Copyright: no-info-found
-License: Expat
+Files: src/sdk.*/src/Tests/dotnet-watch.Tests/Utilities/*
+Copyright: .NET Foundation
+License: Apache-2.0
 
 Files: src/sdk.*/src/Tests/dotnet-watch.Tests/StaticFileHandlerTest.cs
-Copyright: no-info-found
+Copyright: .NET Foundation and contributors
 License: Expat
 
 Files: src/sdk.*/src/WebSdk/*
@@ -3774,7 +3728,7 @@ Copyright: 2005, 2006, Microsoft Corporation
 License: UNKNOWN
 
 Files: src/sdk.*/src/WebSdk/Publish/Tasks/Tasks/MsDeploy/MSDeploy.cs
-Copyright: Microsoft Corporation.
+Copyright: Microsoft Corporation
 License: UNKNOWN
 
 Files: src/source-build-reference-packages.*/src/targetPacks/ILSrc/microsoft.netcore.app/*/*
@@ -3802,7 +3756,6 @@ Copyright: 2011-2021, Twitter, Inc.
  2011-2021, The Bootstrap Authors
 License: Expat
 
-------------------------------not found
 Files: src/source-build-reference-packages.ed58779fdb436582d28af4a356180090d11e1159/src/textOnlyPackages/src/microsoft.dotnet.web.projecttemplates.3.0/*
 Copyright: JS Foundation and other contributors
 License: Expat
@@ -3916,7 +3869,6 @@ License: Expat
 Files: src/source-build-reference-packages.ed58779fdb436582d28af4a356180090d11e1159/src/textOnlyPackages/src/microsoft.dotnet.web.projecttemplates.3.0/3.0.1/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
 Copyright: JS Foundation and other contributors | jquery.org/license
 License: UNKNOWN
---------------------------not found
 
 Files: src/source-build.*/*
 Copyright: .NET Foundation and Contributors.
