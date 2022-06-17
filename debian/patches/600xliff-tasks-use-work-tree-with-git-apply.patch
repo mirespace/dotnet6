@@ -1,5 +1,5 @@
---- a/eng/SourceBuild.props
-+++ b/eng/SourceBuild.props
+--- a/src/xliff-tasks/eng/SourceBuild.props
++++ b/src/xliff-tasks/eng/SourceBuild.props
 @@ -15,7 +15,7 @@
      </ItemGroup>
  

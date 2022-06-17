@@ -67,8 +67,7 @@ function clean_dotnet_cache {
 }
 
 function clean_uscan_download {
-   find .. -name "dotnet*${tag}*${tarball_suffix}" -delete
-   find .. -name "dotnet*${tag}*.tar.xz" -delete
+   find .. -name "dotnet*${tag}*.tar.*" -delete
 }
 
 function check_bootstrap_environment {
@@ -90,7 +89,8 @@ function runtime_id {
 
     source /etc/os-release
 
-    echo "${ID}.${VERSION_ID}-${arch}"
+    #echo "${ID}.${VERSION_ID}-${arch}"
+    [ ! -z ${VERSION_ID} ] && echo "${ID}.${VERSION_ID}-${arch}" || echo "${ID}-${arch}"
 }
 
 build_bootstrap=false
@@ -222,23 +222,33 @@ fi
 # not-very-useful artifacts to reduce tarball size
 
 # Binaries for gradle
-rm -r src/aspnetcore.*/src/SignalR/clients/java/signalr/gradle*
+rm -r src/aspnetcore/src/SignalR/clients/java/signalr/gradle*
 
 # Unnecessary crypto implementation: IDEA
-rm -r src/runtime.*/src/tests/JIT/Performance/CodeQuality/Bytemark/
+rm -r src/runtime/src/tests/JIT/Performance/CodeQuality/Bytemark/
 
 # https://github.com/dotnet/aspnetcore/issues/34785
-find src/aspnetcore.*/src -type d -name samples -print0 | xargs -0 rm -r
+find src/aspnetcore/src -type d -name samples -print0 | xargs -0 rm -r
 
 # https://github.com/NuGet/Home/issues/11094
-rm -r src/nuget-client.*/test/EndToEnd
+rm -r src/nuget-client/test/EndToEnd
 
 # https://github.com/Humanizr/sample-aspnetmvc/issues/1
-rm -r src/source-build.*/src/humanizer/samples/
+rm -r src/source-build/src/humanizer/samples/
 
 #Non-free and unnecesary help file for 7-zip
-rm src/source-build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
+rm src/source-build/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
 
+#Git internals files that are unnecesary for the build
+find . -iname ".git*" -exec rm -rf {} +
+
+#pushd "src"
+
+#find * -maxdepth 0 -type d -print0 | while IFS= read -r -d '' folder; do
+#    mv "${folder}" "${folder%.*}.ubuntu"
+#done
+
+#popd
 popd
 
 if [[ ${build_bootstrap} == true ]]; then
