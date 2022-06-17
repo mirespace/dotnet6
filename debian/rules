@@ -117,7 +117,6 @@ override_dh_install:
 		echo " /usr/share/man/man1/$$f $$f $(DOTNETLIBDIR)/man/man1/$$f" >> debian/tmp/dependants;  \
 	done
 
-	echo "$(DOTNETLIBDIR)" > install_location_$(_RUNTIME_ARCH)
 	echo " /etc/dotnet/install_location install_location $(DOTNETLIBDIR)/install_location" >> debian/tmp/dependants
 	echo " /etc/dotnet/install_location_$(_RUNTIME_ARCH) install_location_$(_RUNTIME_ARCH) $(DOTNETLIBDIR)/install_location_$(_RUNTIME_ARCH)" >> debian/tmp/dependants
 

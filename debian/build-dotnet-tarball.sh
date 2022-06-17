@@ -59,7 +59,7 @@ function clean_dotnet_cache {
                     "/tmp/.NETFramework*")
 
     for folder in ${folders_cached[@]}; do
-        if [ -d $folder ]; then
+        if [ -d "$folder" ]; then
             rm -rf "$folder"
         fi
     done
@@ -67,8 +67,7 @@ function clean_dotnet_cache {
 }
 
 function clean_uscan_download {
-   find .. -name "dotnet*${tag}*${tarball_suffix}" -delete
-   find .. -name "dotnet*${tag}*.tar.xz" -delete
+   find .. -name "dotnet*${tag}*.tar.*" -delete
 }
 
 function check_bootstrap_environment {
@@ -218,6 +217,7 @@ if [[ ${build_bootstrap} == true ]]; then
     rm -rf fixup-previously-source-built-artifacts
 fi
 
+
 # Remove files with funny licenses, crypto implementations and other
 # not-very-useful artifacts to reduce tarball size
 
@@ -238,6 +238,8 @@ rm -r src/source-build.*/src/humanizer/samples/
 
 #Non-free and unnecesary help file for 7-zip
 rm src/source-build.*/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
+
+
 
 popd
 
