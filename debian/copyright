@@ -3904,165 +3904,36 @@ Files: src/source-build.*/*
 Copyright: .NET Foundation and Contributors.
 License: Expat
 
-Files: src/source-build.*/src/*
-Copyright: Microsoft Corporation.
-License: Expat
-
-Files: src/source-build.*/src/MSBuildLocator/samples/*
-Copyright: Microsoft.
+Files: src/source-build.*/src/application-insights/*
+Copyright: Microsoft Corporation
 License: Expat
 
 Files: src/source-build.*/src/MSBuildLocator/src/*
-Copyright: Microsoft.
+Copyright: Microsoft Corporation
 License: Expat
-
-Files: src/source-build.*/src/application-insights/*
-Copyright: 2015, 2016, 2018-2020, Microsoft
-License: Expat
-
-Files: src/source-build.*/src/application-insights/Test/*
-Copyright: 2015
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/CoreSDK.Test/*
-Copyright: file="FailOnAssertSetup.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/CoreSDK.Test/Shared/*
-Copyright: file="SnapshottingCollectionTest.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/CoreSDK.Test/Shared/Extensibility/Implementation/SnapshottingListTest.cs
-Copyright: file="SnapshottingListTest.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/CoreSDK.Test/Shared/Extensibility/Implementation/Tracing/*
-Copyright: file="DiagnoisticsEventThrottlingManagerMock.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/CoreSDK.Test/Shared/Extensibility/Implementation/Tracing/Mocks/DiagnoisticsEventThrottlingMock.cs
-Copyright: file="DiagnoisticsEventThrottlingMock.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/CoreSDK.Test/Shared/Extensibility/Implementation/Tracing/Mocks/DiagnoisticsEventThrottlingSchedulerMock.cs
-Copyright: file="DiagnoisticsEventThrottlingSchedulerMock.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/CoreSDK.Test/Shared/Extensibility/Implementation/Tracing/Mocks/DiagnosticsEventCollectingMock.cs
-Copyright: file="DiagnosticsEventCollectingMock.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/CoreSDK.Test/Shared/Properties/*
-Copyright: Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/Test/TestFramework/*
-Copyright: file="StubDebugOutput.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/*
-Copyright: UNKNOWN
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Channel/*
-Copyright: file="ITelemetryChannel.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Channel/InMemoryTransExpatter.cs
-Copyright: file="InMemoryTransExpatter.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/*
-Copyright: file="IDebugOutput.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/*
-Copyright: file="ContextTagKeys.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/External/Tags.cs
-Copyright: file="Tags.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/Platform/*
-Copyright: file="PlatformSingleton.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/Property.cs
-Copyright: file="Property.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/SnapshottingCollection.cs
-Copyright: file="SnapshottingCollection.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/SnapshottingList.cs
-Copyright: file="SnapshottingList.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/TaskTimer.cs
-Copyright: file="TaskTimer.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/TaskTimerInternal.cs
-Copyright: file="TaskTimerInternal.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/TelemetryDebugWriter.cs
-Copyright: file="TelemetryDebugWriter.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/Tracing/*
-Copyright: file="DiagnoisticsEventThrottlingDefaults.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/Tracing/IDiagnoisticsEventThrottling.cs
-Copyright: file="IDiagnoisticsEventThrottling.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/Tracing/IDiagnoisticsEventThrottlingManager.cs
-Copyright: file="IDiagnoisticsEventThrottlingManager.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/Tracing/IDiagnoisticsEventThrottlingScheduler.cs
-Copyright: file="IDiagnoisticsEventThrottlingScheduler.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/Tracing/SpinWait.cs
-Copyright: file="SpinWait.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/Core/Managed/Shared/Extensibility/Implementation/WeakConcurrentRandom.cs
-Copyright: file="WeakConcurrentRandom.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/TelemetryChannels/*
-Copyright: Microsoft.
-License: UNKNOWN
-
-Files: src/source-build.*/src/application-insights/src/TelemetryChannels/ServerTelemetryChannel/Shared/Implementation/*
-Copyright: file="TaskTimerInternal.cs" company="Microsoft"> / Microsoft.
-License: UNKNOWN
 
 Files: src/source-build.*/src/humanizer/*
 Copyright: 2012-2014, Mehdi Khalili
 License: Expat
 
+#not sure
 Files: src/source-build.*/src/humanizer/src/Humanizer/*
 Copyright: 2012-2017 Mehdi Khalili
            Oren Novotny
 License: Expat
 
+#not sure
 Files: src/source-build.*/src/humanizer/src/Humanizer.Tests.Shared/*
-Copyright: 2013, 2014, Omar Khudeira (http:omar.io)
+Copyright: 2013, 2014, Omar Khudeira
 License: Expat
 
 Files: src/source-build.*/src/humanizer/src/Humanizer.Tests.Shared/InflectorTests.cs
 Copyright: 2013, Scott Kirkland
 License: Expat
 
+#not sure
 Files: src/source-build.*/src/humanizer/src/Humanizer/*
-Copyright: 2013, 2014, Omar Khudeira (http:omar.io)
+Copyright: 2013, 2014, Omar Khudeira
 License: Expat
 
 Files: src/source-build.*/src/humanizer/src/Humanizer/InflectorExtensions.cs
@@ -4073,21 +3944,18 @@ Files: src/source-build.*/src/humanizer/src/Humanizer/MetricNumeralExtensions.cs
 Copyright: 2015, Alois de Gouvello
 License: Expat
 
+#not sure
 Files: src/source-build.*/src/humanizer/src/Humanizer/RomanNumeralExtensions.cs
-Copyright: Jesse Slicer https://github.com/jslicer
+Copyright: Jesse Slicer
 License: Expat
 
-Files: src/source-build.*/src/newtonsoft-json/*
-Copyright: 2007, James Newton-King
-License: Expat
-
-Files: src/source-build.*/src/newtonsoft-json901/*
+Files: src/source-build.*/src/newtonsoft-json*/*
 Copyright: 2007, James Newton-King
 License: Expat
 
 Files: src/source-build.*/src/newtonsoft-json901/Src/Newtonsoft.Json/Utilities/LinqBridge.cs
-Copyright: 2007-2009, Atif Aziz, Joseph Albahari.
-License: BSD~unspecified
+Copyright: 2007-2009, Atif Aziz, Joseph Albahari
+License: New BSD
 
 Files: src/source-build.*/src/newtonsoft-json901/Tools/7-zip/*
 Copyright: 1999-2009 Igor Pavlov.
@@ -4102,7 +3970,7 @@ Copyright: .NET Foundation and Contributors
 License: Expat
 
 Files: src/sourcelink.*/docs/GitSpec/*
-Copyright: Microsoft.
+Copyright: 1989, 1991 Free Software Foundation, Inc.
 License: GPL-2.0
 
 Files: src/symreader.*/*
