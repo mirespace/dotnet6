@@ -2592,7 +2592,7 @@ Files: src/runtime.*/src/mono/mono/metadata/appdomain.h
  src/runtime.*/src/mono/mono/metadata/tabledefs.h
  src/runtime.*/src/mono/mono/metadata/w32process.h
 Copyright: 2001-2003, 2006, Ximian, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/assembly.c
  src/runtime.*/src/mono/mono/metadata/boehm-gc.c
@@ -2610,7 +2610,7 @@ License: Expat
 Files: src/runtime.*/src/mono/mono/metadata/attrdefs.h
 Copyright: 2006, Novell, Inc.
  2001, Ximian, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/callspec.c
 Copyright: 2011, Xamarin, Inc (http:www.xamarin.com)
@@ -2638,7 +2638,7 @@ Files: src/runtime.*/src/mono/mono/metadata/cominterop.c
  src/runtime.*/src/mono/mono/metadata/marshal.h
  src/runtime.*/src/mono/mono/metadata/method-builder.h
 Copyright: 2002-2004, Ximian, Inc. http:www.ximian.com
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/components.c
  src/runtime.*/src/mono/mono/metadata/components.h
@@ -2648,11 +2648,15 @@ Files: src/runtime.*/src/mono/mono/metadata/components.c
  src/runtime.*/src/mono/mono/metadata/profiler-private.h
  src/runtime.*/src/mono/mono/metadata/profiler.c
  src/runtime.*/src/mono/mono/metadata/profiler.h
- src/runtime.*/src/mono/mono/metadata/property-bag.c
- src/runtime.*/src/mono/mono/metadata/property-bag.h
- src/runtime.*/src/mono/mono/metadata/w32event-unix.c
- src/runtime.*/src/mono/mono/metadata/w32event-win32.c
-Copyright: no-info-found
+Copyright: .NET Foundation
+License: Expat
+
+Files: src/runtime.*/src/mono/mono/metadata/property-bag.*
+Copyright: Rodrigo Kumpera
+License: Expat
+
+Files: src/runtime.*/src/mono/mono/metadata/w32event-*.c
+Copyright: Ludovic Henry
 License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/coree.c
@@ -2710,7 +2714,7 @@ Files: src/runtime.*/src/mono/mono/metadata/environment.h
  src/runtime.*/src/mono/mono/metadata/monitor.h
  src/runtime.*/src/mono/mono/metadata/threads.h
 Copyright: 2001-2003, Ximian, Inc
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/gc-internals.h
  src/runtime.*/src/mono/mono/metadata/w32file.h
@@ -2753,7 +2757,7 @@ License: Expat
 Files: src/runtime.*/src/mono/mono/metadata/mono-ptr-array.h
  src/runtime.*/src/mono/mono/metadata/security-core-clr.h
 Copyright: 2007, 2008, 2010, 2011, Novell, Inc
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/object.c
 Copyright: 2004-2011, Novell, Inc (http:www.novell.com)
@@ -2768,15 +2772,15 @@ License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/runtime.h
 Copyright: 2007-2010, Novell, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/security.h
 Copyright: 2004, Novell (http:www.novell.com)
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/seq-points-data.c
 Copyright: 2013, 2015, 2016, Xamarin, Inc (http:www.xamarin.com)
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/sgen-bridge.c
  src/runtime.*/src/mono/mono/metadata/sgen-new-bridge.c
@@ -2827,17 +2831,17 @@ License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/*
 Copyright: 2001-2003, 2006, Ximian, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/abcremoval.c
  src/runtime.*/src/mono/mono/mini/abcremoval.h
  src/runtime.*/src/mono/mono/mini/cfold.c
 Copyright: 2002-2004, Ximian, Inc. http:www.ximian.com
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/alias-analysis.c
 Copyright: 2013-2015, Xamarin
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/aot-compiler.c
 Copyright: 2011, Xamarin Inc (http:www.xamarin.com)
@@ -2871,7 +2875,7 @@ Files: src/runtime.*/src/mono/mono/mini/bench.cs
  src/runtime.*/src/mono/mono/mini/mini-riscv.c
  src/runtime.*/src/mono/mono/mini/mini-riscv.h
  src/runtime.*/src/mono/mono/mini/tramp-riscv.c
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/branch-opts.c
@@ -2921,34 +2925,36 @@ Files: src/runtime.*/src/mono/mono/mini/dwarfwriter.c
  src/runtime.*/src/mono/mono/mini/mini-unwind.h
  src/runtime.*/src/mono/mono/mini/unwind.c
 Copyright: 2007-2010, Novell, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/exceptions-mips.c
  src/runtime.*/src/mono/mono/mini/mini-mips.c
  src/runtime.*/src/mono/mono/mini/tramp-mips.c
 Copyright: 2006, Broadcom
  2001, 2003, Ximian, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/exceptions-ppc.c
  src/runtime.*/src/mono/mono/mini/mini-ppc.c
  src/runtime.*/src/mono/mono/mini/tramp-ppc.c
 Copyright: 2007, 2008, Andreas Faerber
  2001, 2003, Ximian, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/exceptions-s390x.c
  src/runtime.*/src/mono/mono/mini/tramp-s390x.c
-Copyright: - 2001, Ximian, Inc.
+Copyright: 2001, Ximian, Inc.
 License: Expat
 
-Files: src/runtime.*/src/mono/mono/mini/interp/*
-Copyright: 2004
-License: UNKNOWN
+Files: src/runtime.*/src/mono/mono/mini/interp/minitops.c
+ src/runtime.*/src/mono/mono/mini/interp/minitops.def
+ src/runtime.*/src/mono/mono/mini/interp/transform.c
+Copyright: Bernie Solomon
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/interp/interp.c
 Copyright: 2001-2003, 2006, Ximian, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/jit-icalls.c
 Copyright: 2011, Xamarin Inc (http:www.xamarin.com)
@@ -2958,7 +2964,7 @@ License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/lldb.c
 Copyright: 2013, 2015, 2016, Xamarin, Inc (http:www.xamarin.com)
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/llvm-jit.cpp
  src/runtime.*/src/mono/mono/mini/mini-llvm-cpp.cpp
@@ -2968,7 +2974,7 @@ License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/llvm-runtime.h
 Copyright: 2012, 2015, Xamarin, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/mini/local-propagation.c
 Copyright: 2011, Xamarin, Inc (http:www.xamarin.com)
@@ -3053,7 +3059,9 @@ Copyright: 2004-2011, Novell, Inc (http:www.novell.com)
 License: Expat
 
 Files: src/runtime.*/src/mono/mono/profiler/coverage.c
-Copyright: no-info-found
+Copyright: Paolo Molaro
+ Alex Rønne Petersen
+ Ludovic Henry
 License: Expat
 
 Files: src/runtime.*/src/mono/mono/profiler/helper.c
@@ -3138,10 +3146,6 @@ Copyright: 2012, Xamarin Inc
  2011, Xamarin Inc (http:www.xamarin.com)
 License: Expat
 
-Files: src/runtime.*/src/mono/mono/sgen/sgen-hash-table.c
-Copyright: no-info-found
-License: Expat
-
 Files: src/runtime.*/src/mono/mono/sgen/sgen-layout-stats.c
  src/runtime.*/src/mono/mono/sgen/sgen-layout-stats.h
 Copyright: Xamarin Inc (http:www.xamarin.com)
@@ -3181,9 +3185,9 @@ Files: src/runtime.*/src/mono/mono/tests/array-coop-1.cs
 Copyright: 2015, 2016, 2018-2020, Microsoft
 License: Expat
 
-Files: src/runtime.*/src/mono/mono/tests/metadata-verifier/*
-Copyright: invalid offset pe-optional-header + 152 set-uint 0x2000
-License: UNKNOWN
+Files: src/runtime.*/src/mono/mono/tests/metadata-verifier/module.li
+Copyright: Microsoft
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/tests/pinvoke2.cs
 Copyright: 2011, Xamarin Inc (http:www.xamarin.com).
@@ -3203,7 +3207,7 @@ License: Expat
 
 Files: src/runtime.*/src/mono/mono/unit-tests/test-mono-callspec.c
 Copyright: 2017, vFunction, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/unit-tests/test-mono-handle.c
 Copyright: 2015, Xamarin, Inc. (www.xamarin.com)
@@ -3211,14 +3215,14 @@ License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/*
 Copyright: 2018, Microsoft, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/atomic.c
  src/runtime.*/src/mono/mono/utils/mono-uri.c
  src/runtime.*/src/mono/mono/utils/strenc.c
  src/runtime.*/src/mono/mono/utils/strenc.h
 Copyright: 2001-2003, 2006, Ximian, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/atomic.h
 Copyright: 2012, Xamarin Inc
@@ -3241,7 +3245,7 @@ Files: src/runtime.*/src/mono/mono/utils/checked-build.c
  src/runtime.*/src/mono/mono/utils/networking.c
  src/runtime.*/src/mono/mono/utils/networking.h
 Copyright: 2013-2015, Xamarin
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/dlmalloc.c
  src/runtime.*/src/mono/mono/utils/dlmalloc.h
@@ -3292,11 +3296,11 @@ Files: src/runtime.*/src/mono/mono/utils/mach-support-amd64.c
  src/runtime.*/src/mono/mono/utils/mach-support-arm64.c
 Copyright: 2011, 2013, Xamarin, Inc.
  2010, Novell, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/mach-support-unknown.c
 Copyright: 2012, 2015, Xamarin, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/mach-support-x86.c
  src/runtime.*/src/mono/mono/utils/mono-internal-hash.c
@@ -3304,7 +3308,7 @@ Files: src/runtime.*/src/mono/mono/utils/mach-support-x86.c
  src/runtime.*/src/mono/mono/utils/mono-os-semaphore.h
  src/runtime.*/src/mono/mono/utils/mono-value-hash.h
 Copyright: 2007-2010, Novell, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/memcheck.h
  src/runtime.*/src/mono/mono/utils/valgrind.h
@@ -3368,15 +3372,23 @@ Files: src/runtime.*/src/mono/mono/utils/mono-hwcap-cross.c
 Copyright: 2013-2016, Xamarin, Inc (http:www.xamarin.com)
 License: Expat
 
-Files: src/runtime.*/src/mono/mono/utils/mono-hwcap-riscv.c
- src/runtime.*/src/mono/mono/utils/mono-hwcap-wasm.c
- src/runtime.*/src/mono/mono/utils/mono-os-semaphore-win32.c
- src/runtime.*/src/mono/mono/utils/mono-os-wait-win32.c
- src/runtime.*/src/mono/mono/utils/os-event-unix.c
- src/runtime.*/src/mono/mono/utils/os-event-win32.c
- src/runtime.*/src/mono/mono/utils/parse.h
+Files: src/runtime.*/src/mono/mono/utils/parse.h
  src/runtime.*/src/mono/mono/utils/unlocked.h
 Copyright: no-info-found
+License: Expat
+
+Files: src/runtime.*/src/mono/mono/utils/mono-os-wait-win32.c
+Copyright: Johan Lorensson
+License: Expat
+
+Files: src/runtime.*/src/mono/mono/utils/mono-hwcap-wasm.c
+ src/runtime.*/src/mono/mono/utils/os-event-unix.c
+ src/runtime.*/src/mono/mono/utils/os-event-win32.c
+Copyright: Ludovic Henry
+License: Expat
+
+Files: src/runtime.*/src/mono/mono/utils/mono-hwcap-wasm.c
+Copyright: Rodrigo Kumpera
 License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/mono-lazy-init.h
@@ -3393,12 +3405,12 @@ Files: src/runtime.*/src/mono/mono/utils/mono-linked-list-set.c
  src/runtime.*/src/mono/mono/utils/mono-threads-windows.c
  src/runtime.*/src/mono/mono/utils/mono-threads.h
 Copyright: 2007, 2008, 2010, 2011, Novell, Inc
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/mono-memory-model.h
  src/runtime.*/src/mono/mono/utils/mono-threads-posix-signals.c
 Copyright: 2011, 2015, Xamarin, Inc
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/mono-os-mutex.c
  src/runtime.*/src/mono/mono/utils/mono-os-mutex.h
@@ -3408,7 +3420,7 @@ License: Expat
 Files: src/runtime.*/src/mono/mono/utils/mono-path.c
  src/runtime.*/src/mono/mono/utils/mono-stdlib.c
 Copyright: 2006, Novell, Inc. http:www.novell.com
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/mono-proclib-windows.c
  src/runtime.*/src/mono/mono/utils/mono-rand-windows.c
@@ -3440,35 +3452,14 @@ License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/mono-threads-mach-helper.c
 Copyright: 2014, Xamarin Inc
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/utils/mono-tls.c
 Copyright: 2013, 2015, 2016, Xamarin, Inc (http:www.xamarin.com)
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/zlib/*
-Copyright: 1995-2017, Mark Adler
-License: UNKNOWN
-
-Files: src/runtime.*/src/mono/mono/zlib/compress.c
- src/runtime.*/src/mono/mono/zlib/uncompr.c
- src/runtime.*/src/mono/mono/zlib/zconf.h
- src/runtime.*/src/mono/mono/zlib/zutil.h
 Copyright: 1995-2017, Jean-loup Gailly, Mark Adler
-License: UNKNOWN
-
-Files: src/runtime.*/src/mono/mono/zlib/deflate.c
-Copyright: 1995-2017, Jean-loup Gailly and Mark Adler
-License: UNKNOWN
-
-Files: src/runtime.*/src/mono/mono/zlib/deflate.h
- src/runtime.*/src/mono/mono/zlib/trees.c
- src/runtime.*/src/mono/mono/zlib/zutil.c
-Copyright: 1995-2017, Jean-loup Gailly
-License: UNKNOWN
-
-Files: src/runtime.*/src/mono/mono/zlib/zlib.h
-Copyright: 1995-2017, Jean-loup Gailly and Mark Adler
 License: Zlib
 
 Files: src/runtime.*/src/native/corehost/json/*
@@ -3479,53 +3470,45 @@ Files: src/runtime.*/src/native/corehost/json/rapidjson/msinttypes/*
 Copyright: 2006-2013, Alexander Chemeris
 License: BSD-3-clause
 
-Files: src/runtime.*/src/native/corehost/json/rapidjson/schema.h
-Copyright: 2015, THL A29 LiExpated, a Tencent company, and Milo Yip->
-License: Expat
-
 Files: src/runtime.*/src/tests/Common/Platform/*
-Copyright: Microsoft.
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/GC/Scenarios/DoublinkList/DoubLink.cs
-Copyright: Microsoft.
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/GC/Scenarios/Samples/*
-Copyright: 2000, Microsoft Corporation.
+Copyright: 2000, Microsoft Corporation
 License: Expat
 
 Files: src/runtime.*/src/tests/Interop/ArrayMarshalling/BoolArray/MarshalBoolArrayNative.cpp
-Copyright: Microsoft.
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/JIT/Directed/Convert/FPZero.cs
  src/runtime.*/src/tests/JIT/Directed/Convert/out_of_range_fp_to_int_conversions.cs
-Copyright: Microsoft.
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/JIT/Directed/StructABI/StructABI.c
-Copyright: Microsoft.
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/JIT/Methodical/flowgraph/dev10_bug723489/*
-Copyright: Microsoft.
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/JIT/Methodical/fp/apps/Ball.cs
-Copyright: Microsoft.
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/JIT/Performance/CodeQuality/V8/Crypto/*
 Copyright: 2003-2005, Tom Wu
 License: Expat
 
-Files: src/runtime.*/src/tests/JIT/Regression/CLR-x86-JIT/V1-M10/b08172/*
-Copyright: Microsoft.
-License: Expat
-
-Files: src/runtime.*/src/tests/JIT/Regression/CLR-x86-JIT/V1-M10/b09246/*
-Copyright: Microsoft.
+Files: src/runtime.*/src/tests/JIT/Regression/CLR-x86-JIT/V1-M10/*/*.cs
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/JIT/jit64/hfa/main/dll/hfa_native.cpp
@@ -3533,12 +3516,13 @@ Files: src/runtime.*/src/tests/JIT/jit64/hfa/main/dll/hfa_native.cpp
 Copyright: Microsoft.
 License: Expat
 
-Files: src/runtime.*/src/tests/JIT/jit64/mcc/*
-Copyright: Microsoft.
+Files: src/runtime.*/src/tests/JIT/jit64/mcc/interop/*.cpp
+ src/runtime.*/src/tests/JIT/jit64/mcc/interop/*.h
+Copyright: Microsoft
 License: Expat
 
 Files: src/runtime.*/src/tests/Loader/NativeLibs/FromNativePaths_lib.cpp
-Copyright: Microsoft.
+Copyright: Microsoft
 License: Expat
 
 Files: src/sdk.*/src/Assets/TestProjects/CppWinMDComponent/*
