@@ -3179,11 +3179,14 @@ Files: src/runtime.*/src/mono/mono/utils/checked-build.c
 Copyright: 2013-2015, Xamarin
 License: Expat
 
+Files: src/runtime.*/src/mono/mono/utils/mono-digest.h
+ src/runtime.*/src/mono/mono/utils/mono-md5.c
+Copyright: Erik Troan
+License: Expat
+
 Files: src/runtime.*/src/mono/mono/utils/dlmalloc.c
  src/runtime.*/src/mono/mono/utils/dlmalloc.h
- src/runtime.*/src/mono/mono/utils/mono-digest.h
- src/runtime.*/src/mono/mono/utils/mono-md5.c
-Copyright: no-info-found
+Copyright: Doug Lea
 License: public-domain
 
 Files: src/runtime.*/src/mono/mono/utils/freebsd-dwarf.h
