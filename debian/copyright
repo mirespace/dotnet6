@@ -1699,7 +1699,7 @@ Copyright: 1990-1993, 1996, Open Software Foundation, Inc.
 License: Expat
 
 Files: src/runtime.*/src/libraries/Common/tests/System/Net/Prerequisites/Servers/CoreFxNetCloudService/WebServer/Properties/*
-Copyright: u00A9 2016")]
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/Native/AnyOS/brotli/*
@@ -1708,7 +1708,7 @@ License: Expat
 
 Files: src/runtime.*/src/libraries/Native/AnyOS/brotli/fuzz/*
 Copyright: 2015, The Chromium Authors.
-License: UNKNOWN
+License: BSD~unknown
 
 Files: src/runtime.*/src/libraries/Native/AnyOS/brotli/fuzz/run_decode_fuzzer.c
 Copyright: 2010, 2013-2018, Google Inc.
@@ -1728,38 +1728,38 @@ License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/*
 Copyright: 1995-2017, Mark Adler
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/compress.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/zconf.h
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/zutil.h
 Copyright: 1995-2017, Jean-loup Gailly, Mark Adler
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/crc_folding.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/deflate_medium.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/deflate_quick.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/x86.c
 Copyright: 2013, Intel Corporation.
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/deflate.c
 Copyright: 1995-2017, Jean-loup Gailly and Mark Adler
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/deflate.h
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/trees.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/zutil.c
 Copyright: 1995-2017, Jean-loup Gailly
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/slide_sse.c
 Copyright: 2017, Intel Corporation
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/x86.h
 Copyright: 2013, Intel Corporation Jim Kukunas
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib-intel/zlib.h
 Copyright: 1995-2017, Jean-loup Gailly and Mark Adler
@@ -1772,7 +1772,7 @@ Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/z
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/zconf.h.in
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/zutil.h
 Copyright: 1995-2017, Jean-loup Gailly, Mark Adler
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/adler32.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/crc32.c
@@ -1789,18 +1789,18 @@ Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/z
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/inftrees.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/inftrees.h
 Copyright: 1995-2017, Mark Adler
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/deflate.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/zlib.3
 Copyright: 1995-2017, Jean-loup Gailly and Mark Adler
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/deflate.h
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/trees.c
  src/runtime.*/src/libraries/Native/Windows/System.IO.Compression.Native/zlib/zutil.c
 Copyright: 1995-2017, Jean-loup Gailly
-License: UNKNOWN
+License: Zlib
 
 Files: src/runtime.*/src/libraries/System.ComponentModel.TypeConverter/tests/ContainerTests.cs
 Copyright: 2006, Novell, Inc. (http:www.novell.com)
@@ -1843,10 +1843,6 @@ Files: src/runtime.*/src/libraries/System.Configuration.ConfigurationManager/tes
 Copyright: 2012, Xamarin Inc. (http:www.xamarin.com)
 License: Expat
 
-Files: src/runtime.*/src/libraries/System.Console/tests/TestData/*
-Copyright: UNKNOWN
-License: UNKNOWN
-
 Files: src/runtime.*/src/libraries/System.Data.Common/tests/DataProvider.cs
 Copyright: 2004, Mainsoft Co.
 License: Expat
@@ -1856,7 +1852,7 @@ Copyright: 2004, Mainsoft Co.
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/Common/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/Common/DataColumnMappingCollectionTest.cs
@@ -1897,7 +1893,7 @@ Files: src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/DBConcur
  src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/MonkeyDataSet.cs
  src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/RestrictedTypeHandlingTests.cs
  src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/TrailingSpaceTest.cs
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/DataColumnCollectionTest.cs
@@ -1969,7 +1965,7 @@ Copyright: 2004, Novell Inc., and the individuals listed
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/DataTableReadWriteXmlTest.cs
-Copyright: 2006
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/DataTableTest.cs
@@ -2003,7 +1999,7 @@ Files: src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/SqlTypes
  src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/SqlTypes/SqlCharsTest.cs
  src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/SqlTypes/SqlStringSortingTest.cs
  src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/SqlTypes/SqlXmlTest.cs
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Data.Common/tests/System/Data/SqlTypes/SqlInt32Test.cs
@@ -2015,19 +2011,11 @@ Copyright: 2005, 2008, Novell, Inc. http:www.novell.com
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Diagnostics.FileVersionInfo/tests/System.Diagnostics.FileVersionInfo.TestAssembly/*
-Copyright: [assembly:AssemblyCopyrightAttribute("Copyright, you betcha!")]
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Diagnostics.FileVersionInfo/tests/System.Diagnostics.FileVersionInfo.Tests/*
-Copyright: you betcha!"
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Diagnostics.FileVersionInfo/tests/System.Diagnostics.FileVersionInfo.Tests/AssemblyInfo.cs
-Copyright: no-info-found
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Diagnostics.FileVersionInfo/tests/System.Diagnostics.FileVersionInfo.Tests/FileVersionInfoTest.Windows.cs
-Copyright: 2050
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Drawing.Common/src/System/Drawing/Bitmap.Unix.cs
@@ -2148,7 +2136,7 @@ License: Expat
 Files: src/runtime.*/src/libraries/System.Drawing.Common/tests/Printing/PreviewPrintControllerTests.cs
  src/runtime.*/src/libraries/System.Drawing.Common/tests/Printing/PrintControllerTests.cs
  src/runtime.*/src/libraries/System.Drawing.Common/tests/Printing/PrinterResolutionTests.cs
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Drawing.Common/tests/mono/*
@@ -2196,18 +2184,7 @@ Copyright: 2005-2008, Novell, Inc. (http:www.novell.com)
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/*
-Copyright: 2005, 2006, John Luke
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/AssemblyInfo.cs
- src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/ContentDispositionTest.cs
- src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/ContentTypeTest.cs
- src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/HeaderCollectionTest.cs
- src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/LoggingTest.cs
- src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/LoopbackSmtpServer.cs
- src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/MailAddressTest.cs
- src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/SmtpClientCredentialsTest.cs
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Net.Mail/tests/Functional/SmtpExceptionTest.cs
@@ -2218,16 +2195,9 @@ Files: src/runtime.*/src/libraries/System.Private.CoreLib/src/System/HashCode.cs
 Copyright: 2012-2016, Yann Collet
 License: BSD-2-clause and/or Expat
 
-Files: src/runtime.*/src/libraries/System.Private.CoreLib/src/System/Reflection/AssemblyCopyrightAttribute.cs
-Copyright: Attribute(string copyright) / Attribute : Attribute
-License: Expat
 
 Files: src/runtime.*/src/libraries/System.Private.CoreLib/src/System/Runtime/InteropServices/NativeMemory.cs
 Copyright: 2019, Microsoft Corporation, Daan Leijen. Licensed under the Expat license
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Private.CoreLib/src/System/Text/EncoderLatin1BestFitFallback.Data.cs
-Copyright: Sign -> C
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Private.Uri/tests/FunctionalTests/UriParserTest.cs
@@ -2236,10 +2206,6 @@ License: Expat
 
 Files: src/runtime.*/src/libraries/System.Private.Xml.Linq/tests/Schema/*
 Copyright: Stefan Prutianu
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Private.Xml/src/System/Xml/Xsl/XPath/XPathContext.cs
-Copyright: from such context XPath uses its For1 iterator.
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Private.Xml/src/Utils/*
@@ -2258,43 +2224,13 @@ Files: src/runtime.*/src/libraries/System.Private.Xml/tests/Xslt/TestFiles/TestD
 Copyright: 2000, 2001, David Calisle, Oliver Becker
 License: Zlib
 
-Files: src/runtime.*/src/libraries/System.Reflection.Metadata/src/System/Reflection/PortableExecutable/PEDirectoriesBuilder.cs
-Copyright: or IMAGE_DIRECTORY_ENTRY_ARCHITECTURE. / Table { get; set; }
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Reflection.Metadata/tests/Resources/NetModule/*
-Copyright: UNKNOWN
-License: UNKNOWN
-
-Files: src/runtime.*/src/libraries/System.Reflection.Metadata/tests/Resources/NetModule/AppCS.cs
- src/runtime.*/src/libraries/System.Reflection.Metadata/tests/Resources/NetModule/ModuleCS00.cs
- src/runtime.*/src/libraries/System.Reflection.Metadata/tests/Resources/NetModule/ModuleCS01.cs
-Copyright: no-info-found
-License: Expat
-
 Files: src/runtime.*/src/libraries/System.Runtime.Caching/tests/*
 Copyright: 2010, Novell, Inc. (http:novell.com/)
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Runtime.Caching/tests/AdditionalCacheTests/*
-Copyright: no-info-found
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Runtime.Caching/tests/Common/PokerChangeMonitor.cs
-Copyright: no-info-found
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Runtime.Caching/tests/System.Runtime.Caching/CountersTest.cs
-Copyright: no-info-found
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Runtime/tests/System/Attributes.cs
 Copyright: 2004, Novell, Inc. (http:www.novell.com)
  2002, Duco Fijma
-License: Expat
-
-Files: src/runtime.*/src/libraries/System.Runtime/tests/System/Reflection/AssemblyCopyrightAttributeTests.cs
-Copyright: AttributeTests
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Runtime/tests/System/TypedReferenceTests.cs
@@ -2381,16 +2317,12 @@ Copyright: 2004, 2005, 2008, 2009, Novell, Inc (http:www.novell.com)
  2002-2004, Motus Technologies Inc. (http:www.motus.com)
 License: Expat
 
-Files: src/runtime.*/src/libraries/System.ServiceModel.Syndication/src/System/ServiceModel/Syndication/Rss20Constants.cs
-Copyright: Tag = "copyright";
-License: Expat
-
 Files: src/runtime.*/src/libraries/System.Text.Json/tests/System.Text.Json.Tests/NewtonsoftTests/*
 Copyright: 2007, James Newton-King
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Text.RegularExpressions/tests/MonoRegexTests.cs
-Copyright: 2002
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/libraries/System.Web.HttpUtility/src/System/Web/HttpUtility.cs
@@ -2508,7 +2440,7 @@ Copyright: 2007, 2008, Andreas Faerber
 License: Expat
 
 Files: src/runtime.*/src/mono/mono/arch/riscv/*
-Copyright: no-info-found
+Copyright: .NET Foundation
 License: Expat
 
 Files: src/runtime.*/src/mono/mono/arch/s390x/*
@@ -2517,7 +2449,7 @@ License: Expat
 
 Files: src/runtime.*/src/mono/mono/cil/*
 Copyright: 2001-2003, 2006, Ximian, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/component/debugger-agent.c
 Copyright: 2011, Xamarin Inc.
@@ -2527,7 +2459,7 @@ License: Expat
 Files: src/runtime.*/src/mono/mono/component/debugger-state-machine.c
  src/runtime.*/src/mono/mono/component/debugger-state-machine.h
 Copyright: 2018, Microsoft, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/eglib/*
 Copyright: 2001-2011, Novell, Inc.
@@ -2561,7 +2493,7 @@ License: Expat
 Files: src/runtime.*/src/mono/mono/eglib/gutf8.c
 Copyright: 2012, Xamarin Inc
  2006, Novell, Inc.
-License: UNKNOWN
+License: Expat
 
 Files: src/runtime.*/src/mono/mono/metadata/*
 Copyright: 2015, 2016, 2018-2020, Microsoft
