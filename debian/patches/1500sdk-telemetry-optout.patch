@@ -1,7 +1,7 @@
-diff --git a/src/Cli/dotnet/Program.cs b/src/Cli/dotnet/Program.cs
+diff --git a/src/sdk/src/Cli/dotnet/Program.cs b/src/sdk/src/Cli/dotnet/Program.cs
 index de1ebb9e6..6bbf479de 100644
---- a/src/Cli/dotnet/Program.cs
-+++ b/src/Cli/dotnet/Program.cs
+--- a/src/sdk/src/Cli/dotnet/Program.cs
++++ b/src/sdk/src/Cli/dotnet/Program.cs
 @@ -28,6 +28,13 @@ public class Program
  
          public static int Main(string[] args)

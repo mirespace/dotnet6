@@ -15,10 +15,10 @@ See https://github.com/dotnet/source-build/issues/2445 for more details.
  eng/SourceBuild.props | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/eng/SourceBuild.props b/eng/SourceBuild.props
+diff --git a/src/vstest/eng/SourceBuild.props b/src/vstest/eng/SourceBuild.props
 index b365645c..68f82592 100644
---- a/eng/SourceBuild.props
-+++ b/eng/SourceBuild.props
+--- a/src/vstest/eng/SourceBuild.props
++++ b/src/vstest/eng/SourceBuild.props
 @@ -24,7 +24,7 @@
      </ItemGroup>
  

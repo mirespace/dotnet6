@@ -2,6 +2,8 @@
 dotnet6: source-contains-prebuilt-windows-binary
 #patches are applied in the rules as folder changes between versions
 dotnet6: patch-file-present-but-not-mentioned-in-series
+#dotnet6 is virtual, as dotnet community is used to install from it (in MS and RH)
+dotnet6: empty-binary-package
 #multilicense
 dotnet6: license-problem-non-free-RFC
 #The *.js files all contain the full source code  and license headers.

@@ -9,10 +9,10 @@ be a .git directory but it's for a different repo than command-line-api.
  eng/SourceBuild.props | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/eng/SourceBuild.props b/eng/SourceBuild.props
+diff --git a/src/command-line-api/eng/SourceBuild.props b/src/command-line-api/eng/SourceBuild.props
 index 6cc85018..5e223747 100644
---- a/eng/SourceBuild.props
-+++ b/eng/SourceBuild.props
+--- a/src/command-line-api/eng/SourceBuild.props
++++ b/src/command-line-api/eng/SourceBuild.props
 @@ -15,7 +15,7 @@
      </ItemGroup>
  

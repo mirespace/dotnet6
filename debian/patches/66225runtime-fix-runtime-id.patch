@@ -9,10 +9,10 @@ Subject: [PATCH] RID for Ubuntu 22.10
  .../src/runtimeGroups.props                   |  2 +-
  3 files changed, 94 insertions(+), 2 deletions(-)
 
-diff --git a/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json b/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
+diff --git a/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json b/src/runtime/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
 index bf6dfc3c1a1d7..59c1b26eadc46 100644
---- a/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
-+++ b/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
+--- a/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
++++ b/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtime.compatibility.json
 @@ -8026,6 +8026,71 @@
      "any",
      "base"
@@ -85,10 +85,10 @@ index bf6dfc3c1a1d7..59c1b26eadc46 100644
    "unix": [
      "unix",
      "any",
-diff --git a/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json b/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
+diff --git a/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json b/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
 index 2e6ec616b7420..c9329e769798a 100644
---- a/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
-+++ b/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
+--- a/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
++++ b/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json
 @@ -3333,6 +3333,35 @@
          "ubuntu-x86"
        ]
@@ -125,10 +125,10 @@ index 2e6ec616b7420..c9329e769798a 100644
      "unix": {
        "#import": [
          "any"
-diff --git a/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props b/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
+diff --git a/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props b/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
 index 1945bb9af0e5a..200baf2907082 100644
---- a/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
-+++ b/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
+--- a/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
++++ b/src/runtime/src/libraries/Microsoft.NETCore.Platforms/src/runtimeGroups.props
 @@ -236,7 +236,7 @@
      <RuntimeGroup Include="ubuntu">
        <Parent>debian</Parent>

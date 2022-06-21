@@ -8,10 +8,10 @@ Subject: [PATCH] GetRuntimeInformation.targets: determine
  src/redist/targets/GetRuntimeInformation.targets | 2 ++
  1 file changed, 2 insertions(+)
 
-diff --git a/src/redist/targets/GetRuntimeInformation.targets b/src/redist/targets/GetRuntimeInformation.targets
+diff --git a/src/installer/src/redist/targets/GetRuntimeInformation.targets b/src/installer/src/redist/targets/GetRuntimeInformation.targets
 index 5133c3a3841..01f704c7d8e 100644
---- a/src/redist/targets/GetRuntimeInformation.targets
-+++ b/src/redist/targets/GetRuntimeInformation.targets
+--- a/src/installer/src/redist/targets/GetRuntimeInformation.targets
++++ b/src/installer/src/redist/targets/GetRuntimeInformation.targets
 @@ -28,6 +28,8 @@
                                     '$(Rid)' == 'linux-musl-x64' ">$(Rid)</ProductMonikerRid>
        <ProductMonikerRid Condition=" '$(ProductMonikerRid)' == '' ">$(OSName)-$(Architecture)</ProductMonikerRid>

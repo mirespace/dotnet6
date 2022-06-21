@@ -1,5 +1,5 @@
---- a/eng/SourceBuild.props
-+++ b/eng/SourceBuild.props
+--- a/src/fsharp/eng/SourceBuild.props
++++ b/src/fsharp/eng/SourceBuild.props
 @@ -15,7 +15,7 @@
      </ItemGroup>
  

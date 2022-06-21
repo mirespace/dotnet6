@@ -1,0 +1,9 @@
+300command-line-api-use-work-tree-with-git-apply.patch
+400vstest-use-work-tree-with-git-apply.patch
+500fsharp-use-work-tree-with-git-apply.patch
+600xliff-tasks-use-work-tree-with-git-apply.patch
+1500sdk-telemetry-optout.patch
+1501sdk-22373-portablerid.patch
+1600installer-12516-portablerid.patch
+66225runtime-fix-runtime-id.patch
+68212runtime-shlibdeps-warning-log2.patch
