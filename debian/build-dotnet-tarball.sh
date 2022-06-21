@@ -42,8 +42,8 @@ function on_exit {
     folders_to_clean=("foo" "${tarballname}" "${tempdir}" \
                       "fixup-previously-source-built-artifacts" ".dotnet")
 
-    for folder in ${folders_to_clean[@]}; do
-        if [ -d $folder ]; then
+    for folder in "${folders_to_clean[@]}"; do
+        if [ -d "$folder" ]; then
             rm -rf "$folder"
         fi
     done
@@ -58,8 +58,8 @@ function clean_dotnet_cache {
                     "/tmp/dotnet.*" "/tmp/clr-debug-pipe*" "/tmp/Razor-Server" "/tmp/CoreFxPipe*" "/tmp/VBCSCompiler" \
                     "/tmp/.NETFramework*")
 
-    for folder in ${folders_cached[@]}; do
-        if [ -d $folder ]; then
+    for folder in "${folders_cached[@]}"; do
+        if [ -d "$folder" ]; then
             rm -rf "$folder"
         fi
     done
@@ -90,7 +90,7 @@ function runtime_id {
     source /etc/os-release
 
     #echo "${ID}.${VERSION_ID}-${arch}"
-    [ ! -z ${VERSION_ID} ] && echo "${ID}.${VERSION_ID}-${arch}" || echo "${ID}-${arch}"
+    [ -n "${VERSION_ID}" ] && echo "${ID}.${VERSION_ID}-${arch}" || echo "${ID}-${arch}"
 }
 
 build_bootstrap=false
@@ -190,7 +190,7 @@ if [[ ${build_bootstrap} == true ]]; then
     fi
 
     pushd packages/archive/
-    curl -O $(cat archiveArtifacts.txt)
+    curl -O "$(cat archiveArtifacts.txt)"
     popd
 
     mkdir foo
@@ -239,16 +239,10 @@ rm -r src/source-build/src/humanizer/samples/
 #Non-free and unnecesary help file for 7-zip
 rm src/source-build/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
 
-#Git internals files that are unnecesary for the build
-find . -iname ".git*" -exec rm -rf {} +
+#Checked that are not needed in the build: this only removes under roslyn:
+#src/roslyn/src/Compilers/Test/Resources/Core/SymbolsTests/V?/*.dll
+find . -iname "*.dll" -exec rm -rf {} +
 
-#pushd "src"
-
-#find * -maxdepth 0 -type d -print0 | while IFS= read -r -d '' folder; do
-#    mv "${folder}" "${folder%.*}.ubuntu"
-#done
-
-#popd
 popd
 
 if [[ ${build_bootstrap} == true ]]; then
