@@ -35,36 +35,6 @@ DOTNETETCDIR=$(SYSCONFDIR)/dotnet
 
 override_dh_auto_build:
 
-#	pushd src/runtime.* \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/68212-shlibdeps-warning-log2.patch \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/66225-fix-runtime-id.patch \
-#	&& popd
-#
-#	pushd src/command-line-api.* \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/300command-line-api-use-work-tree-with-git-apply.patch \
-#	&& popd
-#
-#	pushd src/vstest.* \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/400vstest-use-work-tree-with-git-apply.patch \
-#	&& popd
-#
-#	pushd src/fsharp.* \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/500fsharp-use-work-tree-with-git-apply.patch \
-#	&& popd
-#
-#	pushd src/xliff-tasks.* \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/600xliff-tasks-use-work-tree-with-git-apply.patch \
-#	&& popd
-#
-#	pushd src/sdk.* \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/1500sdk-telemetry-optout.patch \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/1501sdk-22373-portablerid.patch \
-#	&& popd
-#
-#	pushd src/installer.* \
-#		&& patch -p1 -i $(CURDIR)/debian/patches/1600installer-12516-portablerid.patch \
-#	&& popd
-
 	mkdir -p $(CURDIR)/packages/archive
 	ln -s $(DOTNET_TOP)/$(dotnet_version)/source-built-artifacts/Private.SourceBuilt.Artifacts.*.tar.gz $(CURDIR)/packages/archive/
 	cp -RLp $(DOTNET_TOP)/$(dotnet_version) $(CURDIR)/previously-built-dotnet
