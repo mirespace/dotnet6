@@ -1,7 +1,5 @@
 #the tarball always contains this
 dotnet6: source-contains-prebuilt-windows-binary
-#dotnet6 is virtual, as dotnet community is used to install from it (in MS and RH)
-dotnet6: empty-binary-package
 #multilicense
 dotnet6: license-problem-non-free-RFC
 #The *.js files all contain the full source code  and license headers.
@@ -28,7 +26,7 @@ dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.Projec
 dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js *
 dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js *
 dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js *
-dotnet6 source: source-is-missing src/sdk.ce948f426d1c884d4a7315bd4d745590a797bd48/src/BuiltInTools/BrowserRefresh/WebSocketScriptInjection.js *
+dotnet6 source: source-is-missing src/sdk/src/BuiltInTools/BrowserRefresh/WebSocketScriptInjection.js *
 #Same for HTML files
 dotnet6 source: source-is-missing src/aspnetcore/src/Mvc/test/Mvc.FunctionalTests/compiler/resources/HtmlGenerationWebSite.HtmlGeneration_Home.Link.Encoded.html *
 dotnet6 source: source-is-missing src/aspnetcore/src/Mvc/test/Mvc.FunctionalTests/compiler/resources/HtmlGenerationWebSite.HtmlGeneration_Home.Link.html *

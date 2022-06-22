@@ -1,5 +1,3 @@
-# Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
-# license/copyright files.
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: dotnet
 Source: https://github.com/dotnet/
@@ -124,9 +122,6 @@ Copyright: 2022 Canonical Ltd.
 License: Expat or Apache-2.0
 
 Files: packages/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery/dist/jquery.min.js
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/jquery/dist/jquery.min.js
  src/aspnetcore/src/Identity/UI/src/assets/*
  src/aspnetcore/src/Identity/UI/src/assets/V4/lib/jquery/dist/jquery.min.js
  src/aspnetcore/src/Identity/UI/src/assets/V5/lib/jquery/dist/jquery.min.js
@@ -139,15 +134,7 @@ Files: packages/*
 Copyright: JS Foundation and other contributors | jquery.org/license
 License: Expat
 
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/BlazorServerWeb-CSharp/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/ComponentsWebAssembly-CSharp/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/css/*
- src/aspnetcore/src/Components/Samples/BlazorServerApp/wwwroot/*
+Files: src/aspnetcore/src/Components/Samples/BlazorServerApp/wwwroot/*
  src/aspnetcore/src/Components/WebAssembly/Samples/HostedBlazorWebassemblyApp/Client/wwwroot/*
  src/aspnetcore/src/Components/WebAssembly/testassets/StandaloneApp/wwwroot/*
  src/aspnetcore/src/Components/WebAssembly/testassets/Wasm.Authentication.Client/wwwroot/*
@@ -174,10 +161,7 @@ Copyright: 2011-2021, Twitter, Inc.
  2011-2021, The Bootstrap Authors
 License: Expat
 
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/*
- src/aspnetcore/src/Identity/UI/src/assets/V4/lib/bootstrap/dist/*
+Files: src/aspnetcore/src/Identity/UI/src/assets/V4/lib/bootstrap/dist/*
  src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/*
@@ -185,10 +169,7 @@ Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/conten
 Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
 License: Expat
 
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation-unobtrusive/*
- src/aspnetcore/src/Identity/UI/src/assets/V4/lib/jquery-validation-unobtrusive/*
+Files: src/aspnetcore/src/Identity/UI/src/assets/V4/lib/jquery-validation-unobtrusive/*
  src/aspnetcore/src/Identity/UI/src/assets/V5/lib/jquery-validation-unobtrusive/*
  src/aspnetcore/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation-unobtrusive/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
@@ -197,13 +178,7 @@ Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/conten
 Copyright: Microsoft Corporation.
 License: Apache-2.0
 
-Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/*
- packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
- src/aspnetcore/src/Identity/UI/src/assets/V4/lib/jquery-validation/*
+Files: src/aspnetcore/src/Identity/UI/src/assets/V4/lib/jquery-validation/*
  src/aspnetcore/src/Identity/UI/src/assets/V4/lib/jquery-validation/dist/*
  src/aspnetcore/src/Identity/UI/src/assets/V5/lib/jquery-validation/*
  src/aspnetcore/src/Identity/UI/src/assets/V5/lib/jquery-validation/dist/*
@@ -215,7 +190,7 @@ Files: packages/text-only/microsoft.dotnet.web.projecttemplates.6.0/6.0.?/conten
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/*
- opyright: 2017, Jörn Zaefferer
+Copyright: 2017, Jörn Zaefferer
 License: Expat
 
 Files: packages/text-only/microsoft.net.sdk.ios.manifest-6.0.100/*
@@ -264,7 +239,11 @@ License: Apache-2.0
 
 Files: src/aspnetcore/src/Http/Routing/test/testassets/RoutingSandbox/wwwroot/*
 Copyright: 2014-2018, Michael Daines
-License: EPL-1.0 and/or Expat
+ http://www.graphviz.org/credits/
+ 1998, 1999, 2000 Thai Open Source Software Center Ltd and Clark Cooper
+ 2001, 2002, 2003, 2004, 2005, 2006 Expat maintainers.
+ 1995-2013 Jean-loup Gailly and Mark Adler
+License: EPL-1.0 and Expat and Zlib
 
 Files: src/aspnetcore/src/Installers/Windows/AspNetCoreModule-Setup/IIS-Setup/*
  src/aspnetcore/src/Mvc/test/WebSites/BasicWebSite/wwwroot/*
@@ -302,7 +281,6 @@ Files: src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterW
  src/msbuild/src/Tasks/CultureInfoCache.cs
  src/nuget-client/build/*/*.cs
  src/nuget-client/docs/coding-guidelines.md
- src/nuget-client/src/NuGet.Clients/NuGet.CommandLine/[!EFN]*.cs
  src/nuget-client/src/NuGet.Clients/NuGet.CommandLine/C*.cs
  src/nuget-client/src/NuGet.Clients/NuGet.CommandLine/DiagnosticCommands.cs
  src/nuget-client/src/NuGet.Clients/NuGet.CommandLine/GlobalSuppressions.cs
@@ -396,7 +374,7 @@ License: Expat
 
 Files: src/aspnetcore/src/submodules/*
 Copyright: 2017, Yoshifumi Kawai and contributors
-License: BSD-2-clause and/or Expat
+License: BSD-2-clause or Expat
 
 Files: src/aspnetcore/src/submodules/MessagePack-CSharp/benchmark/*
  src/aspnetcore/src/submodules/MessagePack-CSharp/sandbox/*
@@ -412,7 +390,7 @@ License: Apache-2.0
 
 Files: src/aspnetcore/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/HashCode.cs
 Copyright: 2012-2016, Yann Collet
-License: BSD-2-clause and/or Expat
+License: BSD-2-clause or Expat
 
 Files: src/aspnetcore/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Internal/Sequence`1.cs
 Copyright: from file copied from https:github.com/AArnott/Nerdbank.Streams/blob/d656899be26d4d7c72c11c9232b4952c64a89bcb/src/Nerdbank.Streams/Sequence%601.cs / Andrew Arnott. / All contributors.
@@ -421,12 +399,12 @@ License: Expat
 Files: src/aspnetcore/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/LZ4/*
 Copyright: Yoshifumi Kawai <ils@neue.cc>
            Andrew Arnott <andrewarnott@gmail.com>
-License: BSD-2-clause and/or Expat
+License: BSD-2-clause and Expat
 
 Files: src/aspnetcore/src/submodules/MessagePack-CSharp/tests/MessagePack.Tests/Utils/*
 Copyright: Yoshifumi Kawai <ils@neue.cc>
  Andrew Arnott <andrewarnott@gmail.com>
-License: Expat and/or MS-PL
+License: Expat and MS-PL
 
 Files: src/aspnetcore/src/submodules/googletest/*
 Copyright: 2005-2010, 2013, 2015, 2018-2021, Google Inc.
@@ -476,7 +454,7 @@ Files: src/diagnostics/src/pal/src/include/pal/fakepoll.h
   src/diagnostics/src/pal/src/poll/*
 Copyright: .Net Foundation
  December 2000 Greg Parker     gparker@cs.stanford.edu
-License: Expat and/or public-domain
+License: Expat and public-domain
 
 Files: src/diagnostics/src/SOS/lldbplugin/swift-4.0/*
  src/diagnostics/src/SOS/lldbplugin/swift-4.1/*
@@ -525,7 +503,7 @@ Files: src/format/perf/Utilities/*.cs src/format/perf/*.cs
  src/roslyn-analyzers/*.vb
  src/roslyn-analyzers/src/Microsoft.*/*
  src/*.cs
- src/runtime/src/mono/mono/tests/metadata-verifier/module.li
+ src/runtime/src/mono/mono/tests/metadata-verifier/module.il
  src/runtime/src/tests/Common/Platform/*
  src/runtime/src/tests/GC/Scenarios/DoublinkList/DoubLink.cs
  src/runtime/src/tests/Interop/ArrayMarshalling/BoolArray/MarshalBoolArrayNative.cpp
@@ -547,7 +525,7 @@ License: Expat
 
 Files: src/format/src/Workspaces/MSBuildWorkspaceFinder.cs
 Copyright: Microsoft.
-License: Apache-2.0 and/or Expat
+License: Apache-2.0 or Expat
 
 Files: src/fsharp/src/fsharp/BuildGraph.fs?
  src/fsharp/src/fsharp/DependencyManager/*.fs?
@@ -555,7 +533,7 @@ Files: src/fsharp/src/fsharp/BuildGraph.fs?
  src/fsharp/vsintegration/tests/UnitTests/EditorFormattingServiceTests.fs
  src/fsharp/vsintegration/tests/UnitTests/UnusedOpensTests.fs
 Copyright: Microsoft Corporation.
-License: Apache-2.0 and/or Expat
+License: Apache-2.0 or Expat
 
 Files: src/fsharp/tests/fsharpqa/testenv/src/PEVerify/CLRHelpers.cs
  src/msbuild/src/Package/MSBuild.VSSetup/MSBuild.VSSetup.csproj
@@ -701,7 +679,7 @@ License: Expat
 Files: src/roslyn-analyzers/src/Utilities/Compiler/RoslynHashCode.cs
 Copyright: Microsoft.
            2012-2016, Yann Collet
-License: BSD-2-clause and/or Expat
+License: BSD-2-clause and Expat
 
 Files: src/roslyn/*
 Copyright: .NET Foundation and Contributors
@@ -709,7 +687,7 @@ License: Expat and Apache-2.0
 
 Files: src/roslyn/src/Compilers/Test/Core/Assert/UseCultureAttribute.cs
 Copyright: 2014, Outercurve Foundation
-License: Apache-2.0 and/or Expat
+License: Apache-2.0 or Expat
 
 Files: src/runtime/src/coreclr/inc/llvm/*
 Copyright: 2003-2015, University of Illinois at Urbana-Champaign.
@@ -721,7 +699,7 @@ License: Expat
 
 Files: src/runtime/src/coreclr/pal/src/include/pal/fakepoll.h
 Copyright: December 2000, Greg Parker <gparker@cs.stanford.edu>
-License: Expat and/or public-domain
+License: Expat and public-domain
 
 Files: src/runtime/src/coreclr/pal/src/libunwind/*
 Copyright: 2002, 2004, Hewlett-Packard Co.
@@ -1586,7 +1564,6 @@ Files: src/runtime/src/libraries/System.ComponentModel.TypeConverter/tests/Desig
  src/runtime/src/libraries/System.Security.Cryptography.Xml/tests/XmlDecryptionTransformTest.cs
  src/runtime/src/libraries/System.Web.HttpUtility/src/System/Web/HttpUtility.cs
  src/runtime/src/libraries/System.Web.HttpUtility/tests/*
- src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/*
  src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/RuntimeAssembly.cs
  src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/RuntimeCustomAttributeData.cs
  src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/RuntimeFieldInfo.cs
@@ -1759,7 +1736,7 @@ License: Expat
 
 Files: src/runtime/src/libraries/System.Private.CoreLib/src/System/HashCode.cs
 Copyright: 2012-2016, Yann Collet
-License: BSD-2-clause and/or Expat
+License: BSD-2-clause or Expat
 
 
 Files: src/runtime/src/libraries/System.Private.CoreLib/src/System/Runtime/InteropServices/NativeMemory.cs
@@ -1779,7 +1756,7 @@ Files: src/runtime/src/libraries/System.Private.Xml/src/Utils/DTDs/XHTML10/origi
 Copyright: 1986 International Organization for Standardization
 License: public-domain
 
-Files: src/runtime/src/libraries/System.Private.Xml/src/Utils/DTDs/XHTML10/original/xhtml1-*.ent
+Files: src/runtime/src/libraries/System.Private.Xml/src/Utils/DTDs/XHTML10/original/xhtml1-*.dtd
 Copyright: 1998-2002, W3C (Expat, INRIA, Keio)
 License: Expat
 
@@ -1872,24 +1849,9 @@ Copyright: 2013, Xamarin, Inc (http:www.xamarin.com)
  2002, 2003, Ximian, Inc. (http:www.ximian.com)
 License: Expat
 
-Files: src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/AssemblyBuilder.Mono.cs
- src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/ConstructorBuilder.Mono.cs
- src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/DynamicMethod.cs
- src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/MethodBuilder.Mono.cs
- src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/MonoArrayMethod.cs
- src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/TypeBuilder.Mono.cs
- src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/RuntimeEventInfo.cs
+Files: src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/RuntimeEventInfo.cs
 Copyright: 2004-2009, Novell, Inc (http:www.novell.com)
  2001-2004, Ximian, Inc. http:www.ximian.com
-License: Expat
-
-Files: src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/DynamicMethod.notsupported.cs
-Copyright: 2012-2016, Xamarin Inc (http:www.xamarin.com)
-License: Expat
-
-Files: src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/TypeBuilderInstantiation.cs
-Copyright: 2004, Novell, Inc (http:www.novell.com)
- 2001, Ximian, Inc.
 License: Expat
 
 Files: src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/RuntimeMethodInfo.cs
@@ -2185,7 +2147,6 @@ Copyright: 2007-2010, Novell, Inc.
 License: Expat
 
 Files: src/runtime/src/libraries/System.Security.Cryptography.Xml/tests/XmlDsigEnvelopedSignatureTransformTest.cs
- src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/EExpat/GenericTypeParameterBuilder.cs
  src/runtime/src/mono/mono/metadata/security.h
 Copyright: 2004, Novell (http:www.novell.com)
 License: Expat
@@ -2349,8 +2310,8 @@ Files: src/runtime/src/mono/mono/mini/exceptions-s390x.c
 Copyright: 2001, Ximian, Inc.
 License: Expat
 
-Files: src/runtime/src/mono/mono/mini/interp/minitops.c
- src/runtime/src/mono/mono/mini/interp/minitops.def
+Files: src/runtime/src/mono/mono/mini/interp/mintops.c
+ src/runtime/src/mono/mono/mini/interp/mintops.def
  src/runtime/src/mono/mono/mini/interp/transform.c
 Copyright: Bernie Solomon
 License: Expat
@@ -2686,7 +2647,7 @@ License: Expat
 Files: src/runtime/src/mono/mono/utils/memcheck.h
  src/runtime/src/mono/mono/utils/valgrind.h
 Copyright: 2000-2013, Julian Seward.
-License: GPLv2+
+License: GPL-2
 
 Files: src/runtime/src/mono/mono/utils/memfuncs.c
  src/runtime/src/mono/mono/utils/memfuncs.h
@@ -2806,8 +2767,9 @@ Files: src/runtime/src/tests/JIT/Performance/CodeQuality/V8/Crypto/*
 Copyright: 2003-2005, Tom Wu
 License: Expat
 
-Files: src/source-build-reference-packages/src/targetPacks/ILSrc/microsoft.netcore.app/*/* src/sdk/src/WebSdk/Publish/Targets/Microsoft.NET.Sdk.Publish.props
- src/source-build-reference-packages/src/textOnlyPackages/src/microsoft.netcore.dotnet*/*/*
+Files: src/source-build-reference-packages/src/targetPacks/ILSrc/microsoft.netcore.app/*
+ src/sdk/src/WebSdk/Publish/Targets/Microsoft.NET.Sdk.Publish.props
+ src/source-build-reference-packages/src/textOnlyPackages/src/microsoft.netcore.dotnet*/*
 Copyright: 2015 .NET Foundation
 License: Expat
 
@@ -2852,11 +2814,11 @@ License: Expat
 
 Files: src/sourcelink/docs/GitSpec/*
 Copyright: 1989, 1991 Free Software Foundation, Inc.
-License: GPLv2+
+License: GPL-2
 
 Files: src/symreader/src/PdbTestResources/TestResources.cs
 Copyright: Microsoft and .NET Foundation
-License: Apache-2.0 and/or Expat
+License: Apache-2.0 and Expat
 
 Files: src/templating/*
 Copyright: 2016 .NET Foundation
@@ -3678,7 +3640,7 @@ License: GPL+
  General Public License. The full text of this license can be found
  in the file /usr/share/common-licenses/GPL
 
-License: GPLv2+
+License: GPL-2
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 2 of the License, or
@@ -3696,6 +3658,23 @@ License: GPLv2+
  See /usr/share/common-licenses/GPL-2, or
  <http://www.gnu.org/copyleft/gpl.txt> for the terms of the latest version
  of the GNU General Public License.
+
+License: LGPL-2+
+  This package is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
+  .
+  This package is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+  .
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
+  .
+  On Debian systems, the complete text of the GNU Lesser General Public
+  License can be found in "/usr/share/common-licenses/LGPL-2".
 
 License: LGPL-3
  This library is free software; you can redistribute it and/or
@@ -3716,23 +3695,6 @@ License: LGPL-3
  On Debian systems, the full text of the GNU Lesser General Public
  License version 3 can be found in the file
  `/usr/share/common-licenses/LGPL-3'.
-
-License: LGPLv2+
-  This package is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2 of the License, or (at your option) any later version.
-  .
-  This package is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  Lesser General Public License for more details.
-  .
-  You should have received a copy of the GNU General Public License
-  along with this program. If not, see <http://www.gnu.org/licenses/>.
-  .
-  On Debian systems, the complete text of the GNU Lesser General Public
-  License can be found in "/usr/share/common-licenses/LGPL-2".
 
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a

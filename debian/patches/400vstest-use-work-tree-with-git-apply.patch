@@ -6,7 +6,7 @@ Subject: [PATCH] [ArPow] Use --work-tree with git apply
 This makes things work better in a source-tarball build, where there may
 be a .git directory somewhere in our parent directories but it's for a
 different repo than vstest. In a situation like that a plain `git apply`
-will (silently!) ignore patches because they wont apply to the unrelated
+will (silently!) ignore patches because they won't apply to the unrelated
 repository. That will (eventually) make the source-build fail.
 `--work-tree` makes git directly use the directory that we care about.
 
