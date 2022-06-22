@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <GitCommitHash>c40ef7e056b48e011c43a21354d6790ba6b8b4fc</GitCommitHash>
+    <IsStable>false</IsStable>
+    <OfficialBuildId>20220114.3</OfficialBuildId>
+    <OutputPackageVersion>1.0.2-beta4.22064.3</OutputPackageVersion>
+    <PreReleaseVersionLabel>beta4</PreReleaseVersionLabel>
+  </PropertyGroup>
+</Project>

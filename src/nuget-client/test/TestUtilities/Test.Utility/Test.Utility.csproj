@@ -1,0 +1,83 @@
+<Project>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'README.md'))\build\common.props" />
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <TargetFrameworks>$(TargetFrameworksExeForSigning)</TargetFrameworks>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <NoWarn Condition=" $(TargetFramework.StartsWith('netcoreapp')) ">$(NoWarn);CS1998</NoWarn>
+    <PackProject>true</PackProject>
+    <Shipping>true</Shipping>
+    <IsPackable>true</IsPackable>
+    <SkipShared>true</SkipShared>
+    <NoWarn>$(NoWarn);VSTHRD001;VSTHRD002;VSTHRD110</NoWarn>
+    <Description>A collection of test utilities, such as generating packages, mocking servers, stub implementations of interfaces, etc.</Description>
+    <SkipAnalyzers>true</SkipAnalyzers>
+    <UsePublicApiAnalyzer>false</UsePublicApiAnalyzer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="compiler\resources\*" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == '$(NETFXTargetFramework)' ">
+    <ProjectReference Include="$(NuGetClientsSrcDirectory)NuGet.CommandLine\NuGet.CommandLine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="compiler\resources\.signature.p7s" />
+    <None Remove="compiler\resources\CentralDirectoryHeaderWithZip64ExtraField.zip" />
+    <None Remove="compiler\resources\EmptyZip64.zip" />
+    <None Remove="compiler\resources\intermediate.crt" />
+    <None Remove="compiler\resources\leaf.crt" />
+    <None Remove="compiler\resources\LocalFileHeaderWithZip64ExtraField.zip" />
+    <None Remove="compiler\resources\root.crt" />
+    <None Remove="compiler\resources\runtime.json" />
+    <None Remove="compiler\resources\SignatureFileEntry.zip" />
+    <None Remove="compiler\resources\SignatureFileWithDeflateCompressionMethodAndDefaultCompressionLevel.zip" />
+    <None Remove="compiler\resources\SignatureFileWithFakeContent.zip" />
+    <None Remove="compiler\resources\SignatureFileWithUppercaseFileName.zip" />
+    <None Remove="compiler\resources\SignedPackage.1.0.0.nupkg" />
+    <None Remove="compiler\resources\Test.RepoCountersigned.1.0.0.nupkg" />
+    <None Remove="compiler\resources\Test.Reposigned.1.0.0.nupkg" />
+    <None Remove="compiler\resources\TestPackage.AuthorSigned.1.0.0.nupkg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(NuGetCoreSrcDirectory)NuGet.Commands\NuGet.Commands.csproj" />
+    <ProjectReference Include="$(NuGetCoreSrcDirectory)NuGet.Resolver\NuGet.Resolver.csproj" />
+    <ProjectReference Include="$(NuGetCoreSrcDirectory)NuGet.PackageManagement\NuGet.PackageManagement.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Portable.BouncyCastle" />
+    <PackageReference Include="xunit" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == '$(NETFXTargetFramework)' ">
+    <PackageReference Include="Microsoft.VisualStudio.ProjectSystem" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Sdk" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == '$(NETFXTargetFramework)' ">
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(IsCore)' == 'true' ">
+    <PackageReference Include="System.Security.Cryptography.Pkcs" />
+  </ItemGroup>
+
+  <!-- Remove files that do not support netcore -->
+  <ItemGroup Condition=" '$(IsCore)' == 'true' ">
+    <Compile Remove="ProjectManagement\TestProjectKProject.cs" />
+    <Compile Remove="Threading\*.cs" />
+  </ItemGroup>
+
+  <Import Project="$(BuildCommonDirectory)common.targets" />
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

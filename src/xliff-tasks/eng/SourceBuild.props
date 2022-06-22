@@ -1,0 +1,23 @@
+<Project>
+
+  <PropertyGroup>
+    <GitHubRepositoryName>xliff-tasks</GitHubRepositoryName>
+    <SourceBuildManagedOnly>true</SourceBuildManagedOnly>
+  </PropertyGroup>
+
+  <Target Name="ApplySourceBuildPatchFiles"
+          Condition="
+            '$(ArcadeBuildFromSource)' == 'true' and
+            '$(ArcadeInnerBuildFromSource)' == 'true'"
+          BeforeTargets="Execute">
+    <ItemGroup>
+      <SourceBuildPatchFile Include="$(RepositoryEngineeringDir)source-build-patches\*.patch" />
+    </ItemGroup>
+
+    <Exec
+      Command="git --work-tree=$(RepoRoot) apply --ignore-whitespace --whitespace=nowarn --unsafe-paths &quot;%(SourceBuildPatchFile.FullPath)&quot;"
+      WorkingDirectory="$(RepoRoot)"
+      Condition="'@(SourceBuildPatchFile)' != ''" />
+  </Target>
+
+</Project>

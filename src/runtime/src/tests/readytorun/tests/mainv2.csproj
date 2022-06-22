@@ -1,0 +1,161 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>exe</OutputType>
+    <CLRTestKind>BuildAndRun</CLRTestKind>
+    <CrossGenTest>false</CrossGenTest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="fieldgetter.ilproj" />
+    <ProjectReference Include="testv1\test.csproj" />
+    <ProjectReference Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="main.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <CLRTestBatchPreCommands><![CDATA[
+$(CLRTestBatchPreCommands)
+
+REM Suppress some COMPlus variables for the duration of Crossgen2 execution
+setlocal
+set "COMPlus_GCName="
+set "COMPlus_GCStress="
+set "COMPlus_HeapVerify="
+set "COMPlus_ReadyToRun="
+
+DEL test.dll
+if exist test.dll (
+    echo FAILED to delete test.dll
+    exit /b 1
+)
+COPY /Y ..\testv1\test\test.dll test.dll
+if not exist test.dll (
+    echo FAILED to copy test.dll
+    exit /b 1
+)
+
+%Core_Root%\CoreRun.exe %Core_Root%\crossgen2\crossgen2.dll -r:%Core_Root%\*.dll -r:%25CD% -o:mainv2.ni.dll mainv2.dll
+
+set CrossGenStatus=!ERRORLEVEL!
+IF NOT !CrossGenStatus!==0 (
+    ECHO Crossgen failed with exitcode - !CrossGenStatus!
+    Exit /b 1
+)
+if not exist mainv2.ni.dll (
+    echo FAILED to build mainv2.ni.dll
+    exit /b 1
+)
+
+%Core_Root%\CoreRun.exe %Core_Root%\crossgen2\crossgen2.dll -r:%Core_Root%\*.dll -r:%25CD% -o:fieldgetter.ni.dll fieldgetter.dll 
+
+set CrossGenStatus=!ERRORLEVEL!
+IF NOT !CrossGenStatus!==0 (
+    ECHO Crossgen failed with exitcode - !CrossGenStatus!
+    Exit /b 1
+)
+if not exist fieldgetter.ni.dll (
+    echo FAILED to build fieldgetter.ni.dll
+    exit /b 1
+)
+DEL test.dll
+if exist test.dll (
+    echo FAILED to delete test.dll
+    exit /b 1
+)
+COPY /Y ..\testv2\test\test.dll test.dll
+if not exist test.dll (
+    echo FAILED to copy test.dll
+    exit /b 1
+)
+
+%Core_Root%\CoreRun.exe %Core_Root%\crossgen2\crossgen2.dll -r:%Core_Root%\*.dll -r:%25CD% -o:test.ni.dll test.dll 
+
+set CrossGenStatus=!ERRORLEVEL!
+IF NOT !CrossGenStatus!==0 (
+    ECHO Crossgen failed with exitcode - !CrossGenStatus!
+    Exit /b 1
+)
+if not exist test.ni.dll (
+    echo FAILED to build test.ni.dll
+    exit /b 1
+)
+
+endlocal
+]]></CLRTestBatchPreCommands>
+    <BashCLRTestPreCommands><![CDATA[
+$(BashCLRTestPreCommands)
+
+# Suppress some COMPlus variables for the duration of Crossgen2 execution
+export -n COMPlus_GCName COMPlus_GCStress COMPlus_HeapVerify COMPlus_ReadyToRun
+
+rm -f test.dll
+if [ -f test.dll ]
+then
+  echo Failed to delete test.dll
+  exit 1
+fi
+cp ../testv1/test/test.dll test.dll
+if [ ! -f test.dll ]
+then
+  echo Failed to copy test.dll
+  exit 1
+fi
+
+$CORE_ROOT/corerun $CORE_ROOT/crossgen2/crossgen2.dll -r:$CORE_ROOT/*.dll -r:`pwd` -o:mainv2.ni.dll mainv2.dll
+
+__cgExitCode=$?
+if [ $__cgExitCode -ne 0 ]
+then
+  echo Crossgen failed with exitcode: $__cgExitCode
+  exit 1
+fi
+if [ ! -f mainv2.ni.dll ]
+then
+  echo Failed to build mainv2.ni.dll
+  exit 1
+fi
+
+$CORE_ROOT/corerun $CORE_ROOT/crossgen2/crossgen2.dll -r:$CORE_ROOT/*.dll -r:`pwd` -o:fieldgetter.ni.dll fieldgetter.dll
+
+__cgExitCode=$?
+if [ $__cgExitCode -ne 0 ]
+then
+  echo Crossgen failed with exitcode: $__cgExitCode
+  exit 1
+fi
+if [ ! -f fieldgetter.ni.dll ]
+then
+  echo Failed to build fieldgetter.ni.dll
+  exit 1
+fi
+rm -f test.dll
+if [ -f test.dll ]
+then
+  echo Failed to delete test.dll
+  exit 1
+fi
+cp ../testv2/test/test.dll test.dll
+if [ ! -f test.dll ]
+then
+  echo Failed to copy test.dll
+  exit 1
+fi
+
+$CORE_ROOT/corerun $CORE_ROOT/crossgen2/crossgen2.dll -r:$CORE_ROOT/*.dll -r:`pwd` -o:test.ni.dll test.dll
+
+__cgExitCode=$?
+if [ $__cgExitCode -ne 0 ]
+then
+  echo Crossgen failed with exitcode: $__cgExitCode
+  exit 1
+fi
+if [ ! -f test.ni.dll ]
+then
+  echo Failed to build test.ni.dll
+  exit 1
+fi
+
+export COMPlus_GCName COMPlus_GCStress COMPlus_HeapVerify COMPlus_ReadyToRun
+]]></BashCLRTestPreCommands>
+  </PropertyGroup>
+</Project>

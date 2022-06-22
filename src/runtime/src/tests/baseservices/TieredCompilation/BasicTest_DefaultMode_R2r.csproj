@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <CLRTestPriority>0</CLRTestPriority>
+
+    <!-- This is an explicit crossgen test -->
+    <AlwaysUseCrossGen2>true</AlwaysUseCrossGen2>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BasicTest.cs" />
+  </ItemGroup>
+</Project>

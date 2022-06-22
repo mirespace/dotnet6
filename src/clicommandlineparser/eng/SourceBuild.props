@@ -1,0 +1,8 @@
+<Project>
+
+  <PropertyGroup>
+    <GitHubRepositoryName>cliCommandLineParser</GitHubRepositoryName>
+    <SourceBuildManagedOnly>true</SourceBuildManagedOnly>
+  </PropertyGroup>
+
+</Project>

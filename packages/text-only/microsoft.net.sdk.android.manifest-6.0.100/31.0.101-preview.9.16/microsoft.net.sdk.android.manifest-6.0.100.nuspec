@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.NET.Sdk.Android.Manifest-6.0.100</id>
+    <version>31.0.101-preview.9.16+sha.2c2302a</version>
+    <authors>Microsoft</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <projectUrl>https://github.com/xamarin/xamarin-android</projectUrl>
+    <description>Microsoft.NET.Sdk.Android workload manifest. Please do not reference directly.</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <packageTypes>
+      <packageType name="DotnetPlatform" />
+    </packageTypes>
+  </metadata>
+</package>

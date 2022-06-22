@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net46;netcoreapp1.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp1.1' ">
+    <DefineConstants>$(DefineConstants);NETFX_CORE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.3.0-beta1-build3642" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.0-beta1-build1309" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <ProjectReference Include="..\Humanizer\Humanizer.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net46' ">
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <PackageReference Include="ApiApprover" Version="5.0.0" />
+    <PackageReference Include="ApprovalTests" Version="3.0.13" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApiApprover\PublicApiApprovalTest.approve_public_api.approved.txt" />
+    <Content Include="xunit.runner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+
+  <Import Project="..\Humanizer.Tests.Shared\Humanizer.Tests.Shared.projitems" Label="Shared" />
+
+</Project>
