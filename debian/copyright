@@ -3693,7 +3693,7 @@ License: GPLv2+
  along with this program; if not, write to the Free Software
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  .
- See /usr/share/common-licenses/GPLv2+, or
+ See /usr/share/common-licenses/GPL-2, or
  <http://www.gnu.org/copyleft/gpl.txt> for the terms of the latest version
  of the GNU General Public License.
 
@@ -3732,7 +3732,7 @@ License: LGPLv2+
   along with this program. If not, see <http://www.gnu.org/licenses/>.
   .
   On Debian systems, the complete text of the GNU Lesser General Public
-  License can be found in "/usr/share/common-licenses/LGPLv2+".
+  License can be found in "/usr/share/common-licenses/LGPL-2".
 
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a
