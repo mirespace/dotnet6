@@ -1,4 +1,4 @@
-dotnet6 (6.0.106-0ubuntu1+ppa2) kinetic; urgency=medium
+dotnet6 (6.0.106-0ubuntu1) kinetic; urgency=medium
 
   * Initial Release (LP: #1979414)
 
