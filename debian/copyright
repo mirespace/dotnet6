@@ -10,6 +10,17 @@ Files: src/*.cs
 Copyright: Microsoft.
 License: Expat
 
+Files: src/nuget-client/*
+Copyright: .NET Foundation and Contributors
+License: Apache-2.0
+
+Files: src/nuget-client/src/NuGet.Core/*.cs
+ src/sdk/src/BlazorWasmSdk/*
+ src/sdk/src/BuiltInTools/*
+ src/sdk/src/RazorSdk/*
+Copyright: .NET Foundation
+License: Apache-2.0
+
 Files: src/nuget-client/scripts/funcTests/*
  src/nuget-client/src/NuGet.Core/NuGet.Packaging/PackageCreation/Extensions/FrameworksExtensions.cs
  src/nuget-client/src/NuGet.Core/NuGet.ProjectModel/LockFile/BuildAction.cs
@@ -45,6 +56,16 @@ Files: src/nuget-client/scripts/funcTests/*
 Copyright: .NET Foundation and Contributors
 License: Expat
 
+Files: src/linker/external/cecil/symbols/*
+Copyright: 2012, Xamarin Inc (http:www.xamarin.com)
+ 2002, 2003, Ximian, Inc. http:www.ximian.com
+License: Expat
+
+Files: src/linker/external/cecil/symbols/pdb/*
+Copyright: 2008-2015, Jb Evain
+ 2008-2011, Novell, Inc.
+License: Expat
+
 Files:
  src/linker/external/cecil/symbols/pdb/Microsoft.Cci.Pdb/*
  src/msbuild/ref/*
@@ -74,9 +95,29 @@ Copyright: .NET Foundation and contributors.
            Brad Wilson and Oren Novotny.
 License: Expat and Apache-2.0
 
+Files: src/runtime/src/coreclr/pal/src/libunwind/*
+Copyright: 2002, 2004, Hewlett-Packard Co.
+License: Expat
+
+Files: src/runtime/src/libraries/System.Data.Common/tests/System/Data/*
+Copyright: 2004, Mainsoft Co.
+License: Expat
+
+Files: src/runtime/src/mono/mono/arch/*
+Copyright: 2001, 2002, Ximian, Inc.
+ 2000, Intel Corporation.
+License: Expat
+
+Files: src/vstest/*
+Copyright: 2018-2020, Microsoft Corporation
+License: Expat
+
+Files: src/xdt/*
+Copyright: Microsoft Corporation.
+License: Apache-2.0
+
 Files: *eng/common/*
  ArcadeOverrides/*
- src/aspnetcore/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/BitOperations.cs
  src/nuget-client/src/NuGet.Clients/NuGet.VisualStudio.Implementation/NullableAnnotations.cs
  src/nuget-client/src/NuGet.Core/NuGet.Packaging/Signing/Archive/Crc32.cs
  src/nuget-client/src/NuGet.Core/NuGet.Packaging/Signing/DerEncoding/DerEncoder.cs
@@ -170,6 +211,22 @@ Files: packages/*
 Copyright: JS Foundation and other contributors | jquery.org/license
 License: Expat
 
+
+Files: src/aspnetcore/src/Components/benchmarkapps/BlazingPizza.Server/*
+Copyright: 2011-2018, Twitter, Inc.
+ 2011-2018, The Bootstrap Authors
+ 2011, The Quicksand Project Authors (https:github.com/andrew-paglinawan/QuicksandFamily)
+License: Expat
+
+Files: src/aspnetcore/src/Identity/UI/src/assets/V4/lib/bootstrap/dist/*
+ src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/*
+ src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*
+ src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/*
+ src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/*
+Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
+License: Expat
+
+
 Files: src/aspnetcore/src/Components/Samples/BlazorServerApp/wwwroot/*
  src/aspnetcore/src/Components/WebAssembly/Samples/HostedBlazorWebassemblyApp/Client/wwwroot/*
  src/aspnetcore/src/Components/WebAssembly/testassets/StandaloneApp/wwwroot/*
@@ -197,20 +254,11 @@ Copyright: 2011-2021, Twitter, Inc.
  2011-2021, The Bootstrap Authors
 License: Expat
 
-Files: src/aspnetcore/src/Identity/UI/src/assets/V4/lib/bootstrap/dist/*
- src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/*
- src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*
- src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/*
- src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/*
-Copyright: 2011-2021, The Bootstrap Authors (https:github.com/twbs/bootstrap/graphs/contributors)
-License: Expat
-
 Files: src/aspnetcore/src/Identity/UI/src/assets/V4/lib/jquery-validation-unobtrusive/*
  src/aspnetcore/src/Identity/UI/src/assets/V5/lib/jquery-validation-unobtrusive/*
  src/aspnetcore/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation-unobtrusive/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation-unobtrusive/*
- src/xdt/*
 Copyright: Microsoft Corporation.
 License: Apache-2.0
 
@@ -248,12 +296,6 @@ License: Expat and Apache-2.0
 Files: src/aspnetcore/src/Components/Server/src/BlazorPack/Requires.cs
  src/aspnetcore/src/Components/Server/src/BlazorPack/SequenceOfT.cs
 Copyright: Andrew Arnott.
-License: Expat
-
-Files: src/aspnetcore/src/Components/benchmarkapps/BlazingPizza.Server/*
-Copyright: 2011-2018, Twitter, Inc.
- 2011-2018, The Bootstrap Authors
- 2011, The Quicksand Project Authors (https:github.com/andrew-paglinawan/QuicksandFamily)
 License: Expat
 
 Files: src/aspnetcore/src/Grpc/test/testassets/*
@@ -353,7 +395,6 @@ Files: src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterW
  src/nuget-client/src/NuGet.Clients/NuGet.Tools/*.cs
  src/nuget-client/src/NuGet.Clients/NuGet.V*/*.cs
  src/nuget-client/src/NuGet.Clients/NuGetConsole.Host.PowerShell/*.cs
- src/nuget-client/src/NuGet.Core/*.cs
  src/nuget-client/test/NuGet.Clients.FuncTests/NuGet*/*.cs
  src/nuget-client/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/Caching/Tests/*
  src/nuget-client/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/Caching/CachingTests*.cs
@@ -368,13 +409,10 @@ Files: src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterW
  src/sdk/src/Assets/TestProjects/WatchGlobbingApp/*
  src/sdk/src/Assets/TestProjects/WatchKitchenSink/*
  src/sdk/src/Assets/TestProjects/WatchNoDepsApp/*
- src/sdk/src/BlazorWasmSdk/*
- src/sdk/src/BuiltInTools/*
  src/sdk/src/BuiltInTools/dotnet-watch/HotReload/CompilationHandler.cs
  src/sdk/src/BuiltInTools/dotnet-watch/HotReload/HotReloadEventSource.cs
  src/sdk/src/BuiltInTools/dotnet-watch/HotReload/ScopedCssFileHandler.cs
  src/sdk/src/BuiltInTools/dotnet-watch/HotReload/StaticFileHandler.cs
- src/sdk/src/RazorSdk/*
  src/sdk/src/RazorSdk/Tool/*
  src/sdk/src/RazorSdk/Tool/*/*
  src/sdk/src/Tests/Microsoft.AspNetCore.Watch.BrowserRefresh.Tests/*
@@ -415,6 +453,10 @@ Copyright: Yoshifumi Kawai <ils@neue.cc>
            Andrew Arnott <andrewarnott@gmail.com>
 License: Expat
 
+Files: src/aspnetcore/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/BitOperations.cs
+Copyright: .NET Foundation
+License: Expat
+
 Files: src/aspnetcore/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/BufferWriter.cs
 Copyright: Andrew Arnott <andrewarnott@gmail.com>
 License: Apache-2.0
@@ -424,7 +466,8 @@ Copyright: 2012-2016, Yann Collet
 License: BSD-2-clause or Expat
 
 Files: src/aspnetcore/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Internal/Sequence`1.cs
-Copyright: from file copied from https:github.com/AArnott/Nerdbank.Streams/blob/d656899be26d4d7c72c11c9232b4952c64a89bcb/src/Nerdbank.Streams/Sequence%601.cs / Andrew Arnott. / All contributors.
+Copyright: Andrew Arnott
+ All contributors.
 License: Expat
 
 Files: src/aspnetcore/src/submodules/MessagePack-CSharp/src/MessagePack.UnityClient/Assets/Scripts/MessagePack/LZ4/*
@@ -451,17 +494,8 @@ License: BSD-3-clause
 
 Files: src/diagnostics/src/Microsoft.Diagnostics.TestHelpers/Xunit.Extensions/*
  src/msbuild/src/Xunit.NetCore.Extensions/*
- src/nuget-client/*
 Copyright: .NET Foundation and Contributors
 License: Apache-2.0
-
-Files: src/diagnostics/src/SOS/lldbplugin/swift-4.1/lldb/Utility/*UUID.h
-Copyright: 2014, 2015, Apple Inc. and the Swift project authors
-           1990- 1993, 1996 Open Software Foundation, Inc.
-           1989 by Hewlett-Packard Company, Palo Alto, Ca. &
-           Digital Equipment Corporation, Maynard, Mass.
-           1998 Microsoft.
-License: Expat and Apache-2.0
 
 Files: src/diagnostics/src/pal/inc/rt/xmmintrin.h
 Copyright: .NET Foundation
@@ -492,6 +526,14 @@ Files: src/diagnostics/src/SOS/lldbplugin/swift-4.1/lldb/Core/SwiftForward.h
 Copyright: 2014, 2015, Apple Inc. and the Swift project authors
 License: Apache-2.0-Runtime-Library-Exception
 
+Files: src/diagnostics/src/SOS/lldbplugin/swift-4.1/lldb/Utility/*UUID.h
+Copyright: 2014, 2015, Apple Inc. and the Swift project authors
+           1990- 1993, 1996 Open Software Foundation, Inc.
+           1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+           Digital Equipment Corporation, Maynard, Mass.
+           1998 Microsoft.
+License: Expat and Apache-2.0
+
 Files: src/format/src/Workspaces/MSBuildWorkspaceFinder.cs
 Copyright: Microsoft.
 License: Apache-2.0 or Expat
@@ -518,7 +560,6 @@ Copyright: 2017, Microsoft Corporation (http:www.microsoft.com)
 License: Expat
 
 Files: src/linker/external/cecil/*
- src/linker/external/cecil/symbols/mdb/Mono.Cecil.Mdb/*
 Copyright: 2008-2015, Jb Evain
  2008-2011, Novell, Inc.
 License: Expat
@@ -532,11 +573,6 @@ Files: src/linker/external/cecil/ProjectInfo.cs
 Copyright: 2006, 2008-2015, Jb Evain
 License: Expat
 
-Files: src/linker/external/cecil/symbols/*
-Copyright: 2012, Xamarin Inc (http:www.xamarin.com)
- 2002, 2003, Ximian, Inc. http:www.ximian.com
-License: Expat
-
 Files: src/linker/external/cecil/symbols/mdb/Mono.CompilerServices.SymbolWriter/MonoSymbolTable.cs
  src/linker/external/cecil/symbols/mdb/Mono.CompilerServices.SymbolWriter/MonoSymbolWriter.cs
 Copyright: 2002, Ximian, Inc. http:www.ximian.com
@@ -546,10 +582,6 @@ Files: src/linker/external/cecil/symbols/mdb/Mono.CompilerServices.SymbolWriter/
 Copyright: 2005, 2008, Novell, Inc. http:www.novell.com
 License: Expat
 
-Files: src/linker/external/cecil/symbols/pdb/*
-Copyright: 2008-2015, Jb Evain
- 2008-2011, Novell, Inc.
-License: Expat
 
 Files: src/linker/external/cecil/symbols/pdb/Mono.Cecil.Pdb/ISymUnmanagedDocumentWriter.cs
  src/linker/external/cecil/symbols/pdb/Mono.Cecil.Pdb/ISymUnmanagedWriter2.cs
@@ -637,7 +669,6 @@ License: Expat
 Files: src/linker/test/Mono.Linker.Tests.Cases/PreserveDependencies/*
  src/runtime/src/mono/mono/mini/mini-windows-tls-callback.c
  src/runtime/src/mono/mono/profiler/helper.c
- src/vstest/*
 Copyright: 2018-2020, Microsoft Corporation
 License: Expat
 
@@ -669,10 +700,6 @@ License: Expat
 Files: src/runtime/src/coreclr/pal/src/include/pal/fakepoll.h
 Copyright: December 2000, Greg Parker <gparker@cs.stanford.edu>
 License: Expat and public-domain
-
-Files: src/runtime/src/coreclr/pal/src/libunwind/*
-Copyright: 2002, 2004, Hewlett-Packard Co.
-License: Expat
 
 Files: src/runtime/src/coreclr/pal/src/libunwind/include/*
 Copyright: 2001-2005, Hewlett-Packard Co
@@ -1422,7 +1449,6 @@ Copyright: 2012, Xamarin Inc. (http:www.xamarin.com)
 License: Expat
 
 Files: src/runtime/src/libraries/System.Data.Common/tests/DataProvider.cs
- src/runtime/src/libraries/System.Data.Common/tests/System/Data/*
 Copyright: 2004, Mainsoft Co.
 License: Expat
 
@@ -1854,11 +1880,6 @@ Files: src/runtime/src/mono/System.Private.CoreLib/src/System/TypeIdentifier.cs
 Copyright: 2013-2016, Xamarin, Inc (http:www.xamarin.com)
 License: Expat
 
-Files: src/runtime/src/mono/mono/arch/*
-Copyright: 2001, 2002, Ximian, Inc.
- 2000, Intel Corporation.
-License: Expat
-
 Files: src/runtime/src/mono/mono/arch/arm/*
 Copyright: 2011, Xamarin Inc
  2005-2011, Novell Inc
@@ -2149,7 +2170,9 @@ License: Expat
 
 Files: src/runtime/src/mono/mono/metadata/sysmath.c
 Copyright: Microsoft.
+ Mono Project (http://www.mono-project.com)
  2015, Xamarin, Inc (https:www.xamarin.com)
+ Ludovic Henry (ludovic@xamarin.com)
  2004-2009, Novell, Inc (http:www.novell.com)
  2001-2003, Ximian, Inc (http:www.ximian.com)
 License: Expat
