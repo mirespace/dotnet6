@@ -56,6 +56,11 @@ Files: src/nuget-client/scripts/funcTests/*
 Copyright: .NET Foundation and Contributors
 License: Expat
 
+Files: src/linker/external/cecil/*
+Copyright: 2008-2015, Jb Evain
+ 2008-2011, Novell, Inc.
+License: Expat
+
 Files: src/linker/external/cecil/symbols/*
 Copyright: 2012, Xamarin Inc (http:www.xamarin.com)
  2002, 2003, Ximian, Inc. http:www.ximian.com
@@ -97,6 +102,10 @@ License: Expat and Apache-2.0
 
 Files: src/runtime/src/coreclr/pal/src/libunwind/*
 Copyright: 2002, 2004, Hewlett-Packard Co.
+License: Expat
+
+Files: src/runtime/src/coreclr/pal/src/libunwind/src/*
+Copyright: 2001-2005, Hewlett-Packard Co
 License: Expat
 
 Files: src/runtime/src/libraries/System.Data.Common/tests/System/Data/*
@@ -218,6 +227,20 @@ Copyright: 2011-2018, Twitter, Inc.
  2011, The Quicksand Project Authors (https:github.com/andrew-paglinawan/QuicksandFamily)
 License: Expat
 
+Files: src/aspnetcore/src/Identity/UI/src/assets/V4/lib/bootstrap/*
+ src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/*
+Copyright: 2011-2021, Twitter, Inc.
+ 2011-2021, The Bootstrap Authors
+License: Expat
+
+Files: src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/*
+ src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
+ src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
+Copyright: 2011-2021, Twitter, Inc.
+ 2011-2021, The Bootstrap Authors
+License: Expat
+ 
+
 Files: src/aspnetcore/src/Identity/UI/src/assets/V4/lib/bootstrap/dist/*
  src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/*
@@ -234,20 +257,15 @@ Files: src/aspnetcore/src/Components/Samples/BlazorServerApp/wwwroot/*
  src/aspnetcore/src/Components/benchmarkapps/BlazingPizza.Server/wwwroot/*
  src/aspnetcore/src/Components/benchmarkapps/Wasm.Performance/TestApp/wwwroot/*
  src/aspnetcore/src/Components/test/testassets/ComponentsApp.Server/wwwroot/*
- src/aspnetcore/src/Identity/UI/src/assets/V4/lib/bootstrap/*
  src/aspnetcore/src/Identity/UI/src/assets/V4/lib/bootstrap/dist/css/*
- src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/*
  src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/css/*
  src/aspnetcore/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/bootstrap/*
  src/aspnetcore/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/bootstrap/dist/*
  src/aspnetcore/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/bootstrap/dist/css/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/BlazorServerWeb-CSharp/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/ComponentsWebAssembly-CSharp/*
- src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
- src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/css/*
- src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/*
  src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/css/*
  src/source-build-reference-packages/src/textOnlyPackages/src/microsoft.aspnetcore.components.webassembly.templates/3.2.1/content/ComponentsWebAssembly-CSharp/Client/wwwroot/css/bootstrap/*
 Copyright: 2011-2021, Twitter, Inc.
@@ -559,11 +577,6 @@ Copyright: 2017, Microsoft Corporation (http:www.microsoft.com)
  2008, Novell (http:www.novell.com)
 License: Expat
 
-Files: src/linker/external/cecil/*
-Copyright: 2008-2015, Jb Evain
- 2008-2011, Novell, Inc.
-License: Expat
-
 Files: src/linker/external/cecil/Mono.Security.Cryptography/CryptoConvert.cs
 Copyright: 2004-2006, Novell Inc. (http:www.novell.com)
  2003, Motus Technologies Inc. (http:www.motus.com)
@@ -837,10 +850,6 @@ License: Expat
 Files: src/runtime/src/coreclr/pal/src/libunwind/include/win/*
 Copyright: 1996-1998, John D. Polstra.
 License: BSD-2-clause
-
-Files: src/runtime/src/coreclr/pal/src/libunwind/src/*
-Copyright: 2001-2005, Hewlett-Packard Co
-License: Expat
 
 Files: src/runtime/src/coreclr/pal/src/libunwind/src/aarch64/*
 Copyright: 2013, Linaro Limited
