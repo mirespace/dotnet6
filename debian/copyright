@@ -18,6 +18,11 @@ Files: src/nuget-client/src/NuGet.Core/*.cs
  src/sdk/src/BlazorWasmSdk/*
  src/sdk/src/BuiltInTools/*
  src/sdk/src/RazorSdk/*
+ src/sdk/src/Tests/Microsoft.NET.Sdk.Razor.SourceGenerators.Tests/*
+ src/sdk/src/Tests/Microsoft.NET.Sdk.Razor.Tests/*
+ src/sdk/src/Tests/Microsoft.AspNetCore.Watch.BrowserRefresh.Tests/*
+ src/sdk/src/Tests/dotnet-watch.Tests/*.cs
+ src/nuget-client/src/NuGet.Clients/NuGet.V*/*.cs
 Copyright: .NET Foundation
 License: Apache-2.0
 
@@ -43,7 +48,7 @@ Files: src/nuget-client/scripts/funcTests/*
  src/sdk/src/RazorSdk/Tasks/StaticWebAssetsGeneratePackagePropsFile.cs
  src/sdk/src/RazorSdk/Tasks/ValidateStaticWebAssetsUniquePaths.cs
  src/sdk/src/RazorSdk/Tasks/StaticWebAssets/*
- src/sdk/src/RazorSdk/Tool/Properties/*
+ src/sdk/src/RazorSdk/Tool/Properties/AssemblyInfo.cs
  src/sdk/src/Tests/Microsoft.AspNetCore.Watch.BrowserRefresh.Tests/BlazorWasmHotReloadMiddlewareTest.cs
  src/sdk/src/Tests/Microsoft.AspNetCore.Watch.BrowserRefresh.Tests/HostingStartupTest.cs
  src/sdk/src/Tests/Microsoft.NET.Sdk.Razor.SourceGenerators.Tests/RazorDiagnosticTest.cs
@@ -124,6 +129,28 @@ License: Expat
 Files: src/xdt/*
 Copyright: Microsoft Corporation.
 License: Apache-2.0
+
+Files: src/roslyn/*
+Copyright: .NET Foundation and Contributors
+License: Expat and Apache-2.0
+
+Files: src/runtime/src/mono/mono/metadata/*
+Copyright: 2015, 2016, 2018-2020, Microsoft
+License: Expat
+
+Files: src/runtime/src/mono/mono/mini/*
+Copyright: 2001-2003, 2006, Ximian, Inc.
+License: Expat
+
+Files: src/runtime/src/libraries/System.Data.Common/tests/System/Data/SqlTypes/*
+Copyright: 2004, Novell, Inc (http:www.novell.com)
+ 2003, Martin Willemoes Hansen
+ 2002, Ville Palo
+License: Expat
+
+Files: src/runtime/src/libraries/System.Drawing.Common/tests/Printing/*
+Copyright: 2004-2011, Novell, Inc (http:www.novell.com)
+License: Expat
 
 Files: *eng/common/*
  ArcadeOverrides/*
@@ -411,7 +438,6 @@ Files: src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterW
  src/nuget-client/src/NuGet.Clients/NuGet.P*/*.cs
  src/nuget-client/src/NuGet.Clients/NuGet.SolutionRestoreManager/*.cs
  src/nuget-client/src/NuGet.Clients/NuGet.Tools/*.cs
- src/nuget-client/src/NuGet.Clients/NuGet.V*/*.cs
  src/nuget-client/src/NuGet.Clients/NuGetConsole.Host.PowerShell/*.cs
  src/nuget-client/test/NuGet.Clients.FuncTests/NuGet*/*.cs
  src/nuget-client/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/Caching/Tests/*
@@ -431,9 +457,6 @@ Files: src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterW
  src/sdk/src/BuiltInTools/dotnet-watch/HotReload/HotReloadEventSource.cs
  src/sdk/src/BuiltInTools/dotnet-watch/HotReload/ScopedCssFileHandler.cs
  src/sdk/src/BuiltInTools/dotnet-watch/HotReload/StaticFileHandler.cs
- src/sdk/src/RazorSdk/Tool/*
- src/sdk/src/RazorSdk/Tool/*/*
- src/sdk/src/Tests/Microsoft.AspNetCore.Watch.BrowserRefresh.Tests/*
  src/sdk/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/BlazorReadSatelliteAssemblyFileTest.cs
  src/sdk/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/ServiceWorkerAssert.cs
  src/sdk/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/WasmBuildIncrementalismTest.cs
@@ -441,14 +464,11 @@ Files: src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterW
  src/sdk/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/WasmCompressionTests.cs
  src/sdk/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/WasmPublishIntegrationTest.cs
  src/sdk/src/Tests/Microsoft.NET.Sdk.BlazorWebAssembly.Tests/WasmPwaManifestTests.cs
- src/sdk/src/Tests/Microsoft.NET.Sdk.Razor.SourceGenerators.Tests/*
- src/sdk/src/Tests/Microsoft.NET.Sdk.Razor.Tests/*
  src/sdk/src/Tests/Microsoft.NET.Sdk.Razor.Tool.Tests/*.cs
  src/sdk/src/Tests/Microsoft.NET.Sdk.Razor.Tool.Tests/Properties/*
  src/sdk/src/Tests/Microsoft.NET.TestFramework/AspNetSdkTest.cs
  src/sdk/src/Tests/Microsoft.NET.TestFramework/NuGetTestLogger.cs
  src/sdk/src/Tests/Microsoft.NET.TestFramework/Utilities/FileThumbPrint.cs
- src/sdk/src/Tests/dotnet-watch.Tests/*.cs
  src/sdk/src/Tests/dotnet-watch.Tests/Properties/*
  src/sdk/src/Tests/dotnet-watch.Tests/Utilities/*
  tools-local/tasks/Microsoft.DotNet.SourceBuild.Tasks.XPlat/RepoTasks/*
@@ -607,10 +627,6 @@ Files: src/linker/src/analyzer/*
 Copyright: 2015, Xamarin Inc (http:www.xamarin.com).
 License: Expat
 
-Files: src/linker/src/analyzer/LinkerAnalyzerCore/*
-Copyright: 2017, 2018, Microsoft Corporation (http:www.microsoft.com)
-License: Expat
-
 Files: src/linker/src/analyzer/LinkerAnalyzerCore/DependencyGraph.cs
 Copyright: Radek Doulik (rodo@xamarin.com)
  2015, Xamarin Inc (http:www.xamarin.com).
@@ -620,6 +636,10 @@ Files: src/linker/src/analyzer/LinkerAnalyzerCore/SpaceAnalyzer.cs
  src/linker/test/Mono.Linker.Tests.Cases/CppCLI/TestLibrary/*
 Copyright: Radek Doulik (radou@microsoft.com)
  2018 Microsoft Corporation (http://www.microsoft.com)
+License: Expat
+
+Files: src/runtime/src/mono/mono/utils/*
+Copyright: 2018, Microsoft, Inc.
 License: Expat
 
 Files: src/linker/src/linker/Linker.Steps/BaseStep.cs
@@ -679,6 +699,10 @@ Files: src/linker/src/linker/Linker/IDependencyRecorder.cs
 Copyright: 2017, 2018, Microsoft Corporation (http:www.microsoft.com)
 License: Expat
 
+Files: src/runtime/src/mono/mono/profiler/*
+Copyright: 2004-2011, Novell, Inc (http:www.novell.com)
+License: Expat
+
 Files: src/linker/test/Mono.Linker.Tests.Cases/PreserveDependencies/*
  src/runtime/src/mono/mono/mini/mini-windows-tls-callback.c
  src/runtime/src/mono/mono/profiler/helper.c
@@ -693,10 +717,6 @@ Files: src/roslyn-analyzers/src/Utilities/Compiler/RoslynHashCode.cs
 Copyright: Microsoft.
            2012-2016, Yann Collet
 License: BSD-2-clause and Expat
-
-Files: src/roslyn/*
-Copyright: .NET Foundation and Contributors
-License: Expat and Apache-2.0
 
 Files: src/roslyn/src/Compilers/Test/Core/Assert/UseCultureAttribute.cs
 Copyright: 2014, Outercurve Foundation
@@ -1443,6 +1463,10 @@ Files: src/runtime/src/libraries/System.ComponentModel.TypeConverter/tests/Refer
 Copyright: 2008, Ivan N. Zlatev
 License: Expat
 
+Files: src/runtime/src/libraries/System.Configuration.ConfigurationManager/tests/Mono/*
+Copyright: 2004-2011, Novell, Inc (http:www.novell.com)
+License: Expat
+
 Files: src/runtime/src/libraries/System.Configuration.ConfigurationManager/tests/Mono/ConfigurationErrorsExceptionTest.cs
 Copyright: 2008, Gert Driesen
 License: Expat
@@ -1527,7 +1551,6 @@ Copyright: 2005, Novell, Inc (http:www.novell.com)
 License: Expat
 
 Files: src/runtime/src/libraries/System.ComponentModel.TypeConverter/tests/Design/Serialization/InstanceDescriptorTests.cs
- src/runtime/src/libraries/System.Configuration.ConfigurationManager/tests/Mono/*
  src/runtime/src/libraries/System.Data.Common/tests/System/Data/DataSetAssertion.cs
  src/runtime/src/libraries/System.Data.Common/tests/System/Data/DataSetInferXmlSchemaTest.cs
  src/runtime/src/libraries/System.Data.Common/tests/System/Data/DataSetReadXmlSchemaTest.cs
@@ -1551,7 +1574,6 @@ Files: src/runtime/src/libraries/System.ComponentModel.TypeConverter/tests/Desig
  src/runtime/src/libraries/System.Drawing.Common/tests/Imaging/ColorMatrixTests.cs
  src/runtime/src/libraries/System.Drawing.Common/tests/Imaging/ImageAttributesTests.cs
  src/runtime/src/libraries/System.Drawing.Common/tests/Imaging/MetafileTests.cs
- src/runtime/src/libraries/System.Drawing.Common/tests/Printing/*
  src/runtime/src/libraries/System.Drawing.Common/tests/mono/*
  src/runtime/src/libraries/System.Drawing.Common/tests/mono/System.Drawing/GraphicsTests.cs
  src/runtime/src/libraries/System.Net.HttpListener/src/System/Net/Managed/ChunkedInputStream.cs
@@ -1567,7 +1589,6 @@ Files: src/runtime/src/libraries/System.ComponentModel.TypeConverter/tests/Desig
  src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/RuntimeFieldInfo.cs
  src/runtime/src/mono/System.Private.CoreLib/src/System/Reflection/RuntimeModule.cs
  src/runtime/src/mono/System.Private.CoreLib/src/System/TypeSpec.cs
- src/runtime/src/mono/mono/profiler/*
  src/runtime/src/mono/mono/metadata/mono-basic-block.c
  src/runtime/src/mono/mono/metadata/mono-perfcounters.c
  src/runtime/src/mono/mono/metadata/runtime.c
@@ -1618,12 +1639,6 @@ License: Expat
 Files: src/runtime/src/libraries/System.Data.Common/tests/System/Data/DataViewTest.cs
 Copyright: 2004, 2005, Novell, Inc (http:www.novell.com)
  2003, Patrick Kalkman
-License: Expat
-
-Files: src/runtime/src/libraries/System.Data.Common/tests/System/Data/SqlTypes/*
-Copyright: 2004, Novell, Inc (http:www.novell.com)
- 2003, Martin Willemoes Hansen
- 2002, Ville Palo
 License: Expat
 
 Files: src/runtime/src/libraries/System.Data.Common/tests/System/Data/SqlTypes/SqlBooleanTest.cs
@@ -2202,10 +2217,6 @@ Copyright: 2011, 2012, Xamarin Inc
  2002-2011, Novell, Inc.
 License: Expat
 
-Files: src/runtime/src/mono/mono/mini/*
-Copyright: 2001-2003, 2006, Ximian, Inc.
-License: Expat
-
 Files: src/runtime/src/mono/mono/mini/abcremoval.c
  src/runtime/src/mono/mono/mini/abcremoval.h
  src/runtime/src/mono/mono/mini/cfold.c
@@ -2507,7 +2518,6 @@ Copyright: 2011, Xamarin Inc (http:www.xamarin.com)
 License: Expat
 
 Files: src/runtime/src/mono/mono/eglib/gunicode-win32.c
- src/runtime/src/mono/mono/metadata/*
  src/runtime/src/mono/mono/tests/array-coop-1.cs
  src/runtime/src/mono/mono/tests/tailcall-generic-cast-cs.cs
  src/runtime/src/mono/mono/tests/tailcall-interface.cs
@@ -2537,10 +2547,6 @@ License: Expat
 
 Files: src/runtime/src/mono/mono/unit-tests/test-mono-handle.c
 Copyright: 2015, Xamarin, Inc. (www.xamarin.com)
-License: Expat
-
-Files: src/runtime/src/mono/mono/utils/*
-Copyright: 2018, Microsoft, Inc.
 License: Expat
 
 Files: src/runtime/src/mono/mono/utils/atomic.c
@@ -2759,7 +2765,7 @@ Files: src/runtime/src/tests/JIT/Performance/CodeQuality/V8/Crypto/*
 Copyright: 2003-2005, Tom Wu
 License: Expat
 
-Files: src/source-build-reference-packages/src/targetPacks/ILSrc/microsoft.netcore.app/*
+Files: src/source-build-reference-packages/src/targetPacks/ILsrc/microsoft.netcore.app/*
  src/sdk/src/WebSdk/Publish/Targets/Microsoft.NET.Sdk.Publish.props
  src/source-build-reference-packages/src/textOnlyPackages/src/microsoft.netcore.dotnet*/*
 Copyright: 2015 .NET Foundation
