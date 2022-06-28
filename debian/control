@@ -11,6 +11,7 @@ Build-Depends: bash-completion,
                libkrb5-dev,
                liblttng-ust-dev,
                libssl-dev,
+               libunwind-dev,
                lld,
                llvm,
                locales-all,
@@ -64,7 +65,7 @@ Package: dotnet-runtime-6.0
 Architecture: amd64
 Depends: dotnet-hostfxr-6.0,
          libicu70,
-         libunwind-13,
+         libunwind-dev,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: dotNET runtime
