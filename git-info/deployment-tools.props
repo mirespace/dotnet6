@@ -3,7 +3,7 @@
   <PropertyGroup>
     <GitCommitHash>7431bf2f3c204cbbc326c8d55ce4ac5cad7661d6</GitCommitHash>
     <IsStable>true</IsStable>
-    <OfficialBuildId>20220622.1</OfficialBuildId>
+    <OfficialBuildId>20220629.1</OfficialBuildId>
     <OutputPackageVersion>1.0.247101</OutputPackageVersion>
     <PreReleaseVersionLabel></PreReleaseVersionLabel>
   </PropertyGroup>

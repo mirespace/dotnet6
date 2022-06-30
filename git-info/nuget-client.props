@@ -3,8 +3,8 @@
   <PropertyGroup>
     <GitCommitHash>75551652b352f860ea0b29095b64fa63715dd672</GitCommitHash>
     <IsStable>false</IsStable>
-    <OfficialBuildId>20220622.1</OfficialBuildId>
-    <OutputPackageVersion>6.0.2-rc.3</OutputPackageVersion>
+    <OfficialBuildId>20220629.1</OfficialBuildId>
+    <OutputPackageVersion>6.0.2-rc.5</OutputPackageVersion>
     <PreReleaseVersionLabel>rc</PreReleaseVersionLabel>
   </PropertyGroup>
 </Project>
