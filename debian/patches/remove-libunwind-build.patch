@@ -1,3 +1,11 @@
+Description: This patch bypasses libunwind source build to use the system provided libunwind
+ Source directory is removed, and CMakeLists files are modified so the build process always looks for libunwind-dev
+Author: .Net Foundation and Contributors
+Origin: upstream
+Last-Update: 2022-07-11
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+
 diff --git a/src/runtime/src/coreclr/CMakeLists.txt b/src/runtime/src/coreclr/CMakeLists.txt
 index 4aaad5724..8ee6fc771 100644
 --- a/src/runtime/src/coreclr/CMakeLists.txt
