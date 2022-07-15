@@ -1,0 +1,32 @@
+#the tarball always contains this
+dotnet6: source-contains-prebuilt-windows-binary
+#multilicense
+dotnet6: license-problem-non-free-RFC
+#The *.js files all contain the full source code  and license headers.
+dotnet6 source: source-is-missing [src/aspnetcore/src/Components/Web.JS/dist/Release/blazor.server.js]
+dotnet6 source: source-is-missing [src/aspnetcore/src/Components/Web.JS/dist/Release/blazor.webview.js]
+dotnet6 source: source-is-missing [src/aspnetcore/src/Components/benchmarkapps/Wasm.Performance/TestApp/wwwroot/benchmarks/jsonHandlingData.js]
+dotnet6 source: source-is-missing [src/aspnetcore/src/Http/Routing/test/testassets/RoutingSandbox/wwwroot/full.render.js]
+dotnet6 source: source-is-missing src/aspnetcore/src/Identity/UI/src/assets/V4/lib/jquery-validation/dist/additional-methods.js
+dotnet6 source: source-is-missing src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js
+dotnet6 source: source-is-missing src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.esm.js
+dotnet6 source: source-is-missing src/aspnetcore/src/Identity/UI/src/assets/V5/lib/bootstrap/dist/js/bootstrap.js
+dotnet6 source: source-is-missing src/aspnetcore/src/Identity/UI/src/assets/V5/lib/jquery-validation/dist/additional-methods.js
+dotnet6 source: source-is-missing src/aspnetcore/src/Identity/testassets/Identity.DefaultUI.WebSite/wwwroot/lib/jquery-validation/dist/additional-methods.js
+dotnet6 source: source-is-missing src/aspnetcore/src/Mvc/Mvc.TagHelpers/src/compiler/resources/LinkTagHelper_FallbackJavaScript.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/RazorPagesWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-CSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/jquery-validation/dist/additional-methods.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js
+dotnet6 source: source-is-missing src/aspnetcore/src/ProjectTemplates/Web.ProjectTemplates/content/StarterWeb-FSharp/wwwroot/lib/bootstrap/dist/js/bootstrap.js
+dotnet6 source: source-is-missing src/sdk/src/BuiltInTools/BrowserRefresh/WebSocketScriptInjection.js
+#Same for HTML files
+dotnet6 source: source-is-missing src/aspnetcore/src/Mvc/test/Mvc.FunctionalTests/compiler/resources/HtmlGenerationWebSite.HtmlGeneration_Home.Link.Encoded.html
+dotnet6 source: source-is-missing src/aspnetcore/src/Mvc/test/Mvc.FunctionalTests/compiler/resources/HtmlGenerationWebSite.HtmlGeneration_Home.Link.html

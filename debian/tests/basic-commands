@@ -1,0 +1,11 @@
+#!/bin/bash
+
+##################################
+### Check basic commands       ###
+##################################
+
+set -eo pipefail
+
+dotnet new console --name TestConsole
+cd TestConsole
+dotnet run | grep -qF "Hello, World!"
