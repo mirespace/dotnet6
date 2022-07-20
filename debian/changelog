@@ -1,8 +1,8 @@
 dotnet6 (6.0.107-0ubuntu1) kinetic; urgency=medium
 
-  * New upstream release.
+  * New upstream version.
 
- -- Miriam España Acebal <miriam.espana@canonical.com>  Thu, 14 Jul 2022 10:41:56 +0200
+ -- Miriam España Acebal <miriam.espana@canonical.com>  Tue, 19 Jul 2022 10:14:58 +0200
 
 dotnet6 (6.0.106-0ubuntu2) kinetic; urgency=medium
 

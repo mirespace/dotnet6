@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: dotnet
 Source: https://github.com/dotnet/
-Files-excluded: src/source-build/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
+Files-Excluded: src/source-build/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
  src/roslyn/src/Compilers/Test/Resources/Core/SymbolsTests/V?/MTTestLib?.Dll
  src/source-build/src/humanizer/samples
  src/aspnetcore/src/*/samples
