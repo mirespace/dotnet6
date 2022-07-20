@@ -68,6 +68,21 @@ function clean_uscan_download {
    find .. -name "dotnet*${tag}*.tar.*" -delete
 }
 
+function check_bootstrap_environment {
+    if dpkg -l | grep dotnet ; then
+        echo "error: dotnet is installed. Not a good idea for bootstrapping."
+        exit 1
+    fi
+    if [ -d /usr/lib/dotnet ] || [ -d /usr/lib64/dotnet ] || [ -d /usr/share/dotnet ] ; then
+        echo "error: one of /usr/lib/dotnet /usr/lib64/dotnet or /usr/share/dotnet/ exists. Not a good idea for bootstrapping."
+        exit 1
+    fi
+    if command -v dotnet ; then
+        echo "error: dotnet is in $PATH. Not a good idea for bootstrapping."
+        exit 1
+    fi
+}
+
 function runtime_id {
 
     source /etc/os-release
