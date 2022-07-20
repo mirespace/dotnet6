@@ -22,11 +22,9 @@ IFS=$'\n\t'
 
 function print_usage {
     echo "Usage:"
-    echo "$0 [--bootstrap] <tag-from-installer-repo>"
+    echo "$0 <tag-from-installer-repo>"
     echo
     echo "Creates a source archive from a tag at https://github.com/dotnet/installer"
-    echo ""
-    echo "  --bootstrap     build a source tarball usable for bootstrapping .NET"
 }
 
 function on_exit {
@@ -112,11 +110,6 @@ positional_args=()
 while [[ "$#" -gt 0 ]]; do
     arg="${1}"
     case "${arg}" in
-        --bootstrap)
-            check_bootstrap_environment
-            build_bootstrap=true
-            shift
-            ;;
         -h|--help)
             print_usage
             exit 0
@@ -145,12 +138,6 @@ tarball_name="${dir_name}.orig"
 tarball_suffix=.tar.gz
 
 clean_uscan_download
-
-if [[ ${build_bootstrap} == true ]]; then
-#    unmodified_tarball_name="${unmodified_tarball_name}-${arch}-bootstrap"
-#    tarball_name="${tarball_name}-${arch}-bootstrap"
-    tarball_suffix=.tar.xz
-fi
 
 if [ -f "${tarball_name}${tarball_suffix}" ]; then
     #rm "${tarball_name}${tarball_suffix}"
@@ -183,41 +170,6 @@ mv "${unmodified_tarball_name}" "${tarball_name}"
 
 pushd "${tarball_name}"
 
-if [[ ${build_bootstrap} == true ]]; then
-    if [[ "$(wc -l < packages/archive/archiveArtifacts.txt)" != 1 ]]; then
-        echo "error: this is not going to work! update $0 to fix this issue."
-        exit 1
-    fi
-
-    pushd packages/archive/
-    curl -O "$(cat archiveArtifacts.txt)"
-    popd
-
-    mkdir foo
-    pushd foo
-
-    tar xf ../packages/archive/Private.SourceBuilt.Artifacts.*.tar.gz
-    sed -i -E 's|<MicrosoftNETHostModelPackageVersion>6.0.0-rtm.21521.1</|<MicrosoftNETHostModelPackageVersion>6.0.0-rtm.21521.4</|' PackageVersions.props
-    sed -i -E 's|<MicrosoftNETHostModelVersion>6.0.0-rtm.21521.1</|<MicrosoftNETHostModelVersion>6.0.0-rtm.21521.4</|' PackageVersions.props
-    cat PackageVersions.props
-
-    tar czf ../packages/archive/Private.SourceBuilt.Artifacts.*.tar.gz *
-
-    popd
-    rm -rf foo
-
-    ./prep.sh --bootstrap
-
-    mkdir -p fixup-previously-source-built-artifacts
-    pushd fixup-previously-source-built-artifacts
-    tar xf ../packages/archive/Private.SourceBuilt.Artifacts.*.tar.gz
-    find . -iname '*ubuntu*nupkg' -delete
-    # We must keep the original file names in the archive, even prepending a ./ leads to issues
-    tar -I 'gzip -1' -cf ../packages/archive/Private.SourceBuilt.Artifacts.*.tar.gz *
-    popd
-    rm -rf fixup-previously-source-built-artifacts
-fi
-
 # Remove files with funny licenses, crypto implementations and other
 # not-very-useful artifacts to reduce tarball size
 
@@ -245,12 +197,7 @@ find . -iname "*.dll" -exec rm -rf {} +
 
 popd
 
-if [[ ${build_bootstrap} == true ]]; then
-    tar -I 'xz -T 0' -cf "../${tarball_name}${tarball_suffix}" "${tarball_name}"
-    find . -type f -iname '*.tar.gz' -delete
-    rm -rf .dotnet
-else
-    find . -type f -iname '*.tar.xz' -delete
-    rm -rf .dotnet
-    tar -czf "../${tarball_name}${tarball_suffix}" "${tarball_name}"
-fi
+find . -type f -iname '*.tar.xz' -delete
+rm -rf .dotnet
+tar -czf "../${tarball_name}${tarball_suffix}" "${tarball_name}"
+
