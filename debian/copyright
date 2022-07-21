@@ -8,7 +8,6 @@ Files-Excluded: src/source-build/src/newtonsoft-json901/Tools/7-zip/7-zip.chm
  src/runtime/src/tests/JIT/Performance/CodeQuality/Bytemark
  src/aspnetcore/src/SignalR/clients/java/signalr/gradle*
 
-
 Files: *
 Copyright: .NET Foundation and Contributors
 License: Expat

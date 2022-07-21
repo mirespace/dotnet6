@@ -1,0 +1,26 @@
+diff --git a/src/runtime/src/coreclr/CMakeLists.txt b/src/runtime/src/coreclr/CMakeLists.txt
+index 4aaad5724..8ee6fc771 100644
+--- a/src/runtime/src/coreclr/CMakeLists.txt
++++ b/src/runtime/src/coreclr/CMakeLists.txt
+@@ -115,10 +115,6 @@ if(CLR_CMAKE_HOST_UNIX)
+ 
+     add_subdirectory(pal)
+     add_subdirectory(hosts)
+-else(CLR_CMAKE_HOST_UNIX)
+-    if(CLR_CMAKE_TARGET_UNIX)
+-        add_subdirectory(pal/src/libunwind)
+-    endif(CLR_CMAKE_TARGET_UNIX)
+ endif(CLR_CMAKE_HOST_UNIX)
+ 
+ # Add this subdir. We install the headers for the jit.
+diff --git a/src/runtime/src/coreclr/pal/src/CMakeLists.txt b/src/runtime/src/coreclr/pal/src/CMakeLists.txt
+index ba13ab392..cc8ce4cfd 100644
+--- a/src/runtime/src/coreclr/pal/src/CMakeLists.txt
++++ b/src/runtime/src/coreclr/pal/src/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-if(CLR_CMAKE_TARGET_OSX OR CLR_CMAKE_TARGET_FREEBSD)
++if(CLR_CMAKE_TARGET_OSX OR CLR_CMAKE_TARGET_FREEBSD OR CLR_CMAKE_TARGET_UNIX)
+   # On OSX and *BSD, we use the libunwind that's part of the OS
+   set(CLR_CMAKE_USE_SYSTEM_LIBUNWIND 1)
+ endif(CLR_CMAKE_TARGET_OSX OR CLR_CMAKE_TARGET_FREEBSD)
+

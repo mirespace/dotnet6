@@ -1,5 +1,5 @@
 #the tarball always contains this
-dotnet6: source-contains-prebuilt-windows-binary
+#dotnet6: source-contains-prebuilt-windows-binary
 #multilicense
 dotnet6: license-problem-non-free-RFC
 #The *.js files all contain the full source code  and license headers.

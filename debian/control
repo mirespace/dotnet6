@@ -6,13 +6,14 @@ Build-Depends: clang,
                cmake,
                bash-completion,
                debhelper-compat (= 13),
-	       dotnet-sdk-6.0,
+               dotnet-sdk-6.0,
 	       dotnet-sdk-6.0-source-built-artifacts,
                git,
                libicu-dev,
                libkrb5-dev,
                liblttng-ust-dev,
                libssl-dev,
+               libunwind-dev,
                lld,
                llvm,
                locales-all,
@@ -66,6 +67,7 @@ Package: dotnet-runtime-6.0
 Architecture: amd64
 Depends: dotnet-hostfxr-6.0,
          libicu71,
+         libundwind-13,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: dotNET runtime
