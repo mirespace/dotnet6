@@ -1,8 +1,0 @@
-<Project>
-
-  <PropertyGroup>
-    <GitHubRepositoryName>deployment-tools</GitHubRepositoryName>
-    <SourceBuildManagedOnly>true</SourceBuildManagedOnly>
-  </PropertyGroup>
-
-</Project>

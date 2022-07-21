@@ -1,7 +1,0 @@
-<Project>
-  <ItemGroup Condition="'$(IsFrameworkSupportFacade)' == 'true'">
-    <ResolvedMatchingContract Include="$(ContractAssemblyPath)" />
-  </ItemGroup>
-
-  <Import Project="..\Directory.Build.targets" />
-</Project>

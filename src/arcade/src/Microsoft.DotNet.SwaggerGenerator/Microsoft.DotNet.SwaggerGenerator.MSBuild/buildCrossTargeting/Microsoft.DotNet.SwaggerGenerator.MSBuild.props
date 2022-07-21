@@ -1,3 +1,0 @@
-<Project>
-  <Import Project="..\build\Microsoft.DotNet.SwaggerGenerator.MSBuild.props"/>
-</Project>

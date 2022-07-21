@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "VisualFSharpDebug": {
-      "commandName": "Executable",
-      "executablePath": "$(DevEnvDir)devenv.exe",
-      "commandLineArgs": "/rootsuffix $(VSSDKTargetPlatformRegRootSuffix) /log"
-    }
-  }
-}

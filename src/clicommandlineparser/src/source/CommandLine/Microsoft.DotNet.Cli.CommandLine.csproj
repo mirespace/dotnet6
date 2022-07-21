@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (c) .NET Foundation and contributors. All rights reserved. Licensed under the MIT license. See License.txt in the project root for full license information. -->
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.5</TargetFramework>
-    <IsPackable>true</IsPackable>
-    <IncludeSymbols>true</IncludeSymbols>
-  </PropertyGroup>
-</Project>

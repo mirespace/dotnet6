@@ -1,8 +1,0 @@
-<Project>
-
-  <PropertyGroup>
-    <GitHubRepositoryName>roslyn-analyzers</GitHubRepositoryName>
-    <SourceBuildManagedOnly>true</SourceBuildManagedOnly>
-  </PropertyGroup>
-
-</Project>
