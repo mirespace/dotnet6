@@ -13,7 +13,8 @@ ifeq ($(DEB_HOST_ARCH), amd64)
 endif
 _RUNTIME_ID = $(shell . /etc/os-release; [ ! -z $${VERSION_ID} ] && echo $${ID}.$${VERSION_ID} || echo $${ID})
 _SDK_VERSION = $(DEB_VERSION_UPSTREAM)
-_RUNTIME_VERSION = 6.0.$(shell echo $(_SDK_VERSION) | cut -d'0' -f3)
+_minor_sdk_version=$(shell echo $(_SDK_VERSION) | cut -d'0' -f3)
+_RUNTIME_VERSION = 6.0.$(_minor_sdk_version)
 _VERSION = $(shell echo $(_SDK_VERSION) | cut -d'.' -f1)
 
 PREFIX = /usr
@@ -93,7 +94,7 @@ override_dh_install:
 
 
 	cat debian/tmp/dependants >> debian/dotnet-host.alternatives.in
-	echo "Priority: 60107" >> debian/dotnet-host.alternatives.in
+	echo "Priority: 6010$(_minor_sdk_version)" >> debian/dotnet-host.alternatives.in
 
 
 	for f in debian/*.in; do \

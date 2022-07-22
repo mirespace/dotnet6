@@ -67,7 +67,7 @@ Package: dotnet-runtime-6.0
 Architecture: amd64
 Depends: dotnet-hostfxr-6.0,
          libicu71,
-         libundwind-13,
+         libunwind-13,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: dotNET runtime

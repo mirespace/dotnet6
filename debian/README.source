@@ -13,9 +13,9 @@ dotnet for Debian
     the following:
 
     * Get the latest code from https://launchpad.net/ubuntu/+source/dotnet6 with `pull-lp-source dotnet6` 
-    * (optional) Change the watch file to use the correct address for private repo if you're 
-      building on embargo time or if there is still no official place for the released code 
-      on our side (on no embargo time).
+    * Change the watch file to use the correct address:
+      +  for private repo if you're building on embargo time: add the private repo after the script.
+      +  on public released time: switch between the comments and change the repo part to a on our side.
     * `uscan`
     
     Now, a `dotnet6_6.0.10X.orig.tar.xz` tarball file has been generated with a new folder 

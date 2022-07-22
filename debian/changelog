@@ -1,8 +1,27 @@
 dotnet6 (6.0.107-0ubuntu1) kinetic; urgency=medium
 
   * New upstream version.
+  * d/copyright: Added Files-Excluded stanza.
+  * d/rules: Got the minor version for the SDK and apply it to the
+    Priority on alternatives too.
+  * d/build-dotnet-tarball.sh: Changed it to work with embargoed repo
+    (new logic).
+  * d/watch: Added commented part to work without script with a public
+    monorepo. Added template/example/invalid parameter for the script.
+  * d/README.source: Reflects now the new origtarball building,
+    remove text about aggregated repositories building and not use
+    of the d/p/series file.
 
- -- Miriam España Acebal <miriam.espana@canonical.com>  Tue, 19 Jul 2022 10:14:58 +0200
+  [ Jesús Soto ]
+  * d/p/remove-libunwind-build.patch: Adapt CMakeLists.txt for use
+    system libunwind instead of vendorized code.
+  * d/p/series: Added above patch.
+  * d/control: Added libunwind-dev to build dependencies and 
+    libunwind-13 as dotnet-runtime-6.0 dependency.
+  * d/copyright: Added list of precompiled binaries files not used
+    in building.   
+
+ -- Miriam España Acebal <miriam.espana@canonical.com>  Tue, 22 Jul 2022 13:41:58 +0200
 
 dotnet6 (6.0.106-0ubuntu2) kinetic; urgency=medium
 
