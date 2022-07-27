@@ -55,7 +55,7 @@ if [[ "$#" -gt 0 ]]; then
 	version="${3:-}"
     fi
 else        
-    echo "Not enought arguments to run properly:"
+    echo "Not enough arguments to run properly:"
     print_usage
     exit 1
 fi

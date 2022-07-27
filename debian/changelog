@@ -1,3 +1,16 @@
+dotnet6 (6.0.107-0ubuntu2+ppa1) kinetic; urgency=medium
+
+  * d/copyright: Removing references to licenses for excluded
+    libunwind vendorized code.
+  * d/dotnet-host.bash-completion.in: Fixed path.
+  * d/s/lintian-overrides: Fixing new format for lintian output.
+    Added some new overrides for code shipped in the new tarball.
+
+  [ Jesús Soto ]
+  * d/copyright: Added vendorized libunwind code to Files-Excludes.
+
+ -- Miriam España Acebal <miriam.espana@canonical.com>  Tue, 26 Jul 2022 11:17:40 +0200
+
 dotnet6 (6.0.107-0ubuntu1) kinetic; urgency=medium
 
   * New upstream version.
@@ -16,12 +29,12 @@ dotnet6 (6.0.107-0ubuntu1) kinetic; urgency=medium
   * d/p/remove-libunwind-build.patch: Adapt CMakeLists.txt for use
     system libunwind instead of vendorized code.
   * d/p/series: Added above patch.
-  * d/control: Added libunwind-dev to build dependencies and 
+  * d/control: Added libunwind-dev to build dependencies and
     libunwind-13 as dotnet-runtime-6.0 dependency.
   * d/copyright: Added list of precompiled binaries files not used
-    in building.   
+    in building.
 
- -- Miriam España Acebal <miriam.espana@canonical.com>  Tue, 22 Jul 2022 13:41:58 +0200
+ -- Miriam España Acebal <miriam.espana@canonical.com>  Fri, 22 Jul 2022 13:41:58 +0200
 
 dotnet6 (6.0.106-0ubuntu2) kinetic; urgency=medium
 
