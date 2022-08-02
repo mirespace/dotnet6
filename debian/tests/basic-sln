@@ -1,0 +1,20 @@
+#!/bin/bash
+
+##################################
+### Check basic sln commands   ###
+##################################
+
+set -eo pipefail
+
+mkdir sampleTest
+cd sampleTest
+dotnet new console
+dotnet new sln
+dotnet sln sampleTest.sln add sampleTest.csproj
+dotnet build sampleTest.sln
+cd bin/Debug/net6.0/
+output=$(./sampleTest)
+if [ "$output" != "Hello, World!" ]; then
+    echo 'Test did not output "Hello, World!"'
+    exit 1
+fi
