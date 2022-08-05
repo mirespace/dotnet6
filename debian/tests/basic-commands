@@ -8,5 +8,13 @@ set -eo pipefail
 
 dotnet new console --name TestConsole
 cd TestConsole
-dotnet run | grep -qF "Hello, World!"
+dotnet new sln
+dotnet sln TestConsole.sln add TestConsole.csproj
+dotnet build TestConsole.sln
+cd bin/Debug/net6.0/
+output=$(./TestConsole)
+if [ "$output" != "Hello, World!" ]; then
+    echo 'Test did not output "Hello, World!"'
+    exit 1
+fi
 cd ..
