@@ -1,3 +1,7 @@
 Tests: basic-checks basic-commands
 Depends: @
 Restrictions: superficial
+
+Tests: csproj-with-nuget
+Depends: @
+Restrictions: superficial isolation-container needs-internet

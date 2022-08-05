@@ -1,0 +1,17 @@
+#!/bin/bash
+
+##################################
+### Check basic nuget commands ###
+##################################
+
+set -eo pipefail
+
+cd "$(dirname "${0}")"/TestProject
+dotnet add TestProject.csproj package Google.Apis
+output=$(dotnet run | wc -l)
+if [ "$output" != "4" ]; then
+    echo 'Test project did not work'
+    exit 1
+fi
+dotnet remove TestProject.csproj package Google.Apis
+cd ..
